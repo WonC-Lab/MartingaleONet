@@ -1,0 +1,11 @@
+# Ignore LaTeX files
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Ignore python cache
+__pycache__/
+*.pyc

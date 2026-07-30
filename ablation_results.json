@@ -1,0 +1,22 @@
+{
+  "MartingaleONet (Proposed)": {
+    "RMSE": 1.3287770748138428,
+    "MAPE": 11.024346947669983,
+    "Gamma_TV": 0.2063511610031128
+  },
+  "Standard PINN": {
+    "RMSE": 13.240105628967285,
+    "MAPE": 99.99991059303284,
+    "Gamma_TV": 0.37143208980560305
+  },
+  "Pointwise MLP": {
+    "RMSE": 2.595062017440796,
+    "MAPE": 22.99216091632843,
+    "Gamma_TV": 0.660323715209961
+  },
+  "FDM / Fourier Ground Truth": {
+    "RMSE": 0.0,
+    "MAPE": 0.0,
+    "Gamma_TV": 2.4580319221875016
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "Standard Market": {
+    "corrected_martingale_error": 0.0002719428007732764,
+    "raw_martingale_error": 0.0003330859653125554,
+    "max_error": 0.0008165723043780382
+  },
+  "COVID-19 Crash (OOD)": {
+    "corrected_martingale_error": 0.000889001189060649,
+    "raw_martingale_error": 0.0013446084392706669,
+    "max_error": 0.0023990445475020605
+  },
+  "3x Leveraged ETF (TQQQ)": {
+    "corrected_martingale_error": 0.001449275161246207,
+    "raw_martingale_error": 0.001719593989697521,
+    "max_error": 0.0046626311821007516
+  }
+}
