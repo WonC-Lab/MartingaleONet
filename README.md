@@ -8,7 +8,7 @@ Official implementation of **MartingaleONet**, a novel quantitative framework co
 
 ---
 
-## 🌟 Key Highlights
+## Key Highlights
 
 - **$15,225\times$ Inference Speedup**: Zero-shot operator evaluation mapping Heston PDE parameter functions $\mathbf{u} = (\kappa, \theta, \sigma, \rho, v_0)$ directly to continuous option surfaces $V(S,K,T)$ in $0.1\,\mu\text{s}$.
 - **Continuous Autograd Greeks**: Derives noise-free sensitivities ($\Delta, \Gamma, \mathcal{V}$) via PyTorch automatic differentiation, reducing dynamic deep hedging PnL variance by **$59.5\%$** under proportional transaction costs ($10\text{bps}$ to $20\text{bps}$).
@@ -17,7 +17,7 @@ Official implementation of **MartingaleONet**, a novel quantitative framework co
 
 ---
 
-## 🏗️ Model Architecture
+## Model Architecture
 
 ```
        [Heston Parameters u]                 [Coordinates y = (S,K,T)]
@@ -41,7 +41,7 @@ Official implementation of **MartingaleONet**, a novel quantitative framework co
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
@@ -66,7 +66,7 @@ Official implementation of **MartingaleONet**, a novel quantitative framework co
 
 ---
 
-## 🚀 Quick Start & Usage
+## Quick Start & Usage
 
 ### 1. Requirements
 ```bash
@@ -93,7 +93,7 @@ python src/ablation_study.py
 
 ---
 
-## 📊 Benchmark Results
+## Benchmark Results
 
 | Model / Baseline | RMSE ($) | MAPE (%) | Gamma Noise (TV) | Martingale Preservation |
 | :--- | :---: | :---: | :---: | :---: |
@@ -104,7 +104,7 @@ python src/ablation_study.py
 
 ---
 
-## 📜 Citation
+## Citation
 ```bibtex
 @article{cho2026martingaleonet,
   title={MartingaleONet: Physics-Constrained Operator Learning for Real-Time Option Pricing and Volatility Calibration},
