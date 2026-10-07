@@ -1,0 +1,33 @@
+{
+  "status": "UNSUPPORTED_EXACT_V0",
+  "exception": "RuntimeError('0: invalid value')",
+  "input": {
+    "S": 1.0,
+    "K": 1,
+    "x": 0,
+    "v": 0,
+    "tau": 0.001,
+    "kappa": 2.0,
+    "theta": 0.04,
+    "sigma": 0.3,
+    "rho": -0.7,
+    "r": 0.03,
+    "label": "zero_short_R0"
+  },
+  "engine": "PDE",
+  "setting": [
+    400,
+    200,
+    150
+  ],
+  "alignment": {
+    "target_tau": 0.001,
+    "calendar_tau": 0.0027397260273972603,
+    "days": 1,
+    "exact_time_change_scale": 0.365,
+    "mode": "exact_process_time_change",
+    "Vv_chain_rule_factor": 0.365
+  },
+  "version": "1.41",
+  "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+}

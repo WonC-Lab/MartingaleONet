@@ -1,0 +1,2645 @@
+[
+  {
+    "index": 0,
+    "input": {
+      "S": 0.8,
+      "K": 1,
+      "x": -0.2231435513142097,
+      "v": 0.04,
+      "tau": 0.01,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error",
+      "FD_uncertainty_budget_unresolved"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.927034554124913e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 5.551115123125783e-17,
+          "P2": 5.551115123125783e-17,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.4334657153389237e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 588,
+          "P1": 5.551115123125783e-17,
+          "P2": 5.551115123125783e-17,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.927034554124913e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 5.551115123125783e-17,
+          "P2": 5.551115123125783e-17,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.2110581733536632e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 714,
+          "P1": 5.551115123125783e-17,
+          "P2": 5.551115123125783e-17,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "input": {
+      "S": 0.8,
+      "K": 1,
+      "x": -0.2231435513142097,
+      "v": 0.04,
+      "tau": 0.5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.474857831396751e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.04066889106241284,
+          "P2": 0.031849438294125065,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.424376587166431e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 336,
+          "P1": 0.04066889106241284,
+          "P2": 0.031849438294125065,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.474857831396751e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.04066889106241284,
+          "P2": 0.031849438294125065,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.598038232402177e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.04066889106241284,
+          "P2": 0.031849438294125065,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "input": {
+      "S": 0.9,
+      "K": 1,
+      "x": -0.10536051565782628,
+      "v": 0.04,
+      "tau": 0.01,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error",
+      "FD_uncertainty_budget_unresolved"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9864334151505912e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 7.239379096191101e-10,
+          "P2": 6.501972849015658e-10,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.532429197527071e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 336,
+          "P1": 7.239379096191101e-10,
+          "P2": 6.501972849015658e-10,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9864334151505912e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 7.239379096191101e-10,
+          "P2": 6.501972849015658e-10,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.4870988506713992e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 7.239379096191101e-10,
+          "P2": 6.501972849015658e-10,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "input": {
+      "S": 0.9,
+      "K": 1,
+      "x": -0.10536051565782628,
+      "v": 0.04,
+      "tau": 0.5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.181904205883132e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.2954764071572182,
+          "P2": 0.2537834417822805,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.0423396852199732e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 336,
+          "P1": 0.2954764071572182,
+          "P2": 0.2537834417822805,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.181904205883132e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.2954764071572182,
+          "P2": 0.2537834417822805,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.942476741500942e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.2954764071572182,
+          "P2": 0.2537834417822805,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0.0,
+      "v": 0.04,
+      "tau": 0.5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.465333593844696e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6245949012653974,
+          "P2": 0.570440849800723,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.464559184702262e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.6245949012653974,
+          "P2": 0.570440849800723,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.465333593844696e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6245949012653974,
+          "P2": 0.570440849800723,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.411214592755502e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.6245949012653974,
+          "P2": 0.570440849800723,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0.0,
+      "v": 0.04,
+      "tau": 2,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.3236486192849193e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.6886757207335676,
+          "P2": 0.583765070069313,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.809023745851656e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6886757207335676,
+          "P2": 0.583765070069313,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.3236486192849193e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.6886757207335676,
+          "P2": 0.583765070069313,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.7912844554192027e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 0.6886757207335676,
+          "P2": 0.583765070069313,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "input": {
+      "S": 1.1,
+      "K": 1,
+      "x": 0.09531017980432493,
+      "v": 0.04,
+      "tau": 0.01,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.652460718157823e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.9999919654700835,
+          "P2": 0.9999911121455259,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.0158921470808233e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.9999919654700835,
+          "P2": 0.9999911121455259,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.652460718157823e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.9999919654700835,
+          "P2": 0.9999911121455259,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.2325404937724385e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.9999919654700835,
+          "P2": 0.9999911121455259,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "input": {
+      "S": 1.1,
+      "K": 1,
+      "x": 0.09531017980432493,
+      "v": 0.04,
+      "tau": 0.5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.407877967112239e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.8266451792896055,
+          "P2": 0.7846647292181699,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.294547778444855e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.8266451792896055,
+          "P2": 0.7846647292181699,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.407877967112239e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.8266451792896055,
+          "P2": 0.7846647292181699,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.573910991643096e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 0.8266451792896055,
+          "P2": 0.7846647292181699,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "input": {
+      "S": 1.1,
+      "K": 1,
+      "x": 0.09531017980432493,
+      "v": 0.04,
+      "tau": 2,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.8340612912933455e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.7935776611924145,
+          "P2": 0.700351507681198,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.2647464538290613e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.7935776611924145,
+          "P2": 0.700351507681198,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.8340612912933455e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.7935776611924145,
+          "P2": 0.700351507681198,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.320504853438452e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.7935776611924145,
+          "P2": 0.700351507681198,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "input": {
+      "S": 1.2,
+      "K": 1,
+      "x": 0.1823215567939546,
+      "v": 0.04,
+      "tau": 0.01,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8413267759164147e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.9999999999999793,
+          "P2": 0.9999999999999749,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.3006970051662385e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 0.9999999999999793,
+          "P2": 0.9999999999999749,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8413267759164147e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.9999999999999793,
+          "P2": 0.9999999999999749,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.5154891269156993e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 756,
+          "P1": 0.9999999999999793,
+          "P2": 0.9999999999999749,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 13,
+    "input": {
+      "S": 1.2,
+      "K": 1,
+      "x": 0.1823215567939546,
+      "v": 0.04,
+      "tau": 0.5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.4916946327391737e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.9233308461536918,
+          "P2": 0.8968902863369097,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.011502213154696e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.9233308461536918,
+          "P2": 0.8968902863369097,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.4916946327391737e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.9233308461536918,
+          "P2": 0.8968902863369097,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.749243895242061e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.9233308461536918,
+          "P2": 0.8968902863369097,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "input": {
+      "S": 1.2,
+      "K": 1,
+      "x": 0.1823215567939546,
+      "v": 0.04,
+      "tau": 2,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "offATM"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.5855329603787975e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 588,
+          "P1": 0.8627892817904577,
+          "P2": 0.7846058450307537,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.107891922943935e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.8627892817904577,
+          "P2": 0.7846058450307537,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.5855329603787975e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 588,
+          "P1": 0.8627892817904577,
+          "P2": 0.7846058450307537,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.1623086310807877e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 714,
+          "P1": 0.8627892817904577,
+          "P2": 0.7846058450307537,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 15,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.04,
+      "tau": 1,
+      "kappa": 1,
+      "theta": 0.04,
+      "sigma": 0.282842712474619,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R1"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.0075952626720232e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6702759514663563,
+          "P2": 0.5963052348912466,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.098746368949838e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6702759514663563,
+          "P2": 0.5963052348912466,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.0075952626720232e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6702759514663563,
+          "P2": 0.5963052348912466,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.780581811573114e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 0.6702759514663563,
+          "P2": 0.5963052348912468,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 16,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.04,
+      "tau": 1,
+      "kappa": 1,
+      "theta": 0.04,
+      "sigma": 0.27,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R2"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.325450064824705e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6670158939042605,
+          "P2": 0.5926888915727001,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.22168257414629e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6670158939042605,
+          "P2": 0.5926888915727001,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.325450064824705e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6670158939042605,
+          "P2": 0.5926888915727001,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.466453363661e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 588,
+          "P1": 0.6670158939042605,
+          "P2": 0.5926888915727001,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 17,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.04,
+      "tau": 1,
+      "kappa": 1,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R3"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.70063916290779e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.6745956729382225,
+          "P2": 0.6011169396523203,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.631953150223647e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 462,
+          "P1": 0.6745956729382225,
+          "P2": 0.6011169396523203,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.70063916290779e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 504,
+          "P1": 0.6745956729382225,
+          "P2": 0.6011169396523203,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.824186099228391e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 630,
+          "P1": 0.6745956729382225,
+          "P2": 0.6011169396523203,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 18,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0,
+      "tau": 0.001,
+      "kappa": 0.5,
+      "theta": 0.04,
+      "sigma": 1.2,
+      "rho": -0.99,
+      "r": 0.03,
+      "label": "local_R4"
+    },
+    "flags": [
+      "A_domain",
+      "B_N",
+      "B_interval",
+      "cross_route_unknown",
+      "A_financial_sanity",
+      "B_financial_sanity",
+      "FD_derivative_amplification_or_truncation",
+      "FD_uncertainty_budget_unresolved",
+      "strike_FD_derivative_unresolved"
+    ],
+    "errors": []
+  },
+  {
+    "index": 19,
+    "input": {
+      "S": 0.30119421191220214,
+      "K": 1,
+      "x": -1.2,
+      "v": 0.005,
+      "tau": 5,
+      "kappa": 0.5,
+      "theta": 0.04,
+      "sigma": 1.2,
+      "rho": -0.99,
+      "r": 0.03,
+      "label": "local_R4"
+    },
+    "flags": [
+      "A_domain",
+      "B_N",
+      "B_interval",
+      "cross_route_unknown",
+      "solver_error",
+      "B_financial_sanity",
+      "FD_uncertainty_budget_unresolved",
+      "strike_FD_derivative_unresolved"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 512,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.3591828609149903e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 2688,
+          "P1": -1.026304447537818e-06,
+          "P2": -9.333047451542953e-07,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 1024,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.5511396154799492e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 5376,
+          "P1": 9.215584961808077e-10,
+          "P2": 8.376860316516854e-10,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8140787202264553e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 9114,
+          "P1": 1.8318679906315083e-15,
+          "P2": 1.5543122344752192e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8140787202264553e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 9114,
+          "P1": 1.8318679906315083e-15,
+          "P2": 1.5543122344752192e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.3875927159491586e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 32088,
+          "P1": 1.9984014443252818e-15,
+          "P2": 1.5543122344752192e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.5320549332166795e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 32172,
+          "P1": 1.9984014443252818e-15,
+          "P2": 1.5543122344752192e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.3875927159491586e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 32088,
+          "P1": 1.9984014443252818e-15,
+          "P2": 1.5543122344752192e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.223219066248798e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 31920,
+          "P1": 1.5543122344752192e-15,
+          "P2": 1.8318679906315083e-15,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "input": {
+      "S": 3.3201169227365472,
+      "K": 1,
+      "x": 1.2,
+      "v": 0.25,
+      "tau": 0.001,
+      "kappa": 0.5,
+      "theta": 0.04,
+      "sigma": 1.2,
+      "rho": -0.99,
+      "r": 0.03,
+      "label": "local_R4"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.5604236067369594e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 3864,
+          "P1": 1.0000000000000002,
+          "P2": 0.9999999999999998,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.723863342825222e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 3864,
+          "P1": 1.0000000000000002,
+          "P2": 0.9999999999999998,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.5604236067369594e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 3864,
+          "P1": 1.0000000000000002,
+          "P2": 0.9999999999999998,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.4092239420820981e-12,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 3906,
+          "P1": 1.0000000000000002,
+          "P2": 0.9999999999999998,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.25,
+      "tau": 2,
+      "kappa": 4,
+      "theta": 0.12,
+      "sigma": 0.8,
+      "rho": -0.1,
+      "r": 0,
+      "label": "local_R5"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.5326237233919406e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6072551213191367,
+          "P2": 0.40530352937815484,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.828717205812683e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 378,
+          "P1": 0.6072551213191367,
+          "P2": 0.40530352937815484,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.5326237233919406e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 420,
+          "P1": 0.6072551213191367,
+          "P2": 0.40530352937815484,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.2585903987441327e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.6072551213191367,
+          "P2": 0.40530352937815484,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 22,
+    "input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0,
+      "tau": 0.001,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R0"
+    },
+    "flags": [
+      "A_domain",
+      "cross_route_unknown",
+      "FD_derivative_amplification_or_truncation",
+      "FD_uncertainty_budget_unresolved",
+      "strike_FD_derivative_unresolved"
+    ],
+    "errors": []
+  },
+  {
+    "index": 23,
+    "input": {
+      "S": 0.30119421191220214,
+      "K": 1,
+      "x": -1.2,
+      "v": 0.01,
+      "tau": 0.001,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R0"
+    },
+    "flags": [
+      "A_domain",
+      "solver_error",
+      "FD_uncertainty_budget_unresolved"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 128,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.2210914696263181e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 1092,
+          "P1": -0.001792388593891081,
+          "P2": -0.0017931683296656953,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 256,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.7718440793683475e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 2310,
+          "P1": 0.0005711532339172654,
+          "P2": 0.0005723181565954749,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 512,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.022085364917658e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 4788,
+          "P1": 1.7397283671560793e-05,
+          "P2": 1.809682592762707e-05,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 1024,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.638546620000839e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 9030,
+          "P1": -1.4447013763074779e-06,
+          "P2": -1.4446422623715094e-06,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.542871982021254e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 14406,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1230573682705653e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.542871982021254e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 14406,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1230573682705653e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.399898342108782e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 15834,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1230573682705653e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.326335632026954e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 15918,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1241675912951905e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.399898342108782e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 15834,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1230573682705653e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.519594779799901e-11,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 15666,
+          "P1": -3.126388037344441e-13,
+          "P2": -3.1230573682705653e-13,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  },
+  {
+    "index": 24,
+    "input": {
+      "S": 3.3201169227365472,
+      "K": 1,
+      "x": 1.2,
+      "v": 0.25,
+      "tau": 5,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "local_R0"
+    },
+    "flags": [
+      "solver_error"
+    ],
+    "errors": [
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.5564549146654043e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.9938437530721262,
+          "P2": 0.9681889107338013,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 4,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.048194739527886e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 546,
+          "P1": 0.9938437530721261,
+          "P2": 0.9681889107338013,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.5564549146654043e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 672,
+          "P1": 0.9938437530721262,
+          "P2": 0.9681889107338013,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      {
+        "route": "A",
+        "failure": "quadrature",
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-13,
+            "rtol": 1e-13,
+            "subdivisions": 10000,
+            "panels": 16,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.0962444510258155e-13,
+          "success": false,
+          "status": 2,
+          "message": "Target precision could not be reached due to rounding error.",
+          "evaluations": 798,
+          "P1": 0.9938437530721262,
+          "P2": 0.9681889107338013,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    ]
+  }
+]

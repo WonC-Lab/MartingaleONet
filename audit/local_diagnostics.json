@@ -1,0 +1,384 @@
+{
+  "compute_class": "LOCAL-LIGHT",
+  "device": "cpu",
+  "seed": 2026,
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "torch": "2.12.1+cu126",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_head": "c07f9102fb8ebed466227dafe6683b67b4a64285",
+  "openmp_workaround": "KMP_DUPLICATE_LIB_OK=TRUE (original scripts also set this); original runtime unknown",
+  "timegan": {
+    "trained": false,
+    "theoretical_mean": 103.0454533953517,
+    "mean": 44.8918150806427,
+    "median": 44.59452247619629,
+    "std_ddof0": 5.982681799598243,
+    "min": 24.236860275268555,
+    "max": 59.79826354980469,
+    "quantiles": {
+      "0": 24.236860275268555,
+      "1": 32.214330520629886,
+      "5": 35.667528533935545,
+      "25": 40.59067249298096,
+      "50": 44.59452247619629,
+      "75": 48.93195343017578,
+      "95": 54.904754829406734,
+      "99": 58.18450275421142,
+      "100": 59.79826354980469
+    },
+    "all_path_peak": 11699.416015625,
+    "first30_peak": 2972.41162109375,
+    "terminal_growth_absolute_error": 0.5815363831470899
+  },
+  "correction_axis_probe": {
+    "raw": [
+      [
+        [
+          0.20000000298023224
+        ],
+        [
+          0.20000000298023224
+        ]
+      ],
+      [
+        [
+          -0.20000000298023224
+        ],
+        [
+          -0.20000000298023224
+        ]
+      ]
+    ],
+    "corrected": [
+      [
+        [
+          0.00011908298620255664
+        ],
+        [
+          0.00011908298620255664
+        ]
+      ],
+      [
+        [
+          0.00011908298620255664
+        ],
+        [
+          0.00011908298620255664
+        ]
+      ]
+    ],
+    "explanation": "Each path is divided by its own time mean, erasing persistent path drift."
+  },
+  "stress": {
+    "Standard Market": {
+      "corrected_martingale_error": 0.0002719427192296231,
+      "max_error": 0.0008165724303126343,
+      "raw_martingale_error": 0.00033308596531257396,
+      "terminal_mean": 100.2268820837862
+    },
+    "COVID-19 Crash (OOD)": {
+      "corrected_martingale_error": 0.0008890013372771547,
+      "max_error": 0.0023990448888561167,
+      "raw_martingale_error": 0.0013446084392706669,
+      "terminal_mean": 98.63603647834628
+    },
+    "3x Leveraged ETF (TQQQ)": {
+      "corrected_martingale_error": 0.0014492753404500402,
+      "max_error": 0.004662630595298145,
+      "raw_martingale_error": 0.0017195939896975172,
+      "terminal_mean": 97.91830869132181
+    }
+  },
+  "market_csv": {
+    "rows": 2608,
+    "start": "2015-01-02",
+    "end": "2024-12-31",
+    "columns": [
+      "Date",
+      "SPY",
+      "QQQ",
+      "VIX"
+    ],
+    "date_match": true,
+    "max_absolute_difference": {
+      "SPY": 9.094947017729282e-13,
+      "QQQ": 1.3642420526593924e-12,
+      "VIX": 1.4210854715202004e-14
+    },
+    "synthetic_formula_matches": true
+  },
+  "unhedged_std": 4.196557801943061,
+  "hedging_reduction": {
+    "0bps": {
+      "std_reduction_vs_fdm_pct": 9.955797477043127,
+      "variance_reduction_vs_fdm_pct": 18.920415920047272,
+      "std_reduction_vs_unhedged_pct": 43.412274643644935,
+      "variance_reduction_vs_unhedged_pct": 67.9782933899373
+    },
+    "10bps": {
+      "std_reduction_vs_fdm_pct": 12.264763965979286,
+      "variance_reduction_vs_fdm_pct": 23.02528358054673,
+      "std_reduction_vs_unhedged_pct": 42.5399058105907,
+      "variance_reduction_vs_unhedged_pct": 66.98337575744212
+    },
+    "20bps": {
+      "std_reduction_vs_fdm_pct": 14.53835834806675,
+      "variance_reduction_vs_fdm_pct": 26.963078061565483,
+      "std_reduction_vs_unhedged_pct": 41.63280270917868,
+      "variance_reduction_vs_unhedged_pct": 65.93270280414339
+    }
+  },
+  "pinn_dead_relu_probe": {
+    "prediction": [
+      [
+        0.0
+      ],
+      [
+        0.0
+      ]
+    ],
+    "mse": 250.0,
+    "max_parameter_gradient": 0.0,
+    "global_minimum": false,
+    "interpretation": "positive loss with zero gradient: stationary dead-output trap, not objective minimum"
+  },
+  "zero_surface_pde_loss": 0.0,
+  "solver_crosscheck": {
+    "max_absolute_difference": 8.445823617345157,
+    "rows": [
+      {
+        "S": 80,
+        "K": 100,
+        "T": 0.01,
+        "original_price": 8.445546966850884,
+        "independent_probability_price": -4.068017157729013e-05,
+        "difference": 8.445587647022462,
+        "original_gamma": -0.008185747076197458
+      },
+      {
+        "S": 80,
+        "K": 100,
+        "T": 0.1,
+        "original_price": 8.445827114919581,
+        "independent_probability_price": 3.4975744232063587e-06,
+        "difference": 8.445823617345157,
+        "original_gamma": -0.008378255900879594
+      },
+      {
+        "S": 80,
+        "K": 100,
+        "T": 0.5,
+        "original_price": 8.549564940058772,
+        "independent_probability_price": 0.11598507382254208,
+        "difference": 8.43357986623623,
+        "original_gamma": 0.002811601150142451
+      },
+      {
+        "S": 80,
+        "K": 100,
+        "T": 1.0,
+        "original_price": 9.207716709405204,
+        "independent_probability_price": 0.8518211184435245,
+        "difference": 8.35589559096168,
+        "original_gamma": 0.01366682088678317
+      },
+      {
+        "S": 80,
+        "K": 100,
+        "T": 2.0,
+        "original_price": 11.399186401063787,
+        "independent_probability_price": 3.301958711706856,
+        "difference": 8.09722768935693,
+        "original_gamma": 0.013875875093901868
+      },
+      {
+        "S": 90,
+        "K": 100,
+        "T": 0.01,
+        "original_price": 4.619655599125011,
+        "independent_probability_price": -6.394235353331438e-05,
+        "difference": 4.619719541478544,
+        "original_gamma": -0.010104935771153123
+      },
+      {
+        "S": 90,
+        "K": 100,
+        "T": 0.1,
+        "original_price": 4.676553618876596,
+        "independent_probability_price": 0.061191606650881525,
+        "difference": 4.615362012225715,
+        "original_gamma": 0.01072868426012974
+      },
+      {
+        "S": 90,
+        "K": 100,
+        "T": 0.5,
+        "original_price": 6.12915495091076,
+        "independent_probability_price": 1.5923667784802298,
+        "difference": 4.53678817243053,
+        "original_gamma": 0.02847291699623611
+      },
+      {
+        "S": 90,
+        "K": 100,
+        "T": 1.0,
+        "original_price": 8.194367821213959,
+        "independent_probability_price": 3.7692922817528327,
+        "difference": 4.425075539461126,
+        "original_gamma": 0.021639949583459384
+      },
+      {
+        "S": 90,
+        "K": 100,
+        "T": 2.0,
+        "original_price": 11.94300572446241,
+        "independent_probability_price": 7.720703570985215,
+        "difference": 4.2223021534771945,
+        "original_gamma": 0.014273833068557451
+      },
+      {
+        "S": 100,
+        "K": 100,
+        "T": 0.01,
+        "original_price": 0.8189267358814618,
+        "independent_probability_price": 0.8122964887805466,
+        "difference": 0.006630247100915199,
+        "original_gamma": 0.18743324502753467
+      },
+      {
+        "S": 100,
+        "K": 100,
+        "T": 0.1,
+        "original_price": 2.6561633822957162,
+        "independent_probability_price": 2.6561637405557903,
+        "difference": -3.582600740514863e-07,
+        "original_gamma": 0.060578073707461044
+      },
+      {
+        "S": 100,
+        "K": 100,
+        "T": 0.5,
+        "original_price": 6.264680929246225,
+        "independent_probability_price": 6.2646809226682905,
+        "difference": 6.577934641427419e-09,
+        "original_gamma": 0.025827888240257835
+      },
+      {
+        "S": 100,
+        "K": 100,
+        "T": 1.0,
+        "original_price": 9.242521073958258,
+        "independent_probability_price": 9.242521061493818,
+        "difference": 1.2464440146686684e-08,
+        "original_gamma": 0.017626281130333155
+      },
+      {
+        "S": 100,
+        "K": 100,
+        "T": 2.0,
+        "original_price": 13.890648179695745,
+        "independent_probability_price": 13.890648154800395,
+        "difference": 2.489534978167285e-08,
+        "original_gamma": 0.01173017024842693
+      },
+      {
+        "S": 110,
+        "K": 100,
+        "T": 0.01,
+        "original_price": 10.02999550044997,
+        "independent_probability_price": 10.030019380698505,
+        "difference": -2.3880248534169368e-05,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 110,
+        "K": 100,
+        "T": 0.1,
+        "original_price": 10.299550449662703,
+        "independent_probability_price": 10.565604696259683,
+        "difference": -0.26605424659697974,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 110,
+        "K": 100,
+        "T": 0.5,
+        "original_price": 11.488806039693742,
+        "independent_probability_price": 13.63271037749449,
+        "difference": -2.1439043378007483,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 110,
+        "K": 100,
+        "T": 1.0,
+        "original_price": 12.95544664514918,
+        "independent_probability_price": 16.601187457030335,
+        "difference": -3.6457408118811543,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 110,
+        "K": 100,
+        "T": 2.0,
+        "original_price": 17.009378903236353,
+        "independent_probability_price": 21.336921600738876,
+        "difference": -4.327542697502523,
+        "original_gamma": 0.008863074889916334
+      },
+      {
+        "S": 120,
+        "K": 100,
+        "T": 0.01,
+        "original_price": 20.02999550044997,
+        "independent_probability_price": 20.029910853104084,
+        "difference": 8.464734588642386e-05,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 120,
+        "K": 100,
+        "T": 0.1,
+        "original_price": 20.299550449662703,
+        "independent_probability_price": 20.3193462011656,
+        "difference": -0.019795751502897474,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 120,
+        "K": 100,
+        "T": 0.5,
+        "original_price": 21.488806039693742,
+        "independent_probability_price": 22.445968559683905,
+        "difference": -0.9571625199901632,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 120,
+        "K": 100,
+        "T": 1.0,
+        "original_price": 22.95544664514918,
+        "independent_probability_price": 25.099589343740632,
+        "difference": -2.144142698591452,
+        "original_gamma": 0.0
+      },
+      {
+        "S": 120,
+        "K": 100,
+        "T": 2.0,
+        "original_price": 25.823546641575135,
+        "independent_probability_price": 29.643317999507588,
+        "difference": -3.819771357932453,
+        "original_gamma": 0.0
+      }
+    ],
+    "identity": "S*P1-K*exp(-r*T)*P2; same characteristic function, independent inversion, not fully independent solver"
+  },
+  "feller": {
+    "violations": 93,
+    "count": 500,
+    "fixed_hedging_margin": 0.07,
+    "meaning": "Feller failure permits accessible zero variance; not itself invalid Heston parameters."
+  }
+}

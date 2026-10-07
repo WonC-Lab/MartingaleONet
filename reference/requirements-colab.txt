@@ -1,0 +1,6 @@
+# Proposed user-run environment, not yet validated by the local artifacts.
+numpy==2.3.5
+scipy==1.16.3
+matplotlib==3.10.6
+pytest==8.4.2
+QuantLib==1.41

@@ -1,0 +1,57 @@
+{
+  "status": "EXECUTED",
+  "result": {
+    "values": {
+      "price": 4.8184636974088565e-08
+    },
+    "engine": "analytic",
+    "version": "1.41",
+    "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad",
+    "alignment": {
+      "target_tau": 1,
+      "calendar_tau": 1.0,
+      "days": 365,
+      "exact_time_change_scale": 1.0,
+      "mode": "direct",
+      "Vv_chain_rule_factor": 1.0
+    },
+    "evaluation_date": "2026-10-07",
+    "exercise_date": "2027-10-07",
+    "day_count": "Actual/365 (Fixed)",
+    "calendar": "Null",
+    "time_convention": "years; exact process time change when calendar fraction differs",
+    "q": 0.0,
+    "original_input": {
+      "S": 0.4965853037914095,
+      "K": 1,
+      "x": -0.7,
+      "v": 0.04,
+      "tau": 1,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "deep_OTM"
+    },
+    "mapped_input": {
+      "S": 0.4965853037914095,
+      "K": 1,
+      "x": -0.7,
+      "v": 0.04,
+      "tau": 1.0,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "deep_OTM"
+    },
+    "integration_order": 128,
+    "grids": [
+      200,
+      200,
+      100
+    ]
+  }
+}

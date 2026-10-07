@@ -1,0 +1,246 @@
+{
+  "git_head": "c07f9102fb8ebed466227dafe6683b67b4a64285",
+  "scope": "Every non-.git working-tree input file; Git tree/history checked separately; audit outputs excluded",
+  "tracked_count": 28,
+  "files": [
+    {
+      "path": ".gitignore",
+      "type": "configuration",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 117,
+      "sha256": "e47080c370255685e027dd2b2c7d2a980e753371799579b7f836c6c1dddb1686"
+    },
+    {
+      "path": "README.md",
+      "type": "documentation",
+      "classification": "UNKNOWN",
+      "flags": [],
+      "bytes": 4928,
+      "sha256": "dd9533caff8f561d1d24592c85a7447ca16ba74439332cff238a34f295171c74"
+    },
+    {
+      "path": "ablation_results.json",
+      "type": "result_json",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 515,
+      "sha256": "59091935e4cac5ec9e78d2d0f395ab011c0aa9b57b123b67e91f040e7d7b3074"
+    },
+    {
+      "path": "fig1_deeponet_pricing_error.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 374802,
+      "sha256": "22e65d34ece7060f55d10cad05578c450bfb544110b52cf40d5a50669d25e580"
+    },
+    {
+      "path": "fig2_autograd_greeks_surface.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 1455781,
+      "sha256": "20352170766b4db1d9f4d7e2bdd6f4f70d3fe81ba476ee42f40ff7734083d1ae"
+    },
+    {
+      "path": "fig3_timegan_synthetic_paths.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 365506,
+      "sha256": "f450e4c9685088cd6b9767b059077eacc2361f94bb78c587b34b42e5e0751c96"
+    },
+    {
+      "path": "fig4_us_volatility_surface.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 718418,
+      "sha256": "c68ee304ac0ee4ac6850d9a45697f7766e3da43b577a4be2b29a4eae88889005"
+    },
+    {
+      "path": "fig5_deep_hedging_transaction_costs.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 158443,
+      "sha256": "27c80ba2a3e21aecc6dd154a452e0dedecf125468219027198a101126f5d8558"
+    },
+    {
+      "path": "fig6_multi_asset_basket_correlation.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 425925,
+      "sha256": "f40fdabc28adedab992c666bf6d08be5c9ed47b2145f1af303379a74fd4d1a2e"
+    },
+    {
+      "path": "fig7_stress_test_leverage_ood.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 2435210,
+      "sha256": "cce2b112c995a343fb0f4c527fc992e64a2d633bb1ec46e734b37c45215f685b"
+    },
+    {
+      "path": "fig8_ablation_study_baselines.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 179664,
+      "sha256": "4d106d527bf81cf145f4044526f5afc7b7c529b56fc514cbc91176382e25fe96"
+    },
+    {
+      "path": "fig9_training_loss_convergence.png",
+      "type": "figure",
+      "classification": "DERIVED",
+      "flags": [
+        "MANUALLY_EDITED: explicitly synthetic curve construction"
+      ],
+      "bytes": 224257,
+      "sha256": "b0e76902d0968a7c03de6a420e1a466d437bac57f41aaaaa25baf41d136c7bd9"
+    },
+    {
+      "path": "hedging_results.json",
+      "type": "result_json",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 1114,
+      "sha256": "5e0d664c91761e279a85bd0d42962b98a6cec2aedb31f4f25173a644c9177110"
+    },
+    {
+      "path": "multi_asset_results.json",
+      "type": "result_json",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 88,
+      "sha256": "f3c51d3d5acba60e7bb2a3604fe50415813990f411142532ff582db92d4eb029"
+    },
+    {
+      "path": "paper1_experiments_summary.json",
+      "type": "result_json",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 310,
+      "sha256": "71016c6f6a12c2c66924d5e68840f539b63bb8763c8809cf8fb0524f87079a71"
+    },
+    {
+      "path": "src/ablation_study.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 8119,
+      "sha256": "45070dc9c303cb62e73c7708483688d2f6e453d5c17a81541586469048fb950a"
+    },
+    {
+      "path": "src/deeponet_model.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 6113,
+      "sha256": "0a51063e337e3616b6a66ef6b8cfbdd834e315fed11c473e9fea30c29880b662"
+    },
+    {
+      "path": "src/hedging_engine.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 10191,
+      "sha256": "4ffdecb272c31186dc01b47bd376d1fa6993b50cf1bef90fd46bde1fa5d04605"
+    },
+    {
+      "path": "src/heston_solver.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 3003,
+      "sha256": "40071760e73d3522070695e5e9049ba4bc5ad3a9d754084799e1c5ec9568a09a"
+    },
+    {
+      "path": "src/multi_asset_extension.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 6556,
+      "sha256": "4f094a49afdba33fe8f190253ae8bd8232953ba8fdf4cce83732780d81268dbf"
+    },
+    {
+      "path": "src/plot_training_loss.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [
+        "MANUALLY_EDITED: explicitly synthetic curve construction"
+      ],
+      "bytes": 1575,
+      "sha256": "8376f7f0504156946f1833aa0a8affaa96a00c4eb730a376182637ce49647a67"
+    },
+    {
+      "path": "src/run_paper1_experiments.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 12688,
+      "sha256": "50608fa8fc3fe199abaf0251a469e6c06cdf163f41eca428871037d2a62addec"
+    },
+    {
+      "path": "src/stress_test_leverage.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 4637,
+      "sha256": "0c6e9ee5c4c129f2224869a2952fe7f0c9e3e7a86f79c115ff8ed49a7200e8f2"
+    },
+    {
+      "path": "src/timegan_model.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 3933,
+      "sha256": "d5d52b8bb3aa34544e06695003921206dc83919f674e63108392690cdf535b1c"
+    },
+    {
+      "path": "src/us_market_data.py",
+      "type": "source",
+      "classification": "PRIMARY",
+      "flags": [],
+      "bytes": 2211,
+      "sha256": "ba639d2f9e774ddfee4ade5f5e3915f511dd684d7563569213b1f8d0ab9d217f"
+    },
+    {
+      "path": "src/us_market_spy_qqq_vix_2015_2025.csv",
+      "type": "dataset",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 175319,
+      "sha256": "6a1b26d8eabc3ad9acfa45f4b4029fe539fbe0db10f910e622265ad1ca4fee50"
+    },
+    {
+      "path": "stress_test_results.json",
+      "type": "result_json",
+      "classification": "DERIVED",
+      "flags": [],
+      "bytes": 553,
+      "sha256": "89f02ec005a55209779d72d38ade4068a48d726e39ce51f59c66067a01d8366c"
+    },
+    {
+      "path": "test_fig5.png",
+      "type": "figure",
+      "classification": "ORPHANED",
+      "flags": [],
+      "bytes": 17211,
+      "sha256": "482354ce6f5ea13225530a76b7d49093760c7518b2ab403c2fbd00fd4d5e63fe"
+    }
+  ],
+  "absent": [
+    "checkpoints",
+    "NPY/NPZ inputs",
+    "notebooks",
+    "config files",
+    "raw predictions",
+    "training logs",
+    "manuscript/tables",
+    "tests"
+  ],
+  "duplicates_by_sha256": {}
+}

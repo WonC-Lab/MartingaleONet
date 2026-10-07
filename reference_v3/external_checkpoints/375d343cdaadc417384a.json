@@ -1,0 +1,59 @@
+{
+  "status": "EXECUTED",
+  "result": {
+    "values": {
+      "price": 0.0025860685037487592,
+      "Delta": 0.5219098304688501,
+      "Gamma": 62.90320091138655
+    },
+    "engine": "PDE",
+    "version": "1.41",
+    "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad",
+    "alignment": {
+      "target_tau": 0.003968253968253968,
+      "calendar_tau": 0.0027397260273972603,
+      "days": 1,
+      "exact_time_change_scale": 1.4484126984126984,
+      "mode": "exact_process_time_change",
+      "Vv_chain_rule_factor": 1.4484126984126984
+    },
+    "evaluation_date": "2026-10-07",
+    "exercise_date": "2026-10-08",
+    "day_count": "Actual/365 (Fixed)",
+    "calendar": "Null",
+    "time_convention": "years; exact process time change when calendar fraction differs",
+    "q": 0.0,
+    "original_input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.01,
+      "tau": 0.003968253968253968,
+      "kappa": 2.0,
+      "theta": 0.04,
+      "sigma": 0.3,
+      "rho": -0.7,
+      "r": 0.03,
+      "label": "short_core"
+    },
+    "mapped_input": {
+      "S": 1.0,
+      "K": 1,
+      "x": 0,
+      "v": 0.014484126984126985,
+      "tau": 0.0027397260273972603,
+      "kappa": 2.8968253968253967,
+      "theta": 0.05793650793650794,
+      "sigma": 0.4345238095238095,
+      "rho": -0.7,
+      "r": 0.04345238095238095,
+      "label": "short_core"
+    },
+    "integration_order": 192,
+    "grids": [
+      400,
+      200,
+      150
+    ]
+  }
+}

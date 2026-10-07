@@ -1,0 +1,1441 @@
+{
+  "rows": [
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 4.056991895518003e-05,
+        "Delta": 0.5202214054923983,
+        "Gamma": 633.9588480266962,
+        "Vv": 0.5983324684955522,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.706422608270781e-11,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5202214054923983,
+          "P2": 0.520196441232594,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 6.105242267251398e-05,
+        "Delta": 0.5430123470131762,
+        "Gamma": 1173.8320388896477,
+        "Vv": 0.9730021115061427,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 4096,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 8.755768418067859e-11,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5430123470131762,
+          "P2": 0.542967583373672,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 8.453319546719573e-05,
+        "Delta": 0.5886735945060326,
+        "Gamma": 1828.9591382884958,
+        "Vv": 1.1645674952056813,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.3887167757609773e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5886735945060326,
+          "P2": 0.5886067192472725,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 9.495286807847947e-05,
+        "Delta": 0.6289469878562388,
+        "Gamma": 1986.166805996785,
+        "Vv": 0.9586530894234783,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 16384,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.65340006136996e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6289469878562388,
+          "P2": 0.6288709008321962,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 9.419981851022108e-05,
+        "Delta": 0.6299083191308168,
+        "Gamma": 1889.7341194254182,
+        "Vv": 0.9418813987508936,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9138879959558414e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6299083191308168,
+          "P2": 0.6298330140193051,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 9.422677637838106e-05,
+        "Delta": 0.629933664963903,
+        "Gamma": 1893.625130298598,
+        "Vv": 0.941309102130817,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 65536,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.145924071361427e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.629933664963903,
+          "P2": 0.6298583336541008,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967132,
+        "Gamma": 1893.628700625126,
+        "Vv": 0.9413028798071005,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 4096,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.005020529403888262,
+            0.005080489430541601
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922420073e-05,
+          "direct_call": 9.422680921633679e-05,
+          "parity_direct_gap": 1.2322323608530972e-14,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967132,
+        "Gamma": 1893.628700625126,
+        "Vv": 0.9413028798071005,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 8192,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.005020529403888262,
+            0.005080489430541601
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922420073e-05,
+          "direct_call": 9.422680921633679e-05,
+          "parity_direct_gap": 1.2322323608530972e-14,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967132,
+        "Gamma": 1893.628700625126,
+        "Vv": 0.9413028798071005,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.005020529403888262,
+            0.005080489430541601
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922420073e-05,
+          "direct_call": 9.422680921633679e-05,
+          "parity_direct_gap": 1.2322323608530972e-14,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967132,
+        "Gamma": 1893.628700625126,
+        "Vv": 0.9413028798071005,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 32768,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.005020529403888262,
+            0.005080489430541601
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922420073e-05,
+          "direct_call": 9.422680921633679e-05,
+          "parity_direct_gap": 1.2322323608530972e-14,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967132,
+        "Gamma": 1893.628700625126,
+        "Vv": 0.9413028798071005,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 65536,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.005020529403888262,
+            0.005080489430541601
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922420073e-05,
+          "direct_call": 9.422680921633679e-05,
+          "parity_direct_gap": 1.2322323608530972e-14,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 4096,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 8192,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 32768,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "escalation_R0"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 65536,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 2.0422989120527646e-05,
+        "Delta": 0.5206757754998679,
+        "Gamma": 648.0980292913735,
+        "Vv": 0.38081455886960974,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 2048,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 4.8051459678860395e-11,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5206757754998679,
+          "P2": 0.5206709724056199,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 2.299563404328797e-05,
+        "Delta": 0.5441226661975672,
+        "Gamma": 1282.388944150686,
+        "Vv": 0.46121532239927693,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 4096,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.513779242125771e-11,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5441226661975672,
+          "P2": 0.5441159937984882,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 2.6281751620893523e-05,
+        "Delta": 0.5944754077623539,
+        "Gamma": 2496.8039155340784,
+        "Vv": 0.5579392640435032,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8551932337222362e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5944754077623539,
+          "P2": 0.594466959752018,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 3.152151419361093e-05,
+        "Delta": 0.6955064565536078,
+        "Gamma": 4600.107379675117,
+        "Vv": 0.7228285932103096,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 16384,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 3.4349621398774093e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6955064565536078,
+          "P2": 0.6954957996004322,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 3.97276983292727e-05,
+        "Delta": 0.8669155088759471,
+        "Gamma": 6702.82220184762,
+        "Vv": 0.9226031948159951,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.122993023748709e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.8669155088759471,
+          "P2": 0.8669017878411512,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "A",
+      "estimate": {
+        "price": 4.626133119689513e-05,
+        "Delta": 1.0121862520868996,
+        "Gamma": 1686.923737478414,
+        "Vv": 0.7930268575467807,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 65536,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 9.524836263664547e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 252,
+          "P1": 1.0121862520868996,
+          "P2": 1.012170355410893,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290969904408026e-05,
+        "Delta": 0.9423628800525803,
+        "Gamma": 579.2513373605565,
+        "Vv": 0.7331514595695565,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 4096,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.00629005589681461,
+            0.006350045898481068
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910149039502819e-05,
+          "direct_call": 4.2909783070724616e-05,
+          "parity_direct_gap": 8.402664435286974e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290965217068621e-05,
+        "Delta": 0.9417550878864398,
+        "Gamma": 666.3702971489773,
+        "Vv": 0.732657599599967,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 8192,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.00629005589681461,
+            0.006350045898481068
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910102166112567e-05,
+          "direct_call": 4.29097241920842e-05,
+          "parity_direct_gap": 7.202139799394056e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.2909656061351775e-05,
+        "Delta": 0.9417804323671489,
+        "Gamma": 649.3617393633384,
+        "Vv": 0.7326775497084143,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.00629005589681461,
+            0.006350045898481068
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910106056765934e-05,
+          "direct_call": 4.290972833952011e-05,
+          "parity_direct_gap": 7.227816833406528e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290965608022557e-05,
+        "Delta": 0.9417805166696182,
+        "Gamma": 649.0421750408822,
+        "Vv": 0.7326776100851379,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 32768,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.00629005589681461,
+            0.006350045898481068
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910106075816174e-05,
+          "direct_call": 4.29097283579727e-05,
+          "parity_direct_gap": 7.227774713507379e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290965608022557e-05,
+        "Delta": 0.9417805166694442,
+        "Gamma": 649.0421435084904,
+        "Vv": 0.7326776100845392,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 65536,
+            "L": 16,
+            "interval": null
+          },
+          "interval": [
+            -0.00629005589681461,
+            0.006350045898481068
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.291010607581665e-05,
+          "direct_call": 4.290972835797318e-05,
+          "parity_direct_gap": 7.22777476161885e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.2917404975306717e-05,
+        "Delta": 0.9419034200672507,
+        "Gamma": -1365.6793787241706,
+        "Vv": 0.7323608674203795,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 4096,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2917854970896885e-05,
+          "direct_call": 4.291732766116727e-05,
+          "parity_direct_gap": 7.731413944521643e-11,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.29097736250883e-05,
+        "Delta": 0.9423655199690485,
+        "Gamma": 576.8664984063736,
+        "Vv": 0.7331982933506999,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 8192,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.291022362050354e-05,
+          "direct_call": 4.290977952170211e-05,
+          "parity_direct_gap": 5.896613811107437e-12,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.2909724337403254e-05,
+        "Delta": 0.941754886355574,
+        "Gamma": 666.8429743602923,
+        "Vv": 0.7327023918217647,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910174333008943e-05,
+          "direct_call": 4.290972421081725e-05,
+          "parity_direct_gap": 1.2658600431975434e-13,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290972834219975e-05,
+        "Delta": 0.9417803033799611,
+        "Gamma": 649.3613906957728,
+        "Vv": 0.7327223744828112,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 32768,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910178337674188e-05,
+          "direct_call": 4.290972834335099e-05,
+          "parity_direct_gap": 1.1512397480629988e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "escalation_R4"
+      },
+      "route": "B",
+      "estimate": {
+        "price": 4.290972836107354e-05,
+        "Delta": 0.9417803862750751,
+        "Gamma": 649.0424117771665,
+        "Vv": 0.7327224337153633,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 65536,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910178356689144e-05,
+          "direct_call": 4.290972836206637e-05,
+          "parity_direct_gap": 9.928310343992885e-16,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      }
+    }
+  ],
+  "gate_impact": "diagnostic only; original failed rows retained; no certification upgrade"
+}

@@ -1,0 +1,7 @@
+{
+  "scalar_resume_test": "passed",
+  "exact_prediction_match": true,
+  "completed_run_skip": "passed",
+  "full_experiments_executed": false,
+  "test_scope": "20 scalar Adam steps; interrupted at13, restored iteration10"
+}

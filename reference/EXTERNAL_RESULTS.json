@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "input": {
+        "S": 0.7408182206817179,
+        "K": 1,
+        "x": -0.3,
+        "v": 0.01,
+        "tau": 0.0821917808219178,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "external_0"
+      },
+      "status": "INDETERMINATE",
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    }
+  ],
+  "gate_impact": "No automatic gate upgrade; PDE error-band review required"
+}

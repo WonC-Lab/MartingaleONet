@@ -1,0 +1,8 @@
+constraint,status,sample_count,violation_frequency,mean_violation_magnitude,worst_violation,worst_region,notes
+dV/dS>=0,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+d2V/dS2>=0,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+dV/dK<=0,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+d2V/dK2>=0,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+Delta<=1,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+"V>=max(S-K*exp(-r*T),0)",NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
+V<=S,NEEDS_COLAB_HEAVY_RUN,0,,,,,No historical learned checkpoint; untrained model is not a substitute.
