@@ -16,6 +16,8 @@ Use `colab/phase1b3_reference_completion.ipynb`. The existing `colab/phase1b2_re
 
 Before launching from GitHub, publish the new workflow, immutable CORE archive/manifest, necessary `reference`, `reference_v2`, `audit`, `design` historical inputs, and this version's historical snapshot. The notebook verifies these instead of silently replacing missing artifacts. This workspace preparation does not claim a GitHub push or remote Colab execution.
 
+Completed local MP/external/boundary evidence is also transported in `immutable/LOCAL_EVIDENCE_MANIFEST_0001.zip`, with its original manifest and `LOCAL_EVIDENCE_MANIFEST_0001_BUNDLE.json` SHA256 metadata. Publish all three together with the updated `reuse.py`. The importer prefers this verified bundle, so a fresh clone does not require hundreds of loose checkpoint files. It verifies all entries before copying, refuses changed existing checkpoints, and preserves resumed boundary output. Missing evidence never triggers a CORE sweep. After updating the Colab clone to the published fix, rerun the failed reuse cell; the existing CORE receipt/output is retained.
+
 The setup cell clones `https://github.com/WonC-Lab/MartingaleONet.git` with the chosen ref (default current branch `main`), installs `requirements-colab.txt`, records environment and commit, creates `reference_v3_colab/`, and optionally stores it on Drive for runtime-reset resume. The Colab runtime performs the deliberate external environment subset, not another complete CORE sweep.
 
 Exact remaining commands, with OUT set to the versioned output directory:

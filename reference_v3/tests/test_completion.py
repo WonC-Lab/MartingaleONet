@@ -61,3 +61,34 @@ def test_finite_dirichlet_trace_does_not_certify_unused_greeks(monkeypatch):
     assert evidence['status']=='NUMERICALLY_RESOLVED'
     assert evidence['required_fields']==['price'] and evidence['MP_FD']['rows']==[]
     assert all(evidence['component_status'][f]=='UNRESOLVED' for f in ['Delta','Gamma','Vv'])
+
+def test_evidence_bundle_resumes_without_loose_files_and_rejects_corruption(tmp_path,monkeypatch):
+    import json
+    from reference_v3 import reuse
+    clone=tmp_path/'clone';folder=clone/'reference_v3/immutable';folder.mkdir(parents=True)
+    name='reference_v3/mp_cases/revision/point.json';source=clone/name
+    source.parent.mkdir(parents=True);source.write_bytes(b'{"status":"NUMERICALLY_RESOLVED"}\n')
+    manifest=folder/'LOCAL_EVIDENCE_MANIFEST.json'
+    manifest.write_text(json.dumps({'files':{name:reuse.sha(source.read_bytes())}}))
+    monkeypatch.setattr(reuse,'ROOT',clone)
+    reuse.pack_evidence_bundle();source.unlink()
+    output=tmp_path/'output';output.mkdir()
+    reuse.import_evidence(output)
+    target=output/'mp_cases/revision/point.json'
+    assert target.read_bytes()==b'{"status":"NUMERICALLY_RESOLVED"}\n'
+    reuse.import_evidence(output)
+    target.write_bytes(b'changed')
+    with pytest.raises(RuntimeError,match='checkpoint differs'):reuse.import_evidence(output)
+    manifest.with_suffix('.zip').write_bytes(b'corrupted')
+    empty=tmp_path/'empty';empty.mkdir()
+    with pytest.raises(RuntimeError,match='bundle SHA'):reuse.import_evidence(empty)
+    assert list(empty.iterdir())==[]
+
+def test_missing_evidence_has_actionable_error_without_repricing(tmp_path,monkeypatch):
+    import json
+    from reference_v3 import reuse
+    folder=tmp_path/'reference_v3/immutable';folder.mkdir(parents=True)
+    (folder/'LOCAL_EVIDENCE_MANIFEST.json').write_text(json.dumps({'files':{'reference_v3/mp_cases/missing.json':'0'*64}}))
+    monkeypatch.setattr(reuse,'ROOT',tmp_path)
+    with pytest.raises(RuntimeError,match='CORE remains reused; no full sweep'):
+        reuse.import_evidence(tmp_path/'output')
