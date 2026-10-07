@@ -13,7 +13,7 @@ def plan():
 
 def run(output='reference_v3',workers=10,plan_only=False):
     root=Path(output);cases=plan()
-    dump(root/'BOUNDARY_REQUIRED_PLAN.json',dict(planned=len(cases),selection='original deterministic finite x=+/-1.2, v_max=.25 traces and v=0 compatibility inputs; positive-tau CORE parameter support; not a random or outcome-selected subset',inputs=[c.row() for c in cases],v0_note='v=0 requires limiting PDE consistency; a price/Greek row alone cannot certify it'))
+    dump(root/'BOUNDARY_REQUIRED_PLAN.json',dict(planned=len(cases),selection='original deterministic finite x=+/-1.2, v_max=.25 traces and v=0 compatibility inputs; positive-tau CORE parameter support; not a random or outcome-selected subset',inputs=[c.row() for c in cases],required_labels=dict(finite_positive_variance_Dirichlet_traces=['price'],v0_limiting_PDE=['price','Delta','Vv']),v0_note='v=0 requires limiting PDE consistency; a price/Greek row alone cannot certify it; Gamma is not a boundary training label in the original objective'))
     if plan_only:return
     path=root/'boundary_required.jsonl';rows=[json.loads(z) for z in path.read_text().splitlines()] if path.exists() else [];known={key(r) for r in rows}
     with ProcessPoolExecutor(max_workers=workers) as pool:

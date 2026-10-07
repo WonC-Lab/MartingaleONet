@@ -1,6 +1,6 @@
 {
   "planned": 1557,
-  "selection": "every strict CORE failure and >=10% budget near-failure; historical CORE failures included",
+  "selection": "every strict failure and >=10% budget near-failure in the selected predeclared set",
   "inputs": [
     {
       "x": -0.7,
@@ -17131,7 +17131,7 @@
     }
   ],
   "source_sha256": {
-    "reference_v3\\mp.py": "81faa660a426e5a38df60f358a34ab357cde94c1d3ce06a3760034f92c60b621",
+    "reference_v3\\mp.py": "5957ff6f238c6d4155b0a0119f56f39039fb7497c9fa8a44a356ce08a11202b3",
     "reference_v2\\high_precision.py": "baf96a9524a45896d55795e8a02100f4e0fb79787a3c87d585c6e1986cc2be95",
     "reference\\route_a.py": "dd7dc9e368165e3e7062165e3f7a530c24c13649a8db5d06956f8cb01fe05922",
     "reference\\route_b.py": "dcd2327e22d784cea60523c25b62585e6c8e49f4f818aa817743e523b7ebac6c"

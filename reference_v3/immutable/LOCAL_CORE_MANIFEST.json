@@ -1,0 +1,19 @@
+{
+  "planned": 1734,
+  "evaluated": 1734,
+  "source": "reference_v3/coverage_core.jsonl",
+  "uncompressed_sha256": "3ba4ff1aea78c6d53b026c8287ba8c006e8bfd8148423848d957a0704e868220",
+  "archive_sha256": "ef68cc7bb10740b411b3093e01c72824a287d3fd51bd8e621f6ff00f61b7bdbc",
+  "source_canonical_sha256": {
+    "reference/route_a.py": "dd7dc9e368165e3e7062165e3f7a530c24c13649a8db5d06956f8cb01fe05922",
+    "reference/route_b.py": "dcd2327e22d784cea60523c25b62585e6c8e49f4f818aa817743e523b7ebac6c",
+    "reference/certify.py": "81f1b6cf7a224311374d9dbc4b9f78dea6d2ae4de91646200f770f26be4b1181",
+    "reference/types.py": "92cf766d772980deb21dedbbdf79a22a406fb53f92dfe9f27a364cefee26ada7",
+    "reference/derivatives.py": "1102675504f4c79858d7dfba0651ef25d67e8176f4b77f6f24fae041facd21c3",
+    "reference/certification_grid.py": "82a135126a763d9725b4f16037ee8645b7a1808ac2e22ec829c6ae6f337331fa",
+    "reference_v2/domains.py": "e060356aebaa1f7d471ad95a6eaaf5602c49b942240423a7f82d3e7855c38dcb"
+  },
+  "original_strict_PASS": 187,
+  "original_strict_FAIL": 1547,
+  "reuse_policy": "Verify bytes, catalog and engine content; import without assessing or repricing any CORE input. Missing/mismatched baseline aborts, never triggers a full sweep."
+}

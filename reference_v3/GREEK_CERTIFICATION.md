@@ -1,0 +1,4 @@
+# Greek certification
+**Domain-wide certification incomplete.** All 1734 CORE points have the original Delta/Gamma/Vv and physical-FD study. Flagged counts: {'A_domain': 51, 'solver_error': 1531, 'FD_uncertainty_budget_unresolved': 240, 'FD_derivative_amplification_or_truncation': 15, 'strike_FD_derivative_unresolved': 4, 'B_N': 25}. FD, strike, quadrature and COS failures cannot be cleared without matched evidence. MP derivative stencils include 3/5-point and Richardson Gamma, ten physical spot steps, central or right-sided variance steps, and explicit price-uncertainty propagation. Strike failures additionally require actual MP strike differences.
+
+Retained failed-row resolution 173; remaining unresolved 1374. See FAILURE_RESOLUTION_TABLE.csv for every original flag, final diagnosis/status and evidence pointer. No domain Greek certificate follows from 1734 studies or the inherited selected Gamma resolutions alone.
