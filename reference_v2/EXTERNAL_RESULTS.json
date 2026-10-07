@@ -1,0 +1,617 @@
+{
+  "installed": false,
+  "rows": [
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "easy_ATM"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 0.09242521073959065,
+        "Delta": 0.6556511540803416,
+        "Gamma": 1.8801037393561386,
+        "Vv": 0.40724841794210215,
+        "Vega_s": 0.16289936717684086,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.6946363082227719e-12,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 504,
+          "P1": 0.6556511540803416,
+          "P2": 0.5803787269557235,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 0.09242521073959076,
+        "Delta": 0.6556511540803416,
+        "Gamma": 1.8801037393561393,
+        "Vv": 0.4072484179421022,
+        "Vega_s": 0.1628993671768409,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -9.903148289503605,
+            9.923148289503605
+          ],
+          "cumulants": [
+            0.009999999999999995,
+            0.04246987427883844,
+            0.002861973911983142
+          ],
+          "put": 0.06287074428809893,
+          "direct_call": 0.09242521073488331,
+          "parity_direct_gap": 4.7074427689253184e-12,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 0.4965853037914095,
+        "K": 1,
+        "x": -0.7,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "deep_OTM"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 4.81846370224958e-08,
+        "Delta": 3.01078047554304e-06,
+        "Gamma": 0.0001800378906284359,
+        "Vv": 5.005433367285058e-06,
+        "Vega_s": 2.0021733469140233e-06,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.1494300639551782e-12,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 588,
+          "P1": 3.01078047554304e-06,
+          "P2": 1.4909901174808837e-06,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 4.818463683609053e-08,
+        "Delta": 3.0107804752654843e-06,
+        "Gamma": 0.00018003789062519195,
+        "Vv": 5.00543336726001e-06,
+        "Vega_s": 2.002173346904004e-06,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -10.603148289503604,
+            9.223148289503605
+          ],
+          "cumulants": [
+            0.009999999999999995,
+            0.04246987427883844,
+            0.002861973911983142
+          ],
+          "put": 0.4738602779417355,
+          "direct_call": 4.818237067429713e-08,
+          "parity_direct_gap": 2.2661617934054156e-12,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 2.0137527074704766,
+        "K": 1,
+        "x": 0.7,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "deep_ITM"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 1.043927516948031,
+        "Delta": 0.9977602630896838,
+        "Gamma": 0.00901149595326001,
+        "Vv": 0.017561961116182835,
+        "Vega_s": 0.007024784446473135,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.839151994384244e-12,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 756,
+          "P1": 0.9977602630896838,
+          "P2": 0.9947131300872983,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 1.043927516948031,
+        "Delta": 0.9977602630896839,
+        "Gamma": 0.009011495953260357,
+        "Vv": 0.017561961116183616,
+        "Vega_s": 0.007024784446473447,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -9.203148289503606,
+            10.623148289503604
+          ],
+          "cumulants": [
+            0.009999999999999995,
+            0.04246987427883844,
+            0.002861973911983142
+          ],
+          "put": 0.0006203430260628528,
+          "direct_call": 1.043927516938487,
+          "parity_direct_gap": 9.54414325349262e-12,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "short_core"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 0.002585840710471854,
+        "Delta": 0.5218214630224495,
+        "Gamma": 62.871723743775014,
+        "Vv": 0.12446051679412978,
+        "Vega_s": 0.024892103358825957,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 2.746309281666266e-11,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 252,
+          "P1": 0.5218214630224495,
+          "P2": 0.5192974397560753,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 0.002585840710471965,
+        "Delta": 0.52182146302245,
+        "Gamma": 62.87172374377507,
+        "Vv": 0.1244605167941312,
+        "Vega_s": 0.024892103358826242,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.22782738558436597,
+            0.22802532711888127
+          ],
+          "cumulants": [
+            9.897076725764198e-05,
+            4.017032970874098e-05,
+            1.1156653617655604e-10
+          ],
+          "put": 0.002466800177310885,
+          "direct_call": 0.002585840710471659,
+          "parity_direct_gap": 3.0574501264091225e-16,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 4,
+        "theta": 0.12,
+        "sigma": 0.8,
+        "rho": -0.1,
+        "r": 0,
+        "label": "high_vol_of_vol"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 0.12205230199960376,
+        "Delta": 0.569455700548608,
+        "Gamma": 1.3523183008380169,
+        "Vv": 0.15148710412111352,
+        "Vega_s": 0.06059484164844541,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 7.34118184128283e-13,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 462,
+          "P1": 0.569455700548608,
+          "P2": 0.4474033985490042,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 0.12205230199960382,
+        "Delta": 0.569455700548608,
+        "Gamma": 1.3523183008380169,
+        "Vv": 0.15148710412111352,
+        "Vega_s": 0.06059484164844541,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -14.09670046856376,
+            13.996334155785966
+          ],
+          "cumulants": [
+            -0.05018315638889626,
+            0.1024042446175889,
+            0.00814976994888214
+          ],
+          "put": 0.12205230199960379,
+          "direct_call": 0.12205230224635791,
+          "parity_direct_gap": 2.467540893835718e-10,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.282842712474619,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "near_Feller"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 0.09159419963455195,
+        "Delta": 0.6702759514663563,
+        "Gamma": 1.858227592455398,
+        "Vv": 0.599496049429093,
+        "Vega_s": 0.23979841977163718,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.1790434596050332e-12,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 546,
+          "P1": 0.6702759514663563,
+          "P2": 0.5963052348912466,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 0.09159419963455184,
+        "Delta": 0.6702759514663561,
+        "Gamma": 1.8582275924554,
+        "Vv": 0.599496049429093,
+        "Vega_s": 0.23979841977163718,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -10.517960095679706,
+            10.537960095679706
+          ],
+          "cumulants": [
+            0.009999999999999985,
+            0.04304792952470857,
+            0.004250029452794923
+          ],
+          "put": 0.06203973318306011,
+          "direct_call": 0.09159419963643108,
+          "parity_direct_gap": 1.879232880419579e-12,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "severe_failed"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 2.6281751620893523e-05,
+        "Delta": 0.5944754077623539,
+        "Gamma": 2496.8039155340784,
+        "Vv": 0.5579392640435032,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.8551932337222362e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5944754077623539,
+          "P2": 0.594466959752018,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 4.2909724337403254e-05,
+        "Delta": 0.941754886355574,
+        "Gamma": 666.8429743602923,
+        "Vv": 0.7327023918217647,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.012610106794462448,
+            0.012670096796128906
+          ],
+          "cumulants": [
+            2.9995000833229177e-05,
+            1.000229315155439e-08,
+            2.1323364855583573e-14
+          ],
+          "put": 1.2910174333008943e-05,
+          "direct_call": 4.290972421081725e-05,
+          "parity_direct_gap": 1.2658600431975434e-13,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "zero_short_R0"
+      },
+      "status": "INDETERMINATE",
+      "analytic": [],
+      "PDE": [],
+      "A": {
+        "price": 8.453319546719573e-05,
+        "Delta": 0.5886735945060326,
+        "Gamma": 1828.9591382884958,
+        "Vv": 1.1645674952056813,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 8192,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.3887167757609773e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.5886735945060326,
+          "P2": 0.5886067192472725,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "B": {
+        "price": 9.422680922865911e-05,
+        "Delta": 0.6299337670967592,
+        "Gamma": 1893.6287006250159,
+        "Vv": 0.9413028798071288,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "B",
+          "config": {
+            "N": 16384,
+            "L": 32,
+            "interval": null
+          },
+          "interval": [
+            -0.010071038821103195,
+            0.010130998847756532
+          ],
+          "cumulants": [
+            2.9980013326669332e-05,
+            3.997614401277467e-08,
+            3.55968499172655e-15
+          ],
+          "put": 6.422725922419644e-05,
+          "direct_call": 9.422680923072287e-05,
+          "parity_direct_gap": 2.0637517302718456e-15,
+          "fixed_interval_derivatives": true,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "exception": "ModuleNotFoundError(\"No module named 'QuantLib'\")"
+    }
+  ],
+  "requested_version": "1.41",
+  "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad",
+  "source_url": "https://github.com/lballabio/QuantLib/tree/367ce80ae4f285835ceb3bba97746bea239984ad",
+  "warning": "No automatic gate upgrade; measured analytic/PDE refinement review required"
+}

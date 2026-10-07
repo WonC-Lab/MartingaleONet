@@ -1,0 +1,666 @@
+{
+  "rows": [
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 32768,
+      "h_tau": 1e-06,
+      "prices": [
+        9.40113701380918e-05,
+        9.410559329903201e-05,
+        9.419981851022108e-05,
+        9.429404574368139e-05,
+        9.438827497154634e-05
+      ],
+      "c_tau_FD": 0.09422622697837409,
+      "limiting_PDE_rhs": 0.09424493547944068,
+      "residual": -1.870850106659716e-05,
+      "base": {
+        "price": 9.419981851022108e-05,
+        "Delta": 0.6299083191308168,
+        "Gamma": 1889.7341194254182,
+        "Vv": 0.9418813987508936,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9138879959558414e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6299083191308168,
+          "P2": 0.6298330140193051,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 32768,
+      "h_tau": 5e-07,
+      "prices": [
+        9.410559329903201e-05,
+        9.41527056500524e-05,
+        9.419981851022108e-05,
+        9.424693187598532e-05,
+        9.429404574368139e-05
+      ],
+      "c_tau_FD": 0.09422622713565568,
+      "limiting_PDE_rhs": 0.09424493547944068,
+      "residual": -1.870834378500663e-05,
+      "base": {
+        "price": 9.419981851022108e-05,
+        "Delta": 0.6299083191308168,
+        "Gamma": 1889.7341194254182,
+        "Vv": 0.9418813987508936,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9138879959558414e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6299083191308168,
+          "P2": 0.6298330140193051,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 32768,
+      "h_tau": 2.5e-07,
+      "prices": [
+        9.41527056500524e-05,
+        9.417626201679852e-05,
+        9.419981851022108e-05,
+        9.422337513009804e-05,
+        9.424693187598532e-05
+      ],
+      "c_tau_FD": 0.0942262268210925,
+      "limiting_PDE_rhs": 0.09424493547944068,
+      "residual": -1.870865834818769e-05,
+      "base": {
+        "price": 9.419981851022108e-05,
+        "Delta": 0.6299083191308168,
+        "Gamma": 1889.7341194254182,
+        "Vv": 0.9418813987508936,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 1.9138879959558414e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.6299083191308168,
+          "P2": 0.6298330140193051,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 524288,
+      "h_tau": 1e-06,
+      "prices": [
+        9.403841028432502e-05,
+        9.413260978319293e-05,
+        9.422680922732685e-05,
+        9.43210086163937e-05,
+        9.441520795083758e-05
+      ],
+      "c_tau_FD": 0.09419941659113047,
+      "limiting_PDE_rhs": 0.09419941659316493,
+      "residual": -2.0344559370499837e-12,
+      "base": {
+        "price": 9.422680922732685e-05,
+        "Delta": 0.6299337670966754,
+        "Gamma": 1893.6287006251318,
+        "Vv": 0.9413028798067686,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.622422685736204e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 294,
+          "P1": 0.6299337670966754,
+          "P2": 0.6298584357570873,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 524288,
+      "h_tau": 5e-07,
+      "prices": [
+        9.413260978319293e-05,
+        9.417970951219878e-05,
+        9.422680922732685e-05,
+        9.427390892857712e-05,
+        9.43210086163937e-05
+      ],
+      "c_tau_FD": 0.09419941630432285,
+      "limiting_PDE_rhs": 0.09419941659316493,
+      "residual": -2.8884207525781136e-10,
+      "base": {
+        "price": 9.422680922732685e-05,
+        "Delta": 0.6299337670966754,
+        "Gamma": 1893.6287006251318,
+        "Vv": 0.9413028798067686,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.622422685736204e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 294,
+          "P1": 0.6299337670966754,
+          "P2": 0.6298584357570873,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "PDE_zero_R0"
+      },
+      "cutoff": 524288,
+      "h_tau": 2.5e-07,
+      "prices": [
+        9.417970951219878e-05,
+        9.420325937137264e-05,
+        9.422680922732685e-05,
+        9.42503590795063e-05,
+        9.427390892857712e-05
+      ],
+      "c_tau_FD": 0.09419941623030799,
+      "limiting_PDE_rhs": 0.09419941659316493,
+      "residual": -3.6285693894022586e-10,
+      "base": {
+        "price": 9.422680922732685e-05,
+        "Delta": 0.6299337670966754,
+        "Gamma": 1893.6287006251318,
+        "Vv": 0.9413028798067686,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 6.622422685736204e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 294,
+          "P1": 0.6299337670966754,
+          "P2": 0.6298584357570873,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 32768,
+      "h_tau": 1e-06,
+      "prices": [
+        3.962179847416536e-05,
+        3.967474191235443e-05,
+        3.97276983292727e-05,
+        3.978066768040023e-05,
+        3.983364992155014e-05
+      ],
+      "c_tau_FD": 0.05296289141513514,
+      "limiting_PDE_rhs": 0.04445833733164844,
+      "residual": 0.008504554083486701,
+      "base": {
+        "price": 3.97276983292727e-05,
+        "Delta": 0.8669155088759471,
+        "Gamma": 6702.82220184762,
+        "Vv": 0.9226031948159951,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.122993023748709e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.8669155088759471,
+          "P2": 0.8669017878411512,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 32768,
+      "h_tau": 5e-07,
+      "prices": [
+        3.967474191235443e-05,
+        3.9701218501164703e-05,
+        3.97276983292727e-05,
+        3.975418139079423e-05,
+        3.978066768040023e-05
+      ],
+      "c_tau_FD": 0.052962891498401866,
+      "limiting_PDE_rhs": 0.04445833733164844,
+      "residual": 0.008504554166753428,
+      "base": {
+        "price": 3.97276983292727e-05,
+        "Delta": 0.8669155088759471,
+        "Gamma": 6702.82220184762,
+        "Vv": 0.9226031948159951,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.122993023748709e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.8669155088759471,
+          "P2": 0.8669017878411512,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 32768,
+      "h_tau": 2.5e-07,
+      "prices": [
+        3.9701218501164703e-05,
+        3.971445801054241e-05,
+        3.97276983292727e-05,
+        3.974093945613433e-05,
+        3.975418139079423e-05
+      ],
+      "c_tau_FD": 0.05296289170194275,
+      "limiting_PDE_rhs": 0.04445833733164844,
+      "residual": 0.008504554370294314,
+      "base": {
+        "price": 3.97276983292727e-05,
+        "Delta": 0.8669155088759471,
+        "Gamma": 6702.82220184762,
+        "Vv": 0.9226031948159951,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 32768,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.122993023748709e-10,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 210,
+          "P1": 0.8669155088759471,
+          "P2": 0.8669017878411512,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 524288,
+      "h_tau": 1e-06,
+      "prices": [
+        4.2715576590635074e-05,
+        4.275543669018944e-05,
+        4.2795370755466244e-05,
+        4.283538037941348e-05,
+        4.287546710612933e-05
+      ],
+      "c_tau_FD": 0.0399715831915041,
+      "limiting_PDE_rhs": 0.04188669532070564,
+      "residual": -0.001915112129201535,
+      "base": {
+        "price": 4.2795370755466244e-05,
+        "Delta": 0.9394638822929162,
+        "Gamma": -788.4995976245269,
+        "Vv": 0.6852031356520409,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.034634470466808e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 378,
+          "P1": 0.9394638822929162,
+          "P2": 0.9394492699775121,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 524288,
+      "h_tau": 5e-07,
+      "prices": [
+        4.275543669018944e-05,
+        4.27753943763598e-05,
+        4.2795370755466244e-05,
+        4.281536602535052e-05,
+        4.283538037941348e-05
+      ],
+      "c_tau_FD": 0.03997158378362305,
+      "limiting_PDE_rhs": 0.04188669532070564,
+      "residual": -0.0019151115370825839,
+      "base": {
+        "price": 4.2795370755466244e-05,
+        "Delta": 0.9394638822929162,
+        "Gamma": -788.4995976245269,
+        "Vv": 0.6852031356520409,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.034634470466808e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 378,
+          "P1": 0.9394638822929162,
+          "P2": 0.9394492699775121,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "PDE_zero_R4"
+      },
+      "cutoff": 524288,
+      "h_tau": 2.5e-07,
+      "prices": [
+        4.27753943763598e-05,
+        4.2785380217291724e-05,
+        4.2795370755466244e-05,
+        4.2805366016751556e-05,
+        4.281536602535052e-05
+      ],
+      "c_tau_FD": 0.03997158222931082,
+      "limiting_PDE_rhs": 0.04188669532070564,
+      "residual": -0.0019151130913948183,
+      "base": {
+        "price": 4.2795370755466244e-05,
+        "Delta": 0.9394638822929162,
+        "Gamma": -788.4995976245269,
+        "Vv": 0.6852031356520409,
+        "Vega_s": 0.0,
+        "diagnostics": {
+          "route": "A",
+          "config": {
+            "cutoff": 524288,
+            "atol": 1e-11,
+            "rtol": 1e-11,
+            "subdivisions": 10000,
+            "panels": 8,
+            "precision": "float64"
+          },
+          "quadrature_error_vector_norm": 5.034634470466808e-09,
+          "success": true,
+          "status": 0,
+          "message": "Target precision reached.",
+          "evaluations": 378,
+          "P1": 0.9394638822929162,
+          "P2": 0.9394492699775121,
+          "raw_unclipped": true,
+          "tail_error_certified": false
+        }
+      },
+      "status": "DIAGNOSTIC_ONLY"
+    }
+  ],
+  "equation": "c_tau=r*c_x+kappa*theta*c_v-r*c at v=0; c_x=exp(x)*Delta",
+  "warning": "No PDE tolerance declared; finite-cutoff agreement is not a boundary certificate"
+}

@@ -1,0 +1,25 @@
+{
+  "history": {
+    "historical_files_verified": 68,
+    "modified": []
+  },
+  "current_source_sha256": {
+    "reference_v2\\boundary_pde.py": "24cfd8ed1b7d70faca2b4f9b778858984f3d14a79e6bdbeb8b26dc40b7267ad0",
+    "reference_v2\\decay_analysis.py": "21076b1f63bbbce7849ba05486e0d60fd22b765b76108db4126fb7d611ca4fa3",
+    "reference_v2\\diagnostics.py": "74f4747943410c407908708930f889e3e1d673781093fb88e4ba97ab276c9f2b",
+    "reference_v2\\domains.py": "e060356aebaa1f7d471ad95a6eaaf5602c49b942240423a7f82d3e7855c38dcb",
+    "reference_v2\\external.py": "9bec1327267b05d00ed73b89e2e61f26263cc3533612a2e75dd93fe11451b56c",
+    "reference_v2\\fd_precision.py": "134a41fa9eb82e4c4e87224c0bb3cc694b4e052518072c2d63e4d6d5b150dfe7",
+    "reference_v2\\full_escalation.py": "7e80a6df1f7448be2a7632bf3d71df8d588a13a6f6ccdd3e526adb8a8f97037d",
+    "reference_v2\\greek_priority.py": "81518853d9924141ba4603902ab26c1c80d7f008ea012c9806ec41cf06f6a179",
+    "reference_v2\\high_precision.py": "baf96a9524a45896d55795e8a02100f4e0fb79787a3c87d585c6e1986cc2be95",
+    "reference_v2\\numerical_analysis.py": "84277e0f26365141cd37567d9e9e819ec2711fad1c9d97932cb6fd29b7e466a2",
+    "reference_v2\\plots.py": "a5859a40a4245185a7ea97239d91855741714101bfce93ca1fcc963dc075e04b",
+    "reference_v2\\reports.py": "3eab8eabb323d1d1996e2883bd9a437101f34420e958d3cc5a4739f6839f1b4f",
+    "reference_v2\\workflow.py": "a6ac2d77e8ec84bad118e6ee5f8fc0c4f1af31938e88349d7e8be0d70f74320c",
+    "reference_v2\\zero_escalation.py": "da15da1b9021ae293f192a94e9b286e7cbf2daed095bb8bb349618af3e5f0a32",
+    "reference_v2\\__init__.py": "230ae99cd59493f1dc32723e25f74b49515035fa4e2afaff9e72979f0e584e3d"
+  },
+  "local_executed_coverage_workflow_snapshot": "reference_v2/executed_sources/workflow_coverage_v2_0.py",
+  "note": "coverage source snapshot predates JSON-null aggregation fixes; pricing algorithms and raw rows were not changed"
+}

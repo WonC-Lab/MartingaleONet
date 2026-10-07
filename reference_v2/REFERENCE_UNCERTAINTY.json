@@ -1,0 +1,3140 @@
+{
+  "rows": [
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "HP_ZERO_R0_EXTENDED"
+      },
+      "domain": "CHALLENGE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          9.422680922732685e-05,
+          9.422680922865911e-05,
+          9.422680922718384e-05
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.3322676295501878e-15,
+            1.4300626655083803e-16
+          ],
+          [
+            1.3322676295501878e-15,
+            0.0,
+            1.4752738961010259e-15
+          ],
+          [
+            1.4300626655083803e-16,
+            1.4752738961010259e-15,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.4752738961010259e-15,
+        "median_disagreement": 1.3322676295501878e-15,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.3322676295501878e-15,
+          "MP": 1.4300626655083803e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.6299337670966754,
+          0.6299337670967592,
+          0.6299337670966753
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            8.382183835919932e-14,
+            1.1102230246251565e-16
+          ],
+          [
+            8.382183835919932e-14,
+            0.0,
+            8.393286066166183e-14
+          ],
+          [
+            1.1102230246251565e-16,
+            8.393286066166183e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.393286066166183e-14,
+        "median_disagreement": 8.382183835919932e-14,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 8.382183835919932e-14,
+          "MP": 1.1102230246251565e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          1893.6287006251318,
+          1893.6287006250159,
+          1893.6287006251318
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1596057447604835e-10,
+            0.0
+          ],
+          [
+            1.1596057447604835e-10,
+            0.0,
+            1.1596057447604835e-10
+          ],
+          [
+            0.0,
+            1.1596057447604835e-10,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1596057447604835e-10,
+        "median_disagreement": 1.1596057447604835e-10,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1596057447604835e-10,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.9413028798067686,
+          0.9413028798071288,
+          0.941302879807105
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            3.601563491884008e-13,
+            3.3639757646142243e-13
+          ],
+          [
+            3.601563491884008e-13,
+            0.0,
+            2.375877272697835e-14
+          ],
+          [
+            3.3639757646142243e-13,
+            2.375877272697835e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.601563491884008e-13,
+        "median_disagreement": 3.3639757646142243e-13,
+        "deviation_from_route_median": {
+          "A": 3.3639757646142243e-13,
+          "B": 2.375877272697835e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_0_R0"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.002585840710471854,
+          0.002585840710471965,
+          0.00258584071047179
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            6.375108774214766e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            1.7477339020466331e-16
+          ],
+          [
+            6.375108774214766e-17,
+            1.7477339020466331e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.7477339020466331e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1102230246251565e-16,
+          "MP": 6.375108774214766e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5218214630224495,
+          0.52182146302245,
+          0.5218214630224495
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            5.551115123125783e-16,
+            0.0
+          ],
+          [
+            5.551115123125783e-16,
+            0.0,
+            5.551115123125783e-16
+          ],
+          [
+            0.0,
+            5.551115123125783e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 5.551115123125783e-16,
+        "median_disagreement": 5.551115123125783e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 5.551115123125783e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          62.87172374377502,
+          62.87172374377507,
+          62.87172374377501
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            4.973799150320701e-14,
+            1.4210854715202004e-14
+          ],
+          [
+            4.973799150320701e-14,
+            0.0,
+            6.394884621840902e-14
+          ],
+          [
+            1.4210854715202004e-14,
+            6.394884621840902e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 6.394884621840902e-14,
+        "median_disagreement": 4.973799150320701e-14,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 4.973799150320701e-14,
+          "MP": 1.4210854715202004e-14
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.12446051679413149,
+          0.1244605167941312,
+          0.1244605167941311
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.914335439641036e-16,
+            3.885780586188048e-16
+          ],
+          [
+            2.914335439641036e-16,
+            0.0,
+            9.71445146547012e-17
+          ],
+          [
+            3.885780586188048e-16,
+            9.71445146547012e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.885780586188048e-16,
+        "median_disagreement": 2.914335439641036e-16,
+        "deviation_from_route_median": {
+          "A": 2.914335439641036e-16,
+          "B": 0.0,
+          "MP": 9.71445146547012e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.01,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_1_R0"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.004191920249569825,
+          0.004191920249569825,
+          0.004191920249569834
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            8.673617379884035e-18
+          ],
+          [
+            0.0,
+            0.0,
+            8.673617379884035e-18
+          ],
+          [
+            8.673617379884035e-18,
+            8.673617379884035e-18,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.673617379884035e-18,
+        "median_disagreement": 8.673617379884035e-18,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 8.673617379884035e-18
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.534242931072477,
+          0.5342429310724768,
+          0.534242931072477
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.0
+          ],
+          [
+            2.220446049250313e-16,
+            0.0,
+            2.220446049250313e-16
+          ],
+          [
+            0.0,
+            2.220446049250313e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.220446049250313e-16,
+        "median_disagreement": 2.220446049250313e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 2.220446049250313e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          39.18034497138486,
+          39.18034497138487,
+          39.18034497138485
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.105427357601002e-15,
+            1.4210854715202004e-14
+          ],
+          [
+            7.105427357601002e-15,
+            0.0,
+            2.1316282072803006e-14
+          ],
+          [
+            1.4210854715202004e-14,
+            2.1316282072803006e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.1316282072803006e-14,
+        "median_disagreement": 1.4210854715202004e-14,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 7.105427357601002e-15,
+          "MP": 1.4210854715202004e-14
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.1947532478963636,
+          0.19475324789636325,
+          0.19475324789636322
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            3.608224830031759e-16,
+            3.885780586188048e-16
+          ],
+          [
+            3.608224830031759e-16,
+            0.0,
+            2.7755575615628914e-17
+          ],
+          [
+            3.885780586188048e-16,
+            2.7755575615628914e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.885780586188048e-16,
+        "median_disagreement": 3.608224830031759e-16,
+        "deviation_from_route_median": {
+          "A": 3.608224830031759e-16,
+          "B": 0.0,
+          "MP": 2.7755575615628914e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 0.003968253968253968,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_2_R0"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.005084240523997363,
+          0.005084240523997474,
+          0.005084240523997413
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            4.9439619065339e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            6.158268339717665e-17
+          ],
+          [
+            4.9439619065339e-17,
+            6.158268339717665e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 6.158268339717665e-17,
+        "deviation_from_route_median": {
+          "A": 4.9439619065339e-17,
+          "B": 6.158268339717665e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5128656841817407,
+          0.5128656841817407,
+          0.5128656841817407
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.0,
+        "median_disagreement": 0.0,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          31.654601479669896,
+          31.654601479669903,
+          31.654601479669893
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.105427357601002e-15,
+            3.552713678800501e-15
+          ],
+          [
+            7.105427357601002e-15,
+            0.0,
+            1.0658141036401503e-14
+          ],
+          [
+            3.552713678800501e-15,
+            1.0658141036401503e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.0658141036401503e-14,
+        "median_disagreement": 7.105427357601002e-15,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 7.105427357601002e-15,
+          "MP": 3.552713678800501e-15
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.0625751300738508,
+          0.06257513007385077,
+          0.06257513007385074
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.7755575615628914e-17,
+            5.551115123125783e-17
+          ],
+          [
+            2.7755575615628914e-17,
+            0.0,
+            2.7755575615628914e-17
+          ],
+          [
+            5.551115123125783e-17,
+            2.7755575615628914e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 5.551115123125783e-17,
+        "median_disagreement": 2.7755575615628914e-17,
+        "deviation_from_route_median": {
+          "A": 2.7755575615628914e-17,
+          "B": 0.0,
+          "MP": 2.7755575615628914e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.282842712474619,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_3_R1"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.002578700644690679,
+          0.002578700644690679,
+          0.0025787006446906357
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            4.336808689942018e-17
+          ],
+          [
+            0.0,
+            0.0,
+            4.336808689942018e-17
+          ],
+          [
+            4.336808689942018e-17,
+            4.336808689942018e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.336808689942018e-17,
+        "median_disagreement": 4.336808689942018e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 4.336808689942018e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5211658405029955,
+          0.5211658405029962,
+          0.5211658405029955
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            6.661338147750939e-16,
+            0.0
+          ],
+          [
+            6.661338147750939e-16,
+            0.0,
+            6.661338147750939e-16
+          ],
+          [
+            0.0,
+            6.661338147750939e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 6.661338147750939e-16,
+        "median_disagreement": 6.661338147750939e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 6.661338147750939e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          63.05760130108559,
+          63.057601301085654,
+          63.0576013010856
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            6.394884621840902e-14,
+            7.105427357601002e-15
+          ],
+          [
+            6.394884621840902e-14,
+            0.0,
+            5.684341886080802e-14
+          ],
+          [
+            7.105427357601002e-15,
+            5.684341886080802e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 6.394884621840902e-14,
+        "median_disagreement": 5.684341886080802e-14,
+        "deviation_from_route_median": {
+          "A": 7.105427357601002e-15,
+          "B": 5.684341886080802e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.12506277772010657,
+          0.125062777720107,
+          0.12506277772010685
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            4.163336342344337e-16,
+            2.7755575615628914e-16
+          ],
+          [
+            4.163336342344337e-16,
+            0.0,
+            1.3877787807814457e-16
+          ],
+          [
+            2.7755575615628914e-16,
+            1.3877787807814457e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.163336342344337e-16,
+        "median_disagreement": 2.7755575615628914e-16,
+        "deviation_from_route_median": {
+          "A": 2.7755575615628914e-16,
+          "B": 1.3877787807814457e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.01,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.282842712474619,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_4_R1"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.004163654577823195,
+          0.004163654577823306,
+          0.004163654577823284
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            8.933825901280557e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            2.168404344971009e-17
+          ],
+          [
+            8.933825901280557e-17,
+            2.168404344971009e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 8.933825901280557e-17,
+        "deviation_from_route_median": {
+          "A": 8.933825901280557e-17,
+          "B": 2.168404344971009e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5334328909227898,
+          0.5334328909227906,
+          0.5334328909227898
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.771561172376096e-16,
+            0.0
+          ],
+          [
+            7.771561172376096e-16,
+            0.0,
+            7.771561172376096e-16
+          ],
+          [
+            0.0,
+            7.771561172376096e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 7.771561172376096e-16,
+        "median_disagreement": 7.771561172376096e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 7.771561172376096e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          39.46477599915744,
+          39.46477599915744,
+          39.46477599915744
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.0,
+        "median_disagreement": 0.0,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.19711495717575464,
+          0.19711495717575492,
+          0.19711495717575486
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.7755575615628914e-16,
+            2.220446049250313e-16
+          ],
+          [
+            2.7755575615628914e-16,
+            0.0,
+            5.551115123125783e-17
+          ],
+          [
+            2.220446049250313e-16,
+            5.551115123125783e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.7755575615628914e-16,
+        "median_disagreement": 2.220446049250313e-16,
+        "deviation_from_route_median": {
+          "A": 2.220446049250313e-16,
+          "B": 5.551115123125783e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.282842712474619,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_5_R1"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.005084404078935734,
+          0.005084404078935734,
+          0.005084404078935684
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            4.9439619065339e-17
+          ],
+          [
+            0.0,
+            0.0,
+            4.9439619065339e-17
+          ],
+          [
+            4.9439619065339e-17,
+            4.9439619065339e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.9439619065339e-17,
+        "median_disagreement": 4.9439619065339e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 4.9439619065339e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5124969293609218,
+          0.5124969293609221,
+          0.5124969293609217
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.220446049250313e-16,
+            1.1102230246251565e-16
+          ],
+          [
+            2.220446049250313e-16,
+            0.0,
+            3.3306690738754696e-16
+          ],
+          [
+            1.1102230246251565e-16,
+            3.3306690738754696e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.3306690738754696e-16,
+        "median_disagreement": 2.220446049250313e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 2.220446049250313e-16,
+          "MP": 1.1102230246251565e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          31.654697696176097,
+          31.654697696176118,
+          31.6546976961761
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.1316282072803006e-14,
+            3.552713678800501e-15
+          ],
+          [
+            2.1316282072803006e-14,
+            0.0,
+            1.7763568394002505e-14
+          ],
+          [
+            3.552713678800501e-15,
+            1.7763568394002505e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.1316282072803006e-14,
+        "median_disagreement": 1.7763568394002505e-14,
+        "deviation_from_route_median": {
+          "A": 3.552713678800501e-15,
+          "B": 1.7763568394002505e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.06269799602596365,
+          0.06269799602596365,
+          0.06269799602596361
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            4.163336342344337e-17
+          ],
+          [
+            0.0,
+            0.0,
+            4.163336342344337e-17
+          ],
+          [
+            4.163336342344337e-17,
+            4.163336342344337e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.163336342344337e-17,
+        "median_disagreement": 4.163336342344337e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 4.163336342344337e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.27,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_6_R2"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.0025789022045739074,
+          0.0025789022045739074,
+          0.0025789022045738103
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            9.71445146547012e-17
+          ],
+          [
+            0.0,
+            0.0,
+            9.71445146547012e-17
+          ],
+          [
+            9.71445146547012e-17,
+            9.71445146547012e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 9.71445146547012e-17,
+        "median_disagreement": 9.71445146547012e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 9.71445146547012e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5206005715271862,
+          0.5206005715271854,
+          0.5206005715271862
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.771561172376096e-16,
+            0.0
+          ],
+          [
+            7.771561172376096e-16,
+            0.0,
+            7.771561172376096e-16
+          ],
+          [
+            0.0,
+            7.771561172376096e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 7.771561172376096e-16,
+        "median_disagreement": 7.771561172376096e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 7.771561172376096e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          63.05935489501279,
+          63.05935489501292,
+          63.059354895012795
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.3500311979441904e-13,
+            7.105427357601002e-15
+          ],
+          [
+            1.3500311979441904e-13,
+            0.0,
+            1.2789769243681803e-13
+          ],
+          [
+            7.105427357601002e-15,
+            1.2789769243681803e-13,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.3500311979441904e-13,
+        "median_disagreement": 1.2789769243681803e-13,
+        "deviation_from_route_median": {
+          "A": 7.105427357601002e-15,
+          "B": 1.2789769243681803e-13,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.12505392062958465,
+          0.12505392062958565,
+          0.12505392062958542
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            9.992007221626409e-16,
+            7.771561172376096e-16
+          ],
+          [
+            9.992007221626409e-16,
+            0.0,
+            2.220446049250313e-16
+          ],
+          [
+            7.771561172376096e-16,
+            2.220446049250313e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 9.992007221626409e-16,
+        "median_disagreement": 7.771561172376096e-16,
+        "deviation_from_route_median": {
+          "A": 7.771561172376096e-16,
+          "B": 2.220446049250313e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.01,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.27,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_7_R2"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.004164453231456311,
+          0.004164453231456311,
+          0.00416445323145633
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            1.9081958235744878e-17
+          ],
+          [
+            0.0,
+            0.0,
+            1.9081958235744878e-17
+          ],
+          [
+            1.9081958235744878e-17,
+            1.9081958235744878e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.9081958235744878e-17,
+        "median_disagreement": 1.9081958235744878e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 1.9081958235744878e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.532534840157538,
+          0.5325348401575394,
+          0.532534840157538
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.3322676295501878e-15,
+            0.0
+          ],
+          [
+            1.3322676295501878e-15,
+            0.0,
+            1.3322676295501878e-15
+          ],
+          [
+            0.0,
+            1.3322676295501878e-15,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.3322676295501878e-15,
+        "median_disagreement": 1.3322676295501878e-15,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.3322676295501878e-15,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          39.467844194615914,
+          39.46784419461595,
+          39.46784419461592
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            3.552713678800501e-14,
+            7.105427357601002e-15
+          ],
+          [
+            3.552713678800501e-14,
+            0.0,
+            2.842170943040401e-14
+          ],
+          [
+            7.105427357601002e-15,
+            2.842170943040401e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.552713678800501e-14,
+        "median_disagreement": 2.842170943040401e-14,
+        "deviation_from_route_median": {
+          "A": 7.105427357601002e-15,
+          "B": 2.842170943040401e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.19708048558700283,
+          0.1970804855870037,
+          0.19708048558700353
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            8.604228440844963e-16,
+            6.938893903907228e-16
+          ],
+          [
+            8.604228440844963e-16,
+            0.0,
+            1.6653345369377348e-16
+          ],
+          [
+            6.938893903907228e-16,
+            1.6653345369377348e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.604228440844963e-16,
+        "median_disagreement": 6.938893903907228e-16,
+        "deviation_from_route_median": {
+          "A": 6.938893903907228e-16,
+          "B": 1.6653345369377348e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.27,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_8_R2"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.005084522024657034,
+          0.005084522024656923,
+          0.005084522024656981
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            5.377642775528102e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            5.724587470723463e-17
+          ],
+          [
+            5.377642775528102e-17,
+            5.724587470723463e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 5.724587470723463e-17,
+        "deviation_from_route_median": {
+          "A": 5.377642775528102e-17,
+          "B": 5.724587470723463e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5122144286365464,
+          0.512214428636546,
+          0.5122144286365464
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            4.440892098500626e-16,
+            0.0
+          ],
+          [
+            4.440892098500626e-16,
+            0.0,
+            4.440892098500626e-16
+          ],
+          [
+            0.0,
+            4.440892098500626e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.440892098500626e-16,
+        "median_disagreement": 4.440892098500626e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 4.440892098500626e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          31.654800503069847,
+          31.654800503069854,
+          31.65480050306984
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.105427357601002e-15,
+            7.105427357601002e-15
+          ],
+          [
+            7.105427357601002e-15,
+            0.0,
+            1.4210854715202004e-14
+          ],
+          [
+            7.105427357601002e-15,
+            1.4210854715202004e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.4210854715202004e-14,
+        "median_disagreement": 7.105427357601002e-15,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 7.105427357601002e-15,
+          "MP": 7.105427357601002e-15
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.06269708425350264,
+          0.06269708425350275,
+          0.06269708425350272
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            8.326672684688674e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            2.7755575615628914e-17
+          ],
+          [
+            8.326672684688674e-17,
+            2.7755575615628914e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 8.326672684688674e-17,
+        "deviation_from_route_median": {
+          "A": 8.326672684688674e-17,
+          "B": 2.7755575615628914e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_9_R3"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.002578412665879104,
+          0.002578412665878993,
+          0.002578412665879028
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            7.589415207398531e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            3.5128150388530344e-17
+          ],
+          [
+            7.589415207398531e-17,
+            3.5128150388530344e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 7.589415207398531e-17,
+        "deviation_from_route_median": {
+          "A": 7.589415207398531e-17,
+          "B": 3.5128150388530344e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5219216288583111,
+          0.5219216288583102,
+          0.5219216288583111
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            8.881784197001252e-16,
+            0.0
+          ],
+          [
+            8.881784197001252e-16,
+            0.0,
+            8.881784197001252e-16
+          ],
+          [
+            0.0,
+            8.881784197001252e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.881784197001252e-16,
+        "median_disagreement": 8.881784197001252e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 8.881784197001252e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          63.05545184130786,
+          63.055451841307935,
+          63.05545184130787
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.815970093361102e-14,
+            1.4210854715202004e-14
+          ],
+          [
+            7.815970093361102e-14,
+            0.0,
+            6.394884621840902e-14
+          ],
+          [
+            1.4210854715202004e-14,
+            6.394884621840902e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 7.815970093361102e-14,
+        "median_disagreement": 6.394884621840902e-14,
+        "deviation_from_route_median": {
+          "A": 1.4210854715202004e-14,
+          "B": 6.394884621840902e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.1250755412515518,
+          0.12507554125155165,
+          0.12507554125155154
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.3877787807814457e-16,
+            2.498001805406602e-16
+          ],
+          [
+            1.3877787807814457e-16,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          [
+            2.498001805406602e-16,
+            1.1102230246251565e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.498001805406602e-16,
+        "median_disagreement": 1.3877787807814457e-16,
+        "deviation_from_route_median": {
+          "A": 1.3877787807814457e-16,
+          "B": 0.0,
+          "MP": 1.1102230246251565e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.01,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_10_R3"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.004162513152280778,
+          0.004162513152281,
+          0.004162513152280886
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.220446049250313e-16,
+            1.0842021724855044e-16
+          ],
+          [
+            2.220446049250313e-16,
+            0.0,
+            1.1362438767648086e-16
+          ],
+          [
+            1.0842021724855044e-16,
+            1.1362438767648086e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.220446049250313e-16,
+        "median_disagreement": 1.1362438767648086e-16,
+        "deviation_from_route_median": {
+          "A": 1.0842021724855044e-16,
+          "B": 1.1362438767648086e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5346350321485619,
+          0.5346350321485616,
+          0.5346350321485619
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            3.3306690738754696e-16,
+            0.0
+          ],
+          [
+            3.3306690738754696e-16,
+            0.0,
+            3.3306690738754696e-16
+          ],
+          [
+            0.0,
+            3.3306690738754696e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.3306690738754696e-16,
+        "median_disagreement": 3.3306690738754696e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 3.3306690738754696e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          39.46090102850022,
+          39.46090102850026,
+          39.46090102850022
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            4.263256414560601e-14,
+            0.0
+          ],
+          [
+            4.263256414560601e-14,
+            0.0,
+            4.263256414560601e-14
+          ],
+          [
+            0.0,
+            4.263256414560601e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.263256414560601e-14,
+        "median_disagreement": 4.263256414560601e-14,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 4.263256414560601e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.19716469392426894,
+          0.19716469392426828,
+          0.1971646939242681
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            6.661338147750939e-16,
+            8.326672684688674e-16
+          ],
+          [
+            6.661338147750939e-16,
+            0.0,
+            1.6653345369377348e-16
+          ],
+          [
+            8.326672684688674e-16,
+            1.6653345369377348e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.326672684688674e-16,
+        "median_disagreement": 6.661338147750939e-16,
+        "deviation_from_route_median": {
+          "A": 6.661338147750939e-16,
+          "B": 0.0,
+          "MP": 1.6653345369377348e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 0.003968253968253968,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "GREEK_PRIORITY_11_R3"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.005084237140198011,
+          0.005084237140198011,
+          0.005084237140197973
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            3.8163916471489756e-17
+          ],
+          [
+            0.0,
+            0.0,
+            3.8163916471489756e-17
+          ],
+          [
+            3.8163916471489756e-17,
+            3.8163916471489756e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.8163916471489756e-17,
+        "median_disagreement": 3.8163916471489756e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 3.8163916471489756e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5128744129979134,
+          0.512874412997913,
+          0.5128744129979134
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            3.3306690738754696e-16,
+            0.0
+          ],
+          [
+            3.3306690738754696e-16,
+            0.0,
+            3.3306690738754696e-16
+          ],
+          [
+            0.0,
+            3.3306690738754696e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3.3306690738754696e-16,
+        "median_disagreement": 3.3306690738754696e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 3.3306690738754696e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          31.654587930663595,
+          31.654587930663606,
+          31.654587930663595
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.0658141036401503e-14,
+            0.0
+          ],
+          [
+            1.0658141036401503e-14,
+            0.0,
+            1.0658141036401503e-14
+          ],
+          [
+            0.0,
+            1.0658141036401503e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.0658141036401503e-14,
+        "median_disagreement": 1.0658141036401503e-14,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.0658141036401503e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.06269933108086191,
+          0.06269933108086183,
+          0.06269933108086181
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            8.326672684688674e-17,
+            9.71445146547012e-17
+          ],
+          [
+            8.326672684688674e-17,
+            0.0,
+            1.3877787807814457e-17
+          ],
+          [
+            9.71445146547012e-17,
+            1.3877787807814457e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 9.71445146547012e-17,
+        "median_disagreement": 8.326672684688674e-17,
+        "deviation_from_route_median": {
+          "A": 8.326672684688674e-17,
+          "B": 0.0,
+          "MP": 1.3877787807814457e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 4,
+        "theta": 0.12,
+        "sigma": 0.8,
+        "rho": -0.1,
+        "r": 0,
+        "label": "GREEK_PRIORITY_12_R5"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.002595688660360529,
+          0.00259568866036064,
+          0.0025956886603605202
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            8.673617379884035e-18
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            1.196959198423997e-16
+          ],
+          [
+            8.673617379884035e-18,
+            1.196959198423997e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.196959198423997e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1102230246251565e-16,
+          "MP": 8.673617379884035e-18
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5060825926760265,
+          0.5060825926760276,
+          0.5060825926760268
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-15,
+            3.3306690738754696e-16
+          ],
+          [
+            1.1102230246251565e-15,
+            0.0,
+            7.771561172376096e-16
+          ],
+          [
+            3.3306690738754696e-16,
+            7.771561172376096e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-15,
+        "median_disagreement": 7.771561172376096e-16,
+        "deviation_from_route_median": {
+          "A": 3.3306690738754696e-16,
+          "B": 7.771561172376096e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          62.48312550470199,
+          62.4831255046974,
+          62.48312550469738
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            4.590106073010247e-12,
+            4.61142235508305e-12
+          ],
+          [
+            4.590106073010247e-12,
+            0.0,
+            2.1316282072803006e-14
+          ],
+          [
+            4.61142235508305e-12,
+            2.1316282072803006e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.61142235508305e-12,
+        "median_disagreement": 4.590106073010247e-12,
+        "deviation_from_route_median": {
+          "A": 4.590106073010247e-12,
+          "B": 0.0,
+          "MP": 2.1316282072803006e-14
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.12057001899177659,
+          0.12057001899185533,
+          0.1205700189918553
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            7.874256802153923e-14,
+            7.870093465811578e-14
+          ],
+          [
+            7.874256802153923e-14,
+            0.0,
+            4.163336342344337e-17
+          ],
+          [
+            7.870093465811578e-14,
+            4.163336342344337e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 7.874256802153923e-14,
+        "median_disagreement": 7.870093465811578e-14,
+        "deviation_from_route_median": {
+          "A": 7.870093465811578e-14,
+          "B": 4.163336342344337e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.01,
+        "kappa": 4,
+        "theta": 0.12,
+        "sigma": 0.8,
+        "rho": -0.1,
+        "r": 0,
+        "label": "GREEK_PRIORITY_13_R5"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.004316264381707069,
+          0.00431626438170718,
+          0.00431626438170709
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            2.0816681711721685e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            9.020562075079397e-17
+          ],
+          [
+            2.0816681711721685e-17,
+            9.020562075079397e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 9.020562075079397e-17,
+        "deviation_from_route_median": {
+          "A": 2.0816681711721685e-17,
+          "B": 9.020562075079397e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5091555251586696,
+          0.5091555251586697,
+          0.5091555251586696
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            0.0
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          [
+            0.0,
+            1.1102230246251565e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1102230246251565e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          38.41408750961886,
+          38.41408750961886,
+          38.41408750961885
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            7.105427357601002e-15
+          ],
+          [
+            0.0,
+            0.0,
+            7.105427357601002e-15
+          ],
+          [
+            7.105427357601002e-15,
+            7.105427357601002e-15,
+            0.0
+          ]
+        ],
+        "max_disagreement": 7.105427357601002e-15,
+        "median_disagreement": 7.105427357601002e-15,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 7.105427357601002e-15
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.17974785544724242,
+          0.17974785544724253,
+          0.17974785544724248
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            5.551115123125783e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            5.551115123125783e-17
+          ],
+          [
+            5.551115123125783e-17,
+            5.551115123125783e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 5.551115123125783e-17,
+        "deviation_from_route_median": {
+          "A": 5.551115123125783e-17,
+          "B": 5.551115123125783e-17,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 0.003968253968253968,
+        "kappa": 4,
+        "theta": 0.12,
+        "sigma": 0.8,
+        "rho": -0.1,
+        "r": 0,
+        "label": "GREEK_PRIORITY_14_R5"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.005052579377395783,
+          0.005052579377395672,
+          0.005052579377395818
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            3.5561831257524545e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            1.465841337200402e-16
+          ],
+          [
+            3.5561831257524545e-17,
+            1.465841337200402e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.465841337200402e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1102230246251565e-16,
+          "MP": 3.5561831257524545e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5050121496656143,
+          0.5050121496656134,
+          0.5050121496656143
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            8.881784197001252e-16,
+            0.0
+          ],
+          [
+            8.881784197001252e-16,
+            0.0,
+            8.881784197001252e-16
+          ],
+          [
+            0.0,
+            8.881784197001252e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 8.881784197001252e-16,
+        "median_disagreement": 8.881784197001252e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 8.881784197001252e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          31.6583392357829,
+          31.65833923578292,
+          31.658339235782908
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.7763568394002505e-14,
+            7.105427357601002e-15
+          ],
+          [
+            1.7763568394002505e-14,
+            0.0,
+            1.0658141036401503e-14
+          ],
+          [
+            7.105427357601002e-15,
+            1.0658141036401503e-14,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.7763568394002505e-14,
+        "median_disagreement": 1.0658141036401503e-14,
+        "deviation_from_route_median": {
+          "A": 7.105427357601002e-15,
+          "B": 1.0658141036401503e-14,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.06199552788520141,
+          0.06199552788520142,
+          0.0619955278852014
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.3877787807814457e-17,
+            6.938893903907228e-18
+          ],
+          [
+            1.3877787807814457e-17,
+            0.0,
+            2.0816681711721685e-17
+          ],
+          [
+            6.938893903907228e-18,
+            2.0816681711721685e-17,
+            0.0
+          ]
+        ],
+        "max_disagreement": 2.0816681711721685e-17,
+        "median_disagreement": 1.3877787807814457e-17,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.3877787807814457e-17,
+          "MP": 6.938893903907228e-18
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0.0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "HP_CORE_ATM"
+      },
+      "domain": "CORE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.09242521073959065,
+          0.09242521073959076,
+          0.09242521073959059
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1.1102230246251565e-16,
+            5.551115123125783e-17
+          ],
+          [
+            1.1102230246251565e-16,
+            0.0,
+            1.6653345369377348e-16
+          ],
+          [
+            5.551115123125783e-17,
+            1.6653345369377348e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.6653345369377348e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 1.1102230246251565e-16,
+          "MP": 5.551115123125783e-17
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.6556511540803416,
+          0.6556511540803416,
+          0.6556511540803417
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          [
+            0.0,
+            0.0,
+            1.1102230246251565e-16
+          ],
+          [
+            1.1102230246251565e-16,
+            1.1102230246251565e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1.1102230246251565e-16,
+        "median_disagreement": 1.1102230246251565e-16,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 0.0,
+          "MP": 1.1102230246251565e-16
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          1.8801037393561386,
+          1.8801037393561393,
+          1.880103739356139
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            6.661338147750939e-16,
+            4.440892098500626e-16
+          ],
+          [
+            6.661338147750939e-16,
+            0.0,
+            2.220446049250313e-16
+          ],
+          [
+            4.440892098500626e-16,
+            2.220446049250313e-16,
+            0.0
+          ]
+        ],
+        "max_disagreement": 6.661338147750939e-16,
+        "median_disagreement": 4.440892098500626e-16,
+        "deviation_from_route_median": {
+          "A": 4.440892098500626e-16,
+          "B": 2.220446049250313e-16,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.40724841794210215,
+          0.4072484179421022,
+          0.4072484179421022
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            5.551115123125783e-17,
+            5.551115123125783e-17
+          ],
+          [
+            5.551115123125783e-17,
+            0.0,
+            0.0
+          ],
+          [
+            5.551115123125783e-17,
+            0.0,
+            0.0
+          ]
+        ],
+        "max_disagreement": 5.551115123125783e-17,
+        "median_disagreement": 5.551115123125783e-17,
+        "deviation_from_route_median": {
+          "A": 5.551115123125783e-17,
+          "B": 0.0,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "HP_ZERO_R0"
+      },
+      "domain": "CHALLENGE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          4.056991895518003e-05,
+          9.422680922865911e-05,
+          9.594111800668421e-05
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            5.3656890273479085e-05,
+            5.5371199051504184e-05
+          ],
+          [
+            5.3656890273479085e-05,
+            0.0,
+            1.7143087780250986e-06
+          ],
+          [
+            5.5371199051504184e-05,
+            1.7143087780250986e-06,
+            0.0
+          ]
+        ],
+        "max_disagreement": 5.5371199051504184e-05,
+        "median_disagreement": 5.3656890273479085e-05,
+        "deviation_from_route_median": {
+          "A": 5.3656890273479085e-05,
+          "B": 0.0,
+          "MP": 1.7143087780250986e-06
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5202214054923983,
+          0.6299337670967592,
+          0.5886792986183766
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.10971236160436093,
+            0.06845789312597839
+          ],
+          [
+            0.10971236160436093,
+            0.0,
+            0.041254468478382544
+          ],
+          [
+            0.06845789312597839,
+            0.041254468478382544,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.10971236160436093,
+        "median_disagreement": 0.06845789312597839,
+        "deviation_from_route_median": {
+          "A": 0.06845789312597839,
+          "B": 0.041254468478382544,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          633.9588480266962,
+          1893.6287006250159,
+          1828.9198265631503
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            1259.6698525983197,
+            1194.9609785364541
+          ],
+          [
+            1259.6698525983197,
+            0.0,
+            64.70887406186557
+          ],
+          [
+            1194.9609785364541,
+            64.70887406186557,
+            0.0
+          ]
+        ],
+        "max_disagreement": 1259.6698525983197,
+        "median_disagreement": 1194.9609785364541,
+        "deviation_from_route_median": {
+          "A": 1194.9609785364541,
+          "B": 64.70887406186557,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5983324684955522,
+          0.9413028798071288,
+          0.8356382690065979
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.3429704113115766,
+            0.23730580051104566
+          ],
+          [
+            0.3429704113115766,
+            0.0,
+            0.10566461080053091
+          ],
+          [
+            0.23730580051104566,
+            0.10566461080053091,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.3429704113115766,
+        "median_disagreement": 0.23730580051104566,
+        "deviation_from_route_median": {
+          "A": 0.23730580051104566,
+          "B": 0.10566461080053091,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "HP_ZERO_R4"
+      },
+      "domain": "CHALLENGE",
+      "status": "DIAGNOSTIC_ONLY",
+      "price": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          2.0422989120527646e-05,
+          4.2917404975306717e-05,
+          6.118814836759432e-05
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2.249441585477907e-05,
+            4.076515924706667e-05
+          ],
+          [
+            2.249441585477907e-05,
+            0.0,
+            1.82707433922876e-05
+          ],
+          [
+            4.076515924706667e-05,
+            1.82707433922876e-05,
+            0.0
+          ]
+        ],
+        "max_disagreement": 4.076515924706667e-05,
+        "median_disagreement": 2.249441585477907e-05,
+        "deviation_from_route_median": {
+          "A": 2.249441585477907e-05,
+          "B": 0.0,
+          "MP": 1.82707433922876e-05
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Delta": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.5206757754998679,
+          0.9419034200672507,
+          0.5944928613458995
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.4212276445673828,
+            0.07381708584603164
+          ],
+          [
+            0.4212276445673828,
+            0.0,
+            0.3474105587213512
+          ],
+          [
+            0.07381708584603164,
+            0.3474105587213512,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.4212276445673828,
+        "median_disagreement": 0.3474105587213512,
+        "deviation_from_route_median": {
+          "A": 0.07381708584603164,
+          "B": 0.3474105587213512,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Gamma": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          648.0980292913735,
+          -1365.6793787241706,
+          2496.752735131919
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            2013.777408015544,
+            1848.6547058405456
+          ],
+          [
+            2013.777408015544,
+            0.0,
+            3862.43211385609
+          ],
+          [
+            1848.6547058405456,
+            3862.43211385609,
+            0.0
+          ]
+        ],
+        "max_disagreement": 3862.43211385609,
+        "median_disagreement": 2013.777408015544,
+        "deviation_from_route_median": {
+          "A": 0.0,
+          "B": 2013.777408015544,
+          "MP": 1848.6547058405456
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      },
+      "Vv": {
+        "routes": [
+          "A",
+          "B",
+          "MP"
+        ],
+        "values": [
+          0.38081455886960974,
+          0.7323608674203795,
+          0.4223175563235744
+        ],
+        "pairwise_matrix": [
+          [
+            0.0,
+            0.3515463085507698,
+            0.04150299745396463
+          ],
+          [
+            0.3515463085507698,
+            0.0,
+            0.31004331109680516
+          ],
+          [
+            0.04150299745396463,
+            0.31004331109680516,
+            0.0
+          ]
+        ],
+        "max_disagreement": 0.3515463085507698,
+        "median_disagreement": 0.31004331109680516,
+        "deviation_from_route_median": {
+          "A": 0.04150299745396463,
+          "B": 0.31004331109680516,
+          "MP": 0.0
+        },
+        "interpretation": "numerical diagnostic, not a confidence interval"
+      }
+    }
+  ],
+  "interpretation": "diagnostic only"
+}
