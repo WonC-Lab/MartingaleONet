@@ -1,0 +1,13 @@
+{
+  "code_version": "limiting-v0-certification-v6.0",
+  "AST_valid": true,
+  "input_rows": 128,
+  "all_training_support": true,
+  "time_stencil_moments": true,
+  "first_error_coefficient": "-1/30*fifth_derivative*h**4",
+  "Richardson_factor": 15,
+  "right_variance_moments": true,
+  "protocol_input_code_hashes_match": true,
+  "no_blinded_price_or_residual_evaluations": true,
+  "runner_not_implemented": true
+}

@@ -1,0 +1,635 @@
+{
+  "candidates": [
+    {
+      "index": 0,
+      "input": {
+        "kappa": 3.030905580148101,
+        "theta": 0.03685477253049612,
+        "sigma": 0.6208632726222277,
+        "rho": -0.4222626358270645,
+        "r": 0.0215096190571785
+      },
+      "feller_ratio": 0.5795677330189025,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 1,
+      "input": {
+        "kappa": 1.5182984936982393,
+        "theta": 0.07301366867497563,
+        "sigma": 0.13398089315742256,
+        "rho": -0.5032553911209107,
+        "r": 0.05096869692206383
+      },
+      "feller_ratio": 12.35109864566091,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 2,
+      "input": {
+        "kappa": 1.1890430869534612,
+        "theta": 0.06028634689748287,
+        "sigma": 0.74434084109962,
+        "rho": -0.2419879026710987,
+        "r": 0.06390748582780362
+      },
+      "feller_ratio": 0.25876340568972644,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 3,
+      "input": {
+        "kappa": 3.1388400131836534,
+        "theta": 0.09956690406426787,
+        "sigma": 0.34529072474688294,
+        "rho": -0.7358738459646702,
+        "r": 0.013530441597104073
+      },
+      "feller_ratio": 5.242571406054739,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 4,
+      "input": {
+        "kappa": 3.5665910821408033,
+        "theta": 0.04556333169341087,
+        "sigma": 0.2178372466005385,
+        "rho": -0.8982515200972557,
+        "r": 0.0020801270753145217
+      },
+      "feller_ratio": 6.849115817640525,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 5,
+      "input": {
+        "kappa": 0.7619932685047388,
+        "theta": 0.1129257827810943,
+        "sigma": 0.5184616862796247,
+        "rho": -0.17936613708734506,
+        "r": 0.07043599210679531
+      },
+      "feller_ratio": 0.6402371992274013,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 6,
+      "input": {
+        "kappa": 1.9656970547512174,
+        "theta": 0.02525942761451006,
+        "sigma": 0.4466027514077724,
+        "rho": -0.6656328611075878,
+        "r": 0.04468463644385338
+      },
+      "feller_ratio": 0.4978830015330692,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 7,
+      "input": {
+        "kappa": 2.582484290935099,
+        "theta": 0.08323877358809113,
+        "sigma": 0.6600357971154154,
+        "rho": -0.35964107140898705,
+        "r": 0.0328717377781868
+      },
+      "feller_ratio": 0.9868664313793762,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 8,
+      "input": {
+        "kappa": 2.365442897193134,
+        "theta": 0.06771850826218724,
+        "sigma": 0.3907973192632198,
+        "rho": -0.14406126737594604,
+        "r": 0.05518538899719715
+      },
+      "feller_ratio": 2.097716020205495,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 9,
+      "input": {
+        "kappa": 2.1827460369095206,
+        "theta": 0.10387787993997336,
+        "sigma": 0.6914000915363432,
+        "rho": -0.8251472741365433,
+        "r": 0.027298577055335047
+      },
+      "feller_ratio": 0.9486312257997188,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 10,
+      "input": {
+        "kappa": 0.5415247268974781,
+        "theta": 0.041165775414556266,
+        "sigma": 0.2736430034041405,
+        "rho": -0.3137829221785069,
+        "r": 0.017737368792295455
+      },
+      "feller_ratio": 0.5954096802219276,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 11,
+      "input": {
+        "kappa": 3.7870521917939186,
+        "theta": 0.08044585667550563,
+        "sigma": 0.48709706459194424,
+        "rho": -0.607769388705492,
+        "r": 0.06970620959997177
+      },
+      "feller_ratio": 2.568052761705153,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 12,
+      "input": {
+        "kappa": 3.359296846203506,
+        "theta": 0.026439326982945204,
+        "sigma": 0.7979245987720788,
+        "rho": -0.5701964035630226,
+        "r": 0.07591245025396347
+      },
+      "feller_ratio": 0.2790005542364031,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 13,
+      "input": {
+        "kappa": 0.9685936337336898,
+        "theta": 0.09380206510424614,
+        "sigma": 0.31102117253467443,
+        "rho": -0.45120937675237655,
+        "r": 0.006609319895505905
+      },
+      "feller_ratio": 1.8784692795092537,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 14,
+      "input": {
+        "kappa": 1.735331516712904,
+        "theta": 0.05612659657374024,
+        "sigma": 0.5672791798599065,
+        "rho": -0.78757449015975,
+        "r": 0.03835796140134334
+      },
+      "feller_ratio": 0.6053234089695582,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 15,
+      "input": {
+        "kappa": 2.813864916563034,
+        "theta": 0.1141056551411748,
+        "sigma": 0.16825078306719662,
+        "rho": -0.28148751780390735,
+        "r": 0.049204062893986704
+      },
+      "feller_ratio": 22.684343804171704,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 16,
+      "input": {
+        "kappa": 2.6969072371721268,
+        "theta": 0.05176162140443921,
+        "sigma": 0.6881873718462885,
+        "rho": -0.6868700742721557,
+        "r": 0.01202120266854763
+      },
+      "feller_ratio": 0.5895090519126192,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 17,
+      "input": {
+        "kappa": 1.6461429558694363,
+        "theta": 0.11916641693562269,
+        "sigma": 0.3762799427844584,
+        "rho": -0.3932744175195694,
+        "r": 0.0605406404286623
+      },
+      "feller_ratio": 2.770953808743197,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 18,
+      "input": {
+        "kappa": 1.0985825276002288,
+        "theta": 0.0314390685223043,
+        "sigma": 0.4575460105203093,
+        "rho": -0.855420020967722,
+        "r": 0.054417008459568025
+      },
+      "feller_ratio": 0.3299611492047613,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 19,
+      "input": {
+        "kappa": 3.462370696477592,
+        "theta": 0.0894737259298563,
+        "sigma": 0.23351094061508776,
+        "rho": -0.1739431925117969,
+        "r": 0.023104599565267562
+      },
+      "feller_ratio": 11.362780455434393,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 20,
+      "input": {
+        "kappa": 3.916400007903576,
+        "theta": 0.043088962864130734,
+        "sigma": 0.28182788621634247,
+        "rho": -0.21136968284845348,
+        "r": 0.03126388892531395
+      },
+      "feller_ratio": 4.249278076895501,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 21,
+      "input": {
+        "kappa": 0.6439579166471958,
+        "theta": 0.0791940701007843,
+        "sigma": 0.7574346613138915,
+        "rho": -0.7178470954298973,
+        "r": 0.04117950826883316
+      },
+      "feller_ratio": 0.17778282201054788,
+      "stratum": "feller_violating",
+      "selected": true
+    },
+    {
+      "index": 22,
+      "input": {
+        "kappa": 2.0668562641367316,
+        "theta": 0.0665277419425547,
+        "sigma": 0.16466961707919836,
+        "rho": -0.43070072755217553,
+        "r": 0.07386572606861591
+      },
+      "feller_ratio": 10.141824779246612,
+      "stratum": "feller_satisfied",
+      "selected": true
+    },
+    {
+      "index": 23,
+      "input": {
+        "kappa": 2.277322660200298,
+        "theta": 0.10576443139463662,
+        "sigma": 0.5531303513795138,
+        "rho": -0.5492973260581493,
+        "r": 0.0036180778592824936
+      },
+      "feller_ratio": 1.5744875201890751,
+      "stratum": "feller_satisfied",
+      "selected": true
+    }
+  ],
+  "blocks": [
+    {
+      "kappa": 0.5,
+      "theta": 0.02,
+      "sigma": 0.8,
+      "rho": -0.9,
+      "r": 0,
+      "block_id": 0,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 0.5,
+      "theta": 0.12,
+      "sigma": 0.8,
+      "rho": -0.1,
+      "r": 0.08,
+      "block_id": 1,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 4,
+      "theta": 0.02,
+      "sigma": 0.8,
+      "rho": -0.1,
+      "r": 0,
+      "block_id": 2,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 4,
+      "theta": 0.12,
+      "sigma": 0.8,
+      "rho": -0.9,
+      "r": 0.08,
+      "block_id": 3,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 0.5,
+      "theta": 0.02,
+      "sigma": 0.1,
+      "rho": -0.1,
+      "r": 0.08,
+      "block_id": 4,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 0.5,
+      "theta": 0.12,
+      "sigma": 0.1,
+      "rho": -0.9,
+      "r": 0,
+      "block_id": 5,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 4,
+      "theta": 0.02,
+      "sigma": 0.1,
+      "rho": -0.9,
+      "r": 0.08,
+      "block_id": 6,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 4,
+      "theta": 0.12,
+      "sigma": 0.1,
+      "rho": -0.1,
+      "r": 0,
+      "block_id": 7,
+      "selection": "input_box_anchor"
+    },
+    {
+      "kappa": 3.030905580148101,
+      "theta": 0.03685477253049612,
+      "sigma": 0.6208632726222277,
+      "rho": -0.4222626358270645,
+      "r": 0.0215096190571785,
+      "block_id": 8,
+      "selection": "stratified_sobol",
+      "candidate_index": 0
+    },
+    {
+      "kappa": 1.5182984936982393,
+      "theta": 0.07301366867497563,
+      "sigma": 0.13398089315742256,
+      "rho": -0.5032553911209107,
+      "r": 0.05096869692206383,
+      "block_id": 9,
+      "selection": "stratified_sobol",
+      "candidate_index": 1
+    },
+    {
+      "kappa": 1.1890430869534612,
+      "theta": 0.06028634689748287,
+      "sigma": 0.74434084109962,
+      "rho": -0.2419879026710987,
+      "r": 0.06390748582780362,
+      "block_id": 10,
+      "selection": "stratified_sobol",
+      "candidate_index": 2
+    },
+    {
+      "kappa": 3.1388400131836534,
+      "theta": 0.09956690406426787,
+      "sigma": 0.34529072474688294,
+      "rho": -0.7358738459646702,
+      "r": 0.013530441597104073,
+      "block_id": 11,
+      "selection": "stratified_sobol",
+      "candidate_index": 3
+    },
+    {
+      "kappa": 3.5665910821408033,
+      "theta": 0.04556333169341087,
+      "sigma": 0.2178372466005385,
+      "rho": -0.8982515200972557,
+      "r": 0.0020801270753145217,
+      "block_id": 12,
+      "selection": "stratified_sobol",
+      "candidate_index": 4
+    },
+    {
+      "kappa": 0.7619932685047388,
+      "theta": 0.1129257827810943,
+      "sigma": 0.5184616862796247,
+      "rho": -0.17936613708734506,
+      "r": 0.07043599210679531,
+      "block_id": 13,
+      "selection": "stratified_sobol",
+      "candidate_index": 5
+    },
+    {
+      "kappa": 1.9656970547512174,
+      "theta": 0.02525942761451006,
+      "sigma": 0.4466027514077724,
+      "rho": -0.6656328611075878,
+      "r": 0.04468463644385338,
+      "block_id": 14,
+      "selection": "stratified_sobol",
+      "candidate_index": 6
+    },
+    {
+      "kappa": 2.582484290935099,
+      "theta": 0.08323877358809113,
+      "sigma": 0.6600357971154154,
+      "rho": -0.35964107140898705,
+      "r": 0.0328717377781868,
+      "block_id": 15,
+      "selection": "stratified_sobol",
+      "candidate_index": 7
+    },
+    {
+      "kappa": 2.365442897193134,
+      "theta": 0.06771850826218724,
+      "sigma": 0.3907973192632198,
+      "rho": -0.14406126737594604,
+      "r": 0.05518538899719715,
+      "block_id": 16,
+      "selection": "stratified_sobol",
+      "candidate_index": 8
+    },
+    {
+      "kappa": 2.1827460369095206,
+      "theta": 0.10387787993997336,
+      "sigma": 0.6914000915363432,
+      "rho": -0.8251472741365433,
+      "r": 0.027298577055335047,
+      "block_id": 17,
+      "selection": "stratified_sobol",
+      "candidate_index": 9
+    },
+    {
+      "kappa": 0.5415247268974781,
+      "theta": 0.041165775414556266,
+      "sigma": 0.2736430034041405,
+      "rho": -0.3137829221785069,
+      "r": 0.017737368792295455,
+      "block_id": 18,
+      "selection": "stratified_sobol",
+      "candidate_index": 10
+    },
+    {
+      "kappa": 3.7870521917939186,
+      "theta": 0.08044585667550563,
+      "sigma": 0.48709706459194424,
+      "rho": -0.607769388705492,
+      "r": 0.06970620959997177,
+      "block_id": 19,
+      "selection": "stratified_sobol",
+      "candidate_index": 11
+    },
+    {
+      "kappa": 3.359296846203506,
+      "theta": 0.026439326982945204,
+      "sigma": 0.7979245987720788,
+      "rho": -0.5701964035630226,
+      "r": 0.07591245025396347,
+      "block_id": 20,
+      "selection": "stratified_sobol",
+      "candidate_index": 12
+    },
+    {
+      "kappa": 0.9685936337336898,
+      "theta": 0.09380206510424614,
+      "sigma": 0.31102117253467443,
+      "rho": -0.45120937675237655,
+      "r": 0.006609319895505905,
+      "block_id": 21,
+      "selection": "stratified_sobol",
+      "candidate_index": 13
+    },
+    {
+      "kappa": 1.735331516712904,
+      "theta": 0.05612659657374024,
+      "sigma": 0.5672791798599065,
+      "rho": -0.78757449015975,
+      "r": 0.03835796140134334,
+      "block_id": 22,
+      "selection": "stratified_sobol",
+      "candidate_index": 14
+    },
+    {
+      "kappa": 2.813864916563034,
+      "theta": 0.1141056551411748,
+      "sigma": 0.16825078306719662,
+      "rho": -0.28148751780390735,
+      "r": 0.049204062893986704,
+      "block_id": 23,
+      "selection": "stratified_sobol",
+      "candidate_index": 15
+    },
+    {
+      "kappa": 2.6969072371721268,
+      "theta": 0.05176162140443921,
+      "sigma": 0.6881873718462885,
+      "rho": -0.6868700742721557,
+      "r": 0.01202120266854763,
+      "block_id": 24,
+      "selection": "stratified_sobol",
+      "candidate_index": 16
+    },
+    {
+      "kappa": 1.6461429558694363,
+      "theta": 0.11916641693562269,
+      "sigma": 0.3762799427844584,
+      "rho": -0.3932744175195694,
+      "r": 0.0605406404286623,
+      "block_id": 25,
+      "selection": "stratified_sobol",
+      "candidate_index": 17
+    },
+    {
+      "kappa": 1.0985825276002288,
+      "theta": 0.0314390685223043,
+      "sigma": 0.4575460105203093,
+      "rho": -0.855420020967722,
+      "r": 0.054417008459568025,
+      "block_id": 26,
+      "selection": "stratified_sobol",
+      "candidate_index": 18
+    },
+    {
+      "kappa": 3.462370696477592,
+      "theta": 0.0894737259298563,
+      "sigma": 0.23351094061508776,
+      "rho": -0.1739431925117969,
+      "r": 0.023104599565267562,
+      "block_id": 27,
+      "selection": "stratified_sobol",
+      "candidate_index": 19
+    },
+    {
+      "kappa": 3.916400007903576,
+      "theta": 0.043088962864130734,
+      "sigma": 0.28182788621634247,
+      "rho": -0.21136968284845348,
+      "r": 0.03126388892531395,
+      "block_id": 28,
+      "selection": "stratified_sobol",
+      "candidate_index": 20
+    },
+    {
+      "kappa": 0.6439579166471958,
+      "theta": 0.0791940701007843,
+      "sigma": 0.7574346613138915,
+      "rho": -0.7178470954298973,
+      "r": 0.04117950826883316,
+      "block_id": 29,
+      "selection": "stratified_sobol",
+      "candidate_index": 21
+    },
+    {
+      "kappa": 2.0668562641367316,
+      "theta": 0.0665277419425547,
+      "sigma": 0.16466961707919836,
+      "rho": -0.43070072755217553,
+      "r": 0.07386572606861591,
+      "block_id": 30,
+      "selection": "stratified_sobol",
+      "candidate_index": 22
+    },
+    {
+      "kappa": 2.277322660200298,
+      "theta": 0.10576443139463662,
+      "sigma": 0.5531303513795138,
+      "rho": -0.5492973260581493,
+      "r": 0.0036180778592824936,
+      "block_id": 31,
+      "selection": "stratified_sobol",
+      "candidate_index": 23
+    }
+  ],
+  "counts": {
+    "feller_violating": 60,
+    "feller_satisfied": 68
+  },
+  "selection_uses_numerical_outcomes": false
+}
