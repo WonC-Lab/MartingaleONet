@@ -221,8 +221,15 @@ class CaseRunner:
                 return {'status':'PASS','input':row,'budgets':budgets,'confirming_j':j,
                         'final':{r:history[r][-1] for r in bases},'stats':self.stats}
             candidate=j if qualifies else None
-        # Do not turn stable-looking discrepancies into a model-truth claim.
-        return {'status':'NUMERICAL_UNRESOLVED','input':row,'reason':'no confirmed common window through j=16',
+        # A discrepancy is classified only after two overlapping numerical
+        # windows satisfy every stability/cap test with zero consistency removed.
+        stable=all(all(policy.estimator_window_accepts([{**z,'R_hat':D(0)} for z in window],budgets['B_R'])
+                       for window in [history[route][-4:-1],history[route][-3:]]) for route in bases)
+        one,two=[history[r][-1] for r in ['E1','E2']]
+        agrees=abs(one['R_hat']-two['R_hat'])<=one['u_R_hat']+two['u_R_hat']
+        incompatible=stable and agrees and any(abs(z['R_hat'])>z['u_R_hat'] for z in [one,two])
+        return {'status':'RESIDUAL_INCOMPATIBLE' if incompatible else 'NUMERICAL_UNRESOLVED','input':row,
+                'reason':'stable independent residuals exclude zero' if incompatible else 'no confirmed common window through j=16',
                 'budgets':budgets,'stats':self.stats,'time_history':history}
 
 
