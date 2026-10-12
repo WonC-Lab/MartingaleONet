@@ -1,0 +1,9 @@
+{
+  "CORE": "PASS",
+  "BOUNDARY": "FAIL",
+  "CHALLENGE": "FAIL",
+  "PHASE_1C_AUTHORIZED": "NO",
+  "BOUNDARY_COMPONENT_REVIEW": "REVIEW_REQUIRED",
+  "pricing_calls": 0,
+  "heavy_computation_started": false
+}

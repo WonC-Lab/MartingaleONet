@@ -1,0 +1,2161 @@
+{
+  "planned": 8,
+  "attempted": 8,
+  "complete": true,
+  "rows": [
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "easy_ATM"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 3,
+      "PDE_levels": 14,
+      "errors": [],
+      "adaptive_grid_skips": [
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        }
+      ],
+      "price_budget": "1.0242521073959076E-7",
+      "analytic_last_two_changes": "2E-17",
+      "analytic_gaps": {
+        "A": "2E-17",
+        "B": "2E-17",
+        "MP": "1.508935257116289231010762929925385717225188249715522033978014409181600921072832178284975872033711225546429E-16"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.09242992963869748,
+            "Delta": 0.6556922474010939,
+            "Gamma": 1.880394987258133
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.09242978806889084,
+            "Delta": 0.6556937814274665,
+            "Gamma": 1.8804186261064166
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.0924296479509623,
+            "Delta": 0.6556937625281871,
+            "Gamma": 1.8804256080008361
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 0.09247197745097563,
+            "Delta": 0.6560775457197043,
+            "Gamma": 1.883142917913227
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 0.09243621389641991,
+            "Delta": 0.6557532531679894,
+            "Gamma": 1.8809241122432279
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 0.09242735685880449,
+            "Delta": 0.6556729665733958,
+            "Gamma": 1.8802560381609037
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 0.09242155980240195,
+            "Delta": 0.6556886901193104,
+            "Gamma": 1.8803582000928512
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 0.09242638542096779,
+            "Delta": 0.6556729519895456,
+            "Gamma": 1.8802637137650504
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 0.09242771534375609,
+            "Delta": 0.6556737483641092,
+            "Gamma": 1.880257801570255
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.09242585165292837,
+            "Delta": 0.6556558893330621,
+            "Gamma": 1.8801331952994071
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.09242583656652233,
+            "Delta": 0.6556557916941319,
+            "Gamma": 1.880133688249809
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 0.0924252872338163,
+            "Delta": 0.6556508157750809,
+            "Gamma": 1.8800996512234325
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 0.0924253674052133,
+            "Delta": 0.6556519897071454,
+            "Gamma": 1.8801083436807247
+          }
+        },
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "values": {
+            "price": 0.09242523036416835,
+            "Delta": 0.6556507476644812,
+            "Gamma": 1.880098190156354
+          }
+        }
+      ],
+      "PDE_final_price_gap": "1.962457761E-8",
+      "PDE_price_gap_within_reference_budget": true,
+      "PDE_final_two_changes": {
+        "price": "1.3704104495E-7",
+        "Delta": "0.0000012420426642",
+        "Gamma": "0.0000101535243707"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 1,
+        "calendar_tau": 1.0,
+        "days": 365,
+        "exact_time_change_scale": 1.0,
+        "mode": "direct",
+        "Vv_chain_rule_factor": 1.0
+      }
+    },
+    {
+      "input": {
+        "S": 0.4965853037914095,
+        "K": 1,
+        "x": -0.7,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "deep_OTM"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 3,
+      "PDE_levels": 13,
+      "errors": [],
+      "adaptive_grid_skips": [
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        },
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        }
+      ],
+      "price_budget": "1.0000048184637103932515E-8",
+      "analytic_last_two_changes": "9.12584E-18",
+      "analytic_gaps": {
+        "A": "1.18942590E-16",
+        "B": "3.70943995E-16",
+        "MP": "1.87120427606775628052049977733879968755338733269670734781141677569604747353631977806390988512969095121620497805E-17"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 2.967563739731761e-08,
+            "Delta": 2.0067347733977375e-06,
+            "Gamma": 0.00013494839938526948
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 4.71240412236461e-08,
+            "Delta": 2.7567427260086617e-06,
+            "Gamma": 0.00016366884880168338
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 5.2002207301293935e-08,
+            "Delta": 2.9557696776900715e-06,
+            "Gamma": 0.0001709958593461603
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 6.03413463663927e-09,
+            "Delta": 5.477518770780372e-07,
+            "Gamma": 6.000538352864878e-05
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 4.403791782136461e-08,
+            "Delta": 2.56716907502198e-06,
+            "Gamma": 0.000155493171151632
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 5.484560288840053e-08,
+            "Delta": 3.0930370666946257e-06,
+            "Gamma": 0.00017712498063630964
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 1.4926380695009946e-07,
+            "Delta": 5.309363705904209e-06,
+            "Gamma": 0.000222772719431997
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 6.646134469767779e-08,
+            "Delta": 3.3888971191327717e-06,
+            "Gamma": 0.0001836353846474232
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 5.067883820254656e-08,
+            "Delta": 2.9827928392718976e-06,
+            "Gamma": 0.00017446093358610375
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 4.8617096984782066e-08,
+            "Delta": 3.0035364996396417e-06,
+            "Gamma": 0.0001789724906994791
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 4.891822038206933e-08,
+            "Delta": 3.015844886618966e-06,
+            "Gamma": 0.0001794799126921757
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 4.958888916182671e-08,
+            "Delta": 3.0483731047475665e-06,
+            "Gamma": 0.00018079347210662978
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 4.832982708590534e-08,
+            "Delta": 3.010798643833719e-06,
+            "Gamma": 0.00017978562778561498
+          }
+        }
+      ],
+      "PDE_final_price_gap": "1.45190100915415E-10",
+      "PDE_price_gap_within_reference_budget": true,
+      "PDE_final_two_changes": {
+        "price": "1.25906207592137E-9",
+        "Delta": "3.75744609138475E-8",
+        "Gamma": "0.00000131355941445408"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 1,
+        "calendar_tau": 1.0,
+        "days": 365,
+        "exact_time_change_scale": 1.0,
+        "mode": "direct",
+        "Vv_chain_rule_factor": 1.0
+      }
+    },
+    {
+      "input": {
+        "S": 2.0137527074704766,
+        "K": 1,
+        "x": 0.7,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "deep_ITM"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 3,
+      "PDE_levels": 15,
+      "errors": [],
+      "adaptive_grid_skips": [],
+      "price_budget": "0.0000010539275169480315",
+      "analytic_last_two_changes": "0E-15",
+      "analytic_gaps": {
+        "A": "5E-16",
+        "B": "0E-15",
+        "MP": "2.2131980942971291709939297916259762039879260776447148832560088144964952929241010615772119584481837979664E-16"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 1.0440243218958882,
+            "Delta": 0.9978774256729079,
+            "Gamma": 0.009052198673050895
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 1.044024389825782,
+            "Delta": 0.9978772222925348,
+            "Gamma": 0.009052771985928723
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 1.0440244988785978,
+            "Delta": 0.9978770492664216,
+            "Gamma": 0.00905287883958947
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 1.0448068592586726,
+            "Delta": 0.9988247053120817,
+            "Gamma": 0.0093649900849798
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 1.0441455904567567,
+            "Delta": 0.9980236962272117,
+            "Gamma": 0.009115502315708311
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 1.0439822848613751,
+            "Delta": 0.9978259655335917,
+            "Gamma": 0.009028878299916398
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 1.04398264079644,
+            "Delta": 0.9978267780223414,
+            "Gamma": 0.009040919570644767
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 1.043982490129084,
+            "Delta": 0.9978259536839823,
+            "Gamma": 0.009033225860496564
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 1.0439821842868355,
+            "Delta": 0.9978260403946089,
+            "Gamma": 0.009029044199647427
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 1.043941427808773,
+            "Delta": 0.9977769236124843,
+            "Gamma": 0.00901452668604663
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 1.0439414595851086,
+            "Delta": 0.9977769001877094,
+            "Gamma": 0.009014210868704318
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 1.043931333340419,
+            "Delta": 0.9977646434506428,
+            "Gamma": 0.009009333630448113
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 1.0439311711073342,
+            "Delta": 0.9977646214932676,
+            "Gamma": 0.009010575640247272
+          }
+        },
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "values": {
+            "price": 1.0439286431928307,
+            "Delta": 0.9977615616316775,
+            "Gamma": 0.00900932723933303
+          }
+        },
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "values": {
+            "price": 1.0439280116715597,
+            "Delta": 0.9977607972111155,
+            "Gamma": 0.00900899922781715
+          }
+        }
+      ],
+      "PDE_final_price_gap": "4.947235287E-7",
+      "PDE_price_gap_within_reference_budget": true,
+      "PDE_final_two_changes": {
+        "price": "0.0000025279145035",
+        "Delta": "0.0000030598615901",
+        "Gamma": "0.000001248400914242"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 1,
+        "calendar_tau": 1.0,
+        "days": 365,
+        "exact_time_change_scale": 1.0,
+        "mode": "direct",
+        "Vv_chain_rule_factor": 1.0
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.01,
+        "tau": 0.003968253968253968,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "short_core"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 6,
+      "PDE_levels": 13,
+      "errors": [],
+      "adaptive_grid_skips": [
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        },
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        }
+      ],
+      "price_budget": "1.2585840710471854E-8",
+      "analytic_last_two_changes": "5.63E-17",
+      "analytic_gaps": {
+        "A": "1.09E-16",
+        "B": "2E-18",
+        "MP": "4.526937956719738362059352126441279173053754673728353202942293593673885693103203547855902986533317273253551E-17"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.0025859572809492264,
+            "Delta": 0.5218500892464952,
+            "Gamma": 62.87649715566867
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.0025859570772303474,
+            "Delta": 0.5218504169229129,
+            "Gamma": 62.87653384232109
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.002585932501249829,
+            "Delta": 0.5218878038752299,
+            "Gamma": 62.88428283987731
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 0.0025868168237185773,
+            "Delta": 0.5220285503096467,
+            "Gamma": 63.00665624039502
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 0.002586068503748758,
+            "Delta": 0.5219098304688486,
+            "Gamma": 62.90320091137845
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 0.002585885085963644,
+            "Delta": 0.5218801046638537,
+            "Gamma": 62.87769182813742
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 0.002586122268081843,
+            "Delta": 0.5222319244808987,
+            "Gamma": 62.791772737307184
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 0.0025859045169311806,
+            "Delta": 0.521936413185232,
+            "Gamma": 62.869674122906424
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 0.002585885339507689,
+            "Delta": 0.5218614974588092,
+            "Gamma": 62.87948041345493
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.002585859616915143,
+            "Delta": 0.5218301341626426,
+            "Gamma": 62.8729216561173
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.002585859615978869,
+            "Delta": 0.5218301393570249,
+            "Gamma": 62.87292187777353
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 0.0025858482648500386,
+            "Delta": 0.5218282836586938,
+            "Gamma": 62.87135043979678
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 0.0025858453606757473,
+            "Delta": 0.5218236274346999,
+            "Gamma": 62.87211068500939
+          }
+        }
+      ],
+      "PDE_final_price_gap": "4.6502040023E-9",
+      "PDE_price_gap_within_reference_budget": true,
+      "PDE_final_two_changes": {
+        "price": "1.13511288304E-8",
+        "Delta": "0.0000046562239939",
+        "Gamma": "0.00157143797675"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 0.003968253968253968,
+        "calendar_tau": 0.0027397260273972603,
+        "days": 1,
+        "exact_time_change_scale": 1.4484126984126984,
+        "mode": "exact_process_time_change",
+        "Vv_chain_rule_factor": 1.4484126984126984
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 4,
+        "theta": 0.12,
+        "sigma": 0.8,
+        "rho": -0.1,
+        "r": 0,
+        "label": "high_vol_of_vol"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 3,
+      "PDE_levels": 15,
+      "errors": [],
+      "adaptive_grid_skips": [],
+      "price_budget": "1.3205230199960382E-7",
+      "analytic_last_two_changes": "7E-17",
+      "analytic_gaps": {
+        "A": "6E-17",
+        "B": "0E-17",
+        "MP": "9.444683930329711697171256194581523367776607229399233717568372291277412583863670848995604894694250529454E-18"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.12205918699058511,
+            "Delta": 0.5695100548114937,
+            "Gamma": 1.3524982293129446
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.12205914542196368,
+            "Delta": 0.5695108112392155,
+            "Gamma": 1.3524987256066188
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.12205910368494524,
+            "Delta": 0.5695112035070814,
+            "Gamma": 1.3524959966714634
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 0.12212944928893092,
+            "Delta": 0.5699479014188861,
+            "Gamma": 1.3537959290551678
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 0.1220699915420096,
+            "Delta": 0.5695787954052435,
+            "Gamma": 1.3526971856250274
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 0.12205530803969553,
+            "Delta": 0.5694876400094855,
+            "Gamma": 1.3524258605549984
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 0.12205071463878758,
+            "Delta": 0.5694981566033663,
+            "Gamma": 1.3524563821686613
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 0.12205420969325753,
+            "Delta": 0.5694892969960526,
+            "Gamma": 1.3524365341963511
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 0.12205588272620804,
+            "Delta": 0.5694870370283887,
+            "Gamma": 1.3524204336548258
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.1220532310191961,
+            "Delta": 0.5694640671657525,
+            "Gamma": 1.3523435335086986
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.12205323597715294,
+            "Delta": 0.5694641401772331,
+            "Gamma": 1.3523433143492054
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 0.12205232885871917,
+            "Delta": 0.5694585001382839,
+            "Gamma": 1.3523266402858816
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 0.12205271970319848,
+            "Delta": 0.5694583532738378,
+            "Gamma": 1.3523230414667566
+          }
+        },
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "values": {
+            "price": 0.12205249325609403,
+            "Delta": 0.5694569453303554,
+            "Gamma": 1.3523188820468128
+          }
+        },
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "values": {
+            "price": 0.12205243668575706,
+            "Delta": 0.5694565936056676,
+            "Gamma": 1.3523178519281203
+          }
+        }
+      ],
+      "PDE_final_price_gap": "1.3468615324E-7",
+      "PDE_price_gap_within_reference_budget": false,
+      "PDE_final_two_changes": {
+        "price": "2.2644710445E-7",
+        "Delta": "0.0000014079434824",
+        "Gamma": "0.0000041594199438"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 1,
+        "calendar_tau": 1.0,
+        "days": 365,
+        "exact_time_change_scale": 1.0,
+        "mode": "direct",
+        "Vv_chain_rule_factor": 1.0
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0.04,
+        "tau": 1,
+        "kappa": 1,
+        "theta": 0.04,
+        "sigma": 0.282842712474619,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "near_Feller"
+      },
+      "original_status": "REVIEW_REQUIRED",
+      "analytic_levels": 3,
+      "PDE_levels": 14,
+      "errors": [],
+      "adaptive_grid_skips": [
+        {
+          "grids": [
+            1600,
+            6400,
+            800
+          ],
+          "reason": "prior larger combined grid already meets unchanged price/Delta/KGamma disagreement budgets; no extra grid is needed for triangulation"
+        }
+      ],
+      "price_budget": "1.0159419963455206E-7",
+      "analytic_last_two_changes": "0E-17",
+      "analytic_gaps": {
+        "A": "1.4E-16",
+        "B": "3E-17",
+        "MP": "1.677842603729394327829096369169788981318278288487968266155798621559100045384909234019182893909552752736914E-16"
+      },
+      "analytic_status": "PASS",
+      "PDE_sequence": [
+        {
+          "grids": [
+            100,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.09159825789959992,
+            "Delta": 0.6703194942788959,
+            "Gamma": 1.8585798071522757
+          }
+        },
+        {
+          "grids": [
+            200,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.09159806919891057,
+            "Delta": 0.6703226752216211,
+            "Gamma": 1.858603241309434
+          }
+        },
+        {
+          "grids": [
+            400,
+            300,
+            150
+          ],
+          "values": {
+            "price": 0.09159779179271609,
+            "Delta": 0.6703224985374887,
+            "Gamma": 1.8586233021481013
+          }
+        },
+        {
+          "grids": [
+            400,
+            100,
+            150
+          ],
+          "values": {
+            "price": 0.09163630978981259,
+            "Delta": 0.670739124781787,
+            "Gamma": 1.8616770839667933
+          }
+        },
+        {
+          "grids": [
+            400,
+            200,
+            150
+          ],
+          "values": {
+            "price": 0.09160377083924934,
+            "Delta": 0.6703869837793519,
+            "Gamma": 1.859131267006537
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            150
+          ],
+          "values": {
+            "price": 0.09159570168999337,
+            "Delta": 0.6703000031426244,
+            "Gamma": 1.8584496588358266
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            50
+          ],
+          "values": {
+            "price": 0.09158876612226587,
+            "Delta": 0.6703236387058689,
+            "Gamma": 1.8586219507258903
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            100
+          ],
+          "values": {
+            "price": 0.0915943587212918,
+            "Delta": 0.6703004411430965,
+            "Gamma": 1.8584838449671257
+          }
+        },
+        {
+          "grids": [
+            400,
+            400,
+            200
+          ],
+          "values": {
+            "price": 0.09159623061360604,
+            "Delta": 0.670300895434945,
+            "Gamma": 1.85843690111132
+          }
+        },
+        {
+          "grids": [
+            800,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.09159466514213456,
+            "Delta": 0.6702811058992547,
+            "Gamma": 1.8582768448354274
+          }
+        },
+        {
+          "grids": [
+            1600,
+            800,
+            400
+          ],
+          "values": {
+            "price": 0.0915946414101204,
+            "Delta": 0.670281016612377,
+            "Gamma": 1.858277758768927
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            400
+          ],
+          "values": {
+            "price": 0.09159414105820672,
+            "Delta": 0.670275627878294,
+            "Gamma": 1.858238850043974
+          }
+        },
+        {
+          "grids": [
+            1600,
+            1600,
+            800
+          ],
+          "values": {
+            "price": 0.09159430259925617,
+            "Delta": 0.6702768896858798,
+            "Gamma": 1.858238426565423
+          }
+        },
+        {
+          "grids": [
+            1600,
+            3200,
+            800
+          ],
+          "values": {
+            "price": 0.09159417769374752,
+            "Delta": 0.6702755446052749,
+            "Gamma": 1.858228309486778
+          }
+        }
+      ],
+      "PDE_final_price_gap": "2.194080457E-8",
+      "PDE_price_gap_within_reference_budget": true,
+      "PDE_final_two_changes": {
+        "price": "1.6154104945E-7",
+        "Delta": "0.0000013450806049",
+        "Gamma": "0.000010117078645"
+      },
+      "PDE_status": "REVIEW_REQUIRED",
+      "reconciled_status": "ANALYTIC_CONFIRMED_PDE_FINITE_GRID_REVIEW",
+      "alignment": {
+        "target_tau": 1,
+        "calendar_tau": 1.0,
+        "days": 365,
+        "exact_time_change_scale": 1.0,
+        "mode": "direct",
+        "Vv_chain_rule_factor": 1.0
+      }
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 0.5,
+        "theta": 0.04,
+        "sigma": 1.2,
+        "rho": -0.99,
+        "r": 0.03,
+        "label": "severe_failed"
+      },
+      "original_status": "UNSUPPORTED_EXACT_V0",
+      "analytic_levels": 0,
+      "PDE_levels": 0,
+      "errors": [
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "analytic",
+          "setting": 64,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "analytic",
+          "setting": 128,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "analytic",
+          "setting": 192,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            100,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            200,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            100,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            200,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            50
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            100
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 0.5,
+            "theta": 0.04,
+            "sigma": 1.2,
+            "rho": -0.99,
+            "r": 0.03,
+            "label": "severe_failed"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            200
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        }
+      ],
+      "adaptive_grid_skips": [],
+      "reconciled_status": "UNSUPPORTED_BY_QUANTLIB"
+    },
+    {
+      "input": {
+        "S": 1.0,
+        "K": 1,
+        "x": 0,
+        "v": 0,
+        "tau": 0.001,
+        "kappa": 2.0,
+        "theta": 0.04,
+        "sigma": 0.3,
+        "rho": -0.7,
+        "r": 0.03,
+        "label": "zero_short_R0"
+      },
+      "original_status": "UNSUPPORTED_EXACT_V0",
+      "analytic_levels": 0,
+      "PDE_levels": 0,
+      "errors": [
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "analytic",
+          "setting": 64,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "analytic",
+          "setting": 128,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "analytic",
+          "setting": 192,
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            100,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            200,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            300,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            100,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            200,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            150
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            50
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            100
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        },
+        {
+          "status": "UNSUPPORTED_EXACT_V0",
+          "exception": "RuntimeError('0: invalid value')",
+          "input": {
+            "S": 1.0,
+            "K": 1,
+            "x": 0,
+            "v": 0,
+            "tau": 0.001,
+            "kappa": 2.0,
+            "theta": 0.04,
+            "sigma": 0.3,
+            "rho": -0.7,
+            "r": 0.03,
+            "label": "zero_short_R0"
+          },
+          "engine": "PDE",
+          "setting": [
+            400,
+            400,
+            200
+          ],
+          "alignment": {
+            "target_tau": 0.001,
+            "calendar_tau": 0.0027397260273972603,
+            "days": 1,
+            "exact_time_change_scale": 0.365,
+            "mode": "exact_process_time_change",
+            "Vv_chain_rule_factor": 0.365
+          },
+          "version": "1.41",
+          "source_commit": "367ce80ae4f285835ceb3bba97746bea239984ad"
+        }
+      ],
+      "adaptive_grid_skips": [],
+      "reconciled_status": "UNSUPPORTED_BY_QUANTLIB"
+    }
+  ]
+}

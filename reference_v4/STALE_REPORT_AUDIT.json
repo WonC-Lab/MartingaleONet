@@ -1,0 +1,212 @@
+{
+  "rows": [
+    {
+      "artifact": "HP_core.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        9,
+        21,
+        6
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_RAW_EVIDENCE",
+      "reason": "원시 수치와 체크포인트가 계획 및 해시와 대응하며, 완료 여부를 내용으로 검증했습니다."
+    },
+    {
+      "artifact": "HP_boundary.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        9,
+        22,
+        28
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_RAW_EVIDENCE",
+      "reason": "원시 수치와 체크포인트가 계획 및 해시와 대응하며, 완료 여부를 내용으로 검증했습니다."
+    },
+    {
+      "artifact": "EXTERNAL_RESULTS.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        9,
+        22,
+        2
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_RAW_EVIDENCE",
+      "reason": "원시 수치와 체크포인트가 계획 및 해시와 대응하며, 완료 여부를 내용으로 검증했습니다."
+    },
+    {
+      "artifact": "BOUNDARY_CONTINUITY.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        9,
+        22,
+        34
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_DIAGNOSTIC_STALE_ENDPOINT_TAG",
+      "reason": "R5 tau=.1은 MP 체크포인트 부재로 v0 UNRESOLVED가 기록됐지만 원래 strict PASS를 재검증했습니다. 연속성 판정 기준은 여전히 없습니다."
+    },
+    {
+      "artifact": "BOUNDARY_PDE_CHECKS.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        28
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_RAW_EVIDENCE",
+      "reason": "원시 수치와 체크포인트가 계획 및 해시와 대응하며, 완료 여부를 내용으로 검증했습니다."
+    },
+    {
+      "artifact": "REFERENCE_VALIDATION_REPORT.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "MIXED_CURRENT_COUNTS_STALE_PROSE",
+      "reason": "1557/1557 집계는 최종 증거와 맞지만 Colab 미실행 및 경계 대기 문구는 완료 증거와 충돌합니다."
+    },
+    {
+      "artifact": "CORE_DOMAIN_CERTIFICATE.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_DATA_CLASSIFIER_LOGIC_ARTIFACT",
+      "reason": "R5 FAIL은 유한 격자 PDE를 reference gap에 직접 합친 데서 비롯됐습니다. 원래 FAIL을 보존하고 v4에서 별도로 판정합니다."
+    },
+    {
+      "artifact": "BOUNDARY_REQUIRED_CERTIFICATION.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "STALE_HARDCODED_INTERPRETATION",
+      "reason": "최종 계산 이후 생성된 보고서지만 템플릿에 MP/PDE pending이 남았습니다. 생성 시점만의 문제가 아닙니다."
+    },
+    {
+      "artifact": "HIGH_PRECISION_REPORT.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_RAW_EVIDENCE",
+      "reason": "원시 수치와 체크포인트가 계획 및 해시와 대응하며, 완료 여부를 내용으로 검증했습니다."
+    },
+    {
+      "artifact": "GREEK_CERTIFICATION.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "STALE_HARDCODED_INTERPRETATION",
+      "reason": "최종 계산 이후 생성된 보고서지만 템플릿에 MP/PDE pending이 남았습니다. 생성 시점만의 문제가 아닙니다."
+    },
+    {
+      "artifact": "EXTERNAL_VALIDATION_REPORT.md",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_DATA_STALE_SCOPE_PROSE",
+      "reason": "최종 refinement 수치는 유효하지만 일반적인 Colab/pending 설명은 실제 실행 환경에 맞게 갱신되지 않았습니다."
+    },
+    {
+      "artifact": "CERTIFICATION_RESULTS.json",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        40
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_DATA_CLASSIFIER_LOGIC_ARTIFACT",
+      "reason": "R5 FAIL은 유한 격자 PDE를 reference gap에 직접 합친 데서 비롯됐습니다. 원래 FAIL을 보존하고 v4에서 별도로 판정합니다."
+    },
+    {
+      "artifact": "FAILURE_RESOLUTION_TABLE.csv",
+      "zip_timestamp": [
+        2026,
+        10,
+        10,
+        11,
+        44,
+        36
+      ],
+      "timezone": "not stored in ZIP",
+      "provenance": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+      "underlying_evidence": "final returned c1049e1053f6...",
+      "classification": "CURRENT_DATA_CLASSIFIER_LOGIC_ARTIFACT",
+      "reason": "R5 FAIL은 유한 격자 PDE를 reference gap에 직접 합친 데서 비롯됐습니다. 원래 FAIL을 보존하고 v4에서 별도로 판정합니다."
+    }
+  ]
+}

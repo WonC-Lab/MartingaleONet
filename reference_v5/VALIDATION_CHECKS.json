@@ -1,0 +1,10 @@
+{
+  "source_parse": true,
+  "quantity_classification_unique": true,
+  "manifest_total": 378,
+  "new_blinded_cases": 168,
+  "stencil_moments_and_coefficient_amplification": true,
+  "proposal_hashes_match": true,
+  "required_reports_exist": true,
+  "pricing_calls": 0
+}

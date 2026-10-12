@@ -1,0 +1,33 @@
+{
+  "required_reports": true,
+  "core_catalog_and_csv_count": 1734,
+  "core_numerical_unresolved": 0,
+  "training_boundary_csv_count": 600,
+  "observed_challenge_unresolved": 6,
+  "csv_rows_unique": 2351,
+  "archive_sha_unchanged": true,
+  "python_sources_parse": true,
+  "json_outputs_parse": true,
+  "test_results": {
+    "returned_colab": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "27",
+      "time": "10.395",
+      "timestamp": "2026-10-10T09:12:58.335943+00:00",
+      "hostname": "db8ada903184"
+    },
+    "v4_regression": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "5",
+      "time": "0.582",
+      "timestamp": "2026-10-12T09:22:55.206089+09:00",
+      "hostname": "DESKTOP-LG4JR4I"
+    }
+  }
+}

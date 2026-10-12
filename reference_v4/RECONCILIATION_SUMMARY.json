@@ -1,0 +1,108 @@
+{
+  "phase": "1B.4",
+  "core_pointwise": {
+    "NUMERICALLY_RESOLVED": 1734
+  },
+  "boundary_pointwise": {
+    "NUMERICALLY_RESOLVED": 600
+  },
+  "MP_coverage": {
+    "HP_ESCALATION_PLAN.json": {
+      "planned": 1557,
+      "supported_by_checkpoint": 1552,
+      "supported_by_inherited_v2": 5,
+      "missing": []
+    },
+    "HP_BOUNDARY_ESCALATION_PLAN.json": {
+      "planned": 566,
+      "supported_by_checkpoint": 566,
+      "supported_by_inherited_v2": 0,
+      "missing": []
+    }
+  },
+  "MP_checkpoint_count": 2122,
+  "MP_unique_checkpoint_inputs": 2118,
+  "inherited_v2_only_inputs": [
+    [
+      0,
+      0.01,
+      0.01,
+      1,
+      1,
+      0.04,
+      0.3,
+      -0.7,
+      0.03
+    ],
+    [
+      0,
+      0.04,
+      0.003968253968253968,
+      1,
+      1,
+      0.04,
+      0.3,
+      -0.7,
+      0.03
+    ],
+    [
+      0,
+      0.01,
+      0.003968253968253968,
+      1,
+      4,
+      0.12,
+      0.8,
+      -0.1,
+      0
+    ],
+    [
+      0,
+      0.01,
+      0.01,
+      1,
+      4,
+      0.12,
+      0.8,
+      -0.1,
+      0
+    ],
+    [
+      0,
+      0.04,
+      0.003968253968253968,
+      1,
+      4,
+      0.12,
+      0.8,
+      -0.1,
+      0
+    ]
+  ],
+  "history_checks": {
+    "BYTE_IDENTICAL": 180,
+    "EOL_TRANSPORT_ONLY": 33
+  },
+  "inherited_checkpoint_checks": {
+    "BYTE_IDENTICAL": 283
+  },
+  "module_checks": {
+    "reference_v3/boundary.py": true,
+    "reference_v3/__init__.py": true,
+    "reference_v3/plots.py": true,
+    "reference_v3/boundary_pde.py": true,
+    "reference_v3/provenance.py": true,
+    "reference_v3/coverage.py": true,
+    "reference_v3/review.py": true,
+    "reference_v3/external.py": true,
+    "reference_v3/mp.py": true,
+    "reference_v3/continuity.py": true,
+    "reference_v3/reuse.py": true,
+    "reference_v3/escalation.py": true
+  },
+  "source_commit": "f3c62f22d29d560e41e34017b54c811b7f0ba506",
+  "core_sha256": "3ba4ff1aea78c6d53b026c8287ba8c006e8bfd8148423848d957a0704e868220",
+  "pricing_calls": 0,
+  "unresolved_core": [],
+  "unresolved_boundary": []
+}

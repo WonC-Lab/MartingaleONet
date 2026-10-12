@@ -1,0 +1,152 @@
+{
+  "quantities": [
+    {
+      "id": "terminal_value",
+      "object": "c(x,v,0)=(exp(x)-1)^+",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "exact supervised value",
+      "training": "L_b terminal term",
+      "estimator": "analytic payoff; no FD Greek at the kink",
+      "schedule": "terminal sampling; no reference refinement required",
+      "diagnostic": "exact identity",
+      "adjudication": "EXACT_TARGET_DEFINED",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,76,87,99"
+    },
+    {
+      "id": "absorbing_stock_zero",
+      "object": "V(0,v,K,tau)=0; x=-infinity is not a finite trunk query",
+      "status": "DIAGNOSTIC_ONLY",
+      "role": "exact S=0 external check",
+      "training": "not a separately declared sampled L_b target at finite x",
+      "estimator": "analytic boundary identity",
+      "schedule": "external diagnostic",
+      "diagnostic": "do not replace x=-1.2 labels by zero",
+      "adjudication": "DIAGNOSTIC_ONLY",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,87"
+    },
+    {
+      "id": "finite_x_value",
+      "object": "c(x_b,v,tau,p), x_b=+-1.2",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "certified value label",
+      "training": "L_b finite-x trace",
+      "estimator": "independent A/B + MP on failures",
+      "schedule": "original cutoff/N/L/tolerance/precision refinements; required boundary catalog",
+      "diagnostic": "T_C cross agreement and final two increments <=T_C/4",
+      "adjudication": "PASS_EXISTING_POINTWISE_EVIDENCE",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,87,99; design/REFERENCE_ENGINE_SPEC.md:57-61"
+    },
+    {
+      "id": "vmax_value",
+      "object": "c(x,.25,tau,p)",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "certified value label",
+      "training": "L_b finite-v_max trace",
+      "estimator": "independent A/B/MP",
+      "schedule": "same pointwise price criteria",
+      "diagnostic": "T_C and two stable refinements",
+      "adjudication": "PASS_EXISTING_POINTWISE_EVIDENCE",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,99; design/REFERENCE_ENGINE_SPEC.md:57-61"
+    },
+    {
+      "id": "zero_variance_value",
+      "object": "c_0(x,tau,p)=c(x,0,tau,p)",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "reference consistency component; not an additional v0 Dirichlet loss",
+      "training": "c_theta appears in the v0 AD equation; reference residual is not a label",
+      "estimator": "genuine MP and refined A/B price",
+      "schedule": "v0 part of minimum boundary catalog",
+      "diagnostic": "original T_C",
+      "adjudication": "PASS_EXISTING_POINTWISE_EVIDENCE",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,87,99; reference_v3/boundary.py:16"
+    },
+    {
+      "id": "right_Vv_point",
+      "object": "c_v^+(x,0,tau,p)=lim_h_down_0 [c(x,h,tau,p)-c_0]/h = V_v^+/K if it exists",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "reference derivative consistency component",
+      "training": "network right derivative in v0 equation; no separate boundary Vv label loss declared",
+      "estimator": "(-25 f0+48 f1-36 f2+16 f3-3 f4)/(12h_v)",
+      "schedule": "original six relative steps; v2 ten-step extension, h_v=.01q at zero",
+      "diagnostic": "T_nu; two FD increments, analytic gap and propagated uncertainty <=T_nu/4",
+      "adjudication": "PASS_EXISTING_POINTWISE_EVIDENCE",
+      "source": "design/REFERENCE_ENGINE_SPEC.md:70,74,76; reference_v2/PROTOCOL.md:11"
+    },
+    {
+      "id": "mapped_cx_component",
+      "object": "c_x=e^x Delta; T_cx=e^x T_Delta at fixed x",
+      "status": "PREDECLARED_IMPLICIT_BUT_UNAMBIGUOUS",
+      "role": "coordinate-mapped error bound",
+      "training": "v0 AD equation component; no extra supervised cx target",
+      "estimator": "Delta + exact coordinate chain rule",
+      "schedule": "same predeclared Delta refinements",
+      "diagnostic": "multiply existing Delta budget by e^x; no extra tolerance selected",
+      "adjudication": "PASS_FROM_EXISTING_DELTA_EVIDENCE",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:66; design/REFERENCE_ENGINE_SPEC.md:76"
+    },
+    {
+      "id": "value_continuity_sequence",
+      "object": "lim_v_down_0 c(x,v,tau,p)=c_0(x,tau,p)",
+      "status": "DIAGNOSTIC_ONLY",
+      "role": "report boundary approach; no standalone continuity penalty",
+      "training": "no direct loss term; qualitative consistency diagnostic",
+      "estimator": "g(v)=c(v)-c_0",
+      "schedule": "v=0,1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2",
+      "diagnostic": "observed approach; no predeclared numeric pass threshold",
+      "adjudication": "DIAGNOSTIC_ONLY_NO_INDEPENDENT_TRAINING_GATE",
+      "source": "reference_v2/PROTOCOL.md:13; reference_v3/continuity.py:25"
+    },
+    {
+      "id": "derivative_continuity_sequence",
+      "object": "lim_v_down_0 c_v(x,v,tau,p)=c_v^+ if the stronger trace condition exists",
+      "status": "DIAGNOSTIC_ONLY",
+      "role": "not identical to right derivative existence/value certification",
+      "training": "no direct derivative-continuity regularization declared",
+      "estimator": "positive-v Greek sequences against endpoint",
+      "schedule": "same v sequence",
+      "diagnostic": "not a theorem of uniform C1 regularity; no numeric pass threshold",
+      "adjudication": "DIAGNOSTIC_ONLY",
+      "source": "reference_v2/PROTOCOL.md:13; design/PHASE1A_RESEARCH_DESIGN.md:43"
+    },
+    {
+      "id": "network_v0_penalty_target",
+      "object": "R0[c_theta]=c_theta,tau-r c_theta,x-kappa theta c_theta,v^++r c_theta; target=0",
+      "status": "PREDECLARED_EXPLICIT",
+      "role": "mathematically known zero penalty target",
+      "training": "directly used by L_b at exact v0",
+      "estimator": "network AD with declared coordinate map, not MP residual supervision",
+      "schedule": "proposed finite-v boundary minibatch; no Phase1C code executed",
+      "diagnostic": "equation defined; optimizer tolerance/weights not fully frozen",
+      "adjudication": "EXACT_TARGET_DEFINED_NOT_A_NUMERICAL_REFERENCE_CERTIFICATE",
+      "source": "design/PHASE1A_RESEARCH_DESIGN.md:41,87,91,99"
+    },
+    {
+      "id": "reference_v0_compatibility_acceptance",
+      "object": "numerical acceptance of R0[c_ref] and its uncertainty",
+      "status": "NOT_PREDECLARED",
+      "role": "pre-training v0 consistency review obligation",
+      "training": "indirect validation of the model boundary constraint, not a training label",
+      "estimator": "time FD minus reference Delta/Vv/price RHS",
+      "schedule": "v2/v3 h_tau/tau=.001,.0005,.00025; MP at fixed cutoff/degree",
+      "diagnostic": "missing residual acceptance budget and full time-price uncertainty propagation",
+      "adjudication": "PROTOCOL_GAP",
+      "source": "reference_v2/boundary_pde.py:1,20-23; reference_v3/boundary_pde.py:25; reference_v2/REFERENCE_VALIDATION_REPORT.md"
+    },
+    {
+      "id": "reference_time_derivative_budget",
+      "object": "numerical error budget for c_tau(x,0,tau,p)",
+      "status": "NOT_PREDECLARED",
+      "role": "missing component of reference residual acceptance",
+      "training": "network AD derivative is a residual component; not a reference supervised time Greek",
+      "estimator": "(f_-2-8 f_-1+8 f_1-f_2)/(12h_tau)",
+      "schedule": "three original time steps; no two-axis uncertainty acceptance specified",
+      "diagnostic": "T_C and T_nu do not uniquely define a c_tau budget",
+      "adjudication": "PROTOCOL_GAP",
+      "source": "design/REFERENCE_ENGINE_SPEC.md:57,76; reference_v3/boundary_pde.py:17-25"
+    }
+  ],
+  "outcome": "C",
+  "BOUNDARY": "FAIL",
+  "review": "PROTOCOL_GAP",
+  "PHASE_1C_AUTHORIZED": "NO"
+}

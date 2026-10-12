@@ -1,0 +1,2147 @@
+{
+  "phase": "1B.5",
+  "created_at_utc": "2026-10-12T00:48:54.489713+00:00",
+  "outcome": "C",
+  "BOUNDARY": "FAIL",
+  "PHASE_1C_AUTHORIZED": "NO",
+  "source_catalog": [
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\BASELINE_RATIONALE.md",
+      "sha256": "6482ad3ca0a2a7566c631cd264fccac3c940f2ebaefe16fb276aab76eeebc95f",
+      "lines": 27,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 8,
+          "text": "| B01 | Smooth normalized MLP | Test whether branch/trunk factorization helps this finite-parametric task | Value and boundary labels | Parameter-count and compute controls; equal tuning budget |"
+        },
+        {
+          "line": 9,
+          "text": "| B02 | Vanilla DeepONet | Operator architecture control | Value and boundary labels | Same class and initial weights as physics/proposed arms |"
+        },
+        {
+          "line": 10,
+          "text": "| B03 | Physics-informed DeepONet | Isolate Heston residual information | Value + PDE + boundary | Full payoff, finite boundary and variance handling |"
+        },
+        {
+          "line": 11,
+          "text": "| B04 | Differential MLP | Strong established derivative-learning competitor | Value + boundary + certified Greek labels | Equal derivative-label count and generation cost |"
+        },
+        {
+          "line": 12,
+          "text": "| B05 | Differential DeepONet | Differential-only operator control | Value + boundary + Greeks | Same price/Greek information as proposed; no PDE or shape |"
+        },
+        {
+          "line": 13,
+          "text": "| B06 | Differential physics DeepONet | Isolate shape benefit beyond PDE and Greeks | Value + PDE + boundary + Greeks | Main strong comparator for H2/H4 |"
+        },
+        {
+          "line": 14,
+          "text": "| B07 | Shape physics DeepONet | Isolate shape without certified derivative supervision | Value + PDE + boundary + minimal shape | Shares class, initialization and active sampling streams with B03/B06/B08 |"
+        },
+        {
+          "line": 17,
+          "text": "| B10 | Sensitivity-PDE control | Compare a close conceptual extension suggested in prior work | B03 plus explicitly derived sensitivity residuals | Optional development-budget arm; expensive third/fourth derivatives; do not call it an exact published reproduction |"
+        },
+        {
+          "line": 23,
+          "text": "Exclude FNO from the main study: finite model parameters plus point queries do not provide a natural shared spatial-function-grid comparison. An FNO study would need a separate grid task, resolution protocol and matched outputs. Include a PINN only if it actually uses PDE, payoff and boundary conditions. A fixed-parameter PINN may be a small solver control, but its per-parameter training cost precludes an unqualified operator amortization comparison."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\CLAIM_EVIDENCE_MATRIX.md",
+      "sha256": "c0151871978f1939de8369327bada4db7b8997f720f10318921b341150a36141",
+      "lines": 30,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 7,
+          "text": "| C01 | Reference prices meet declared tolerances | Separate A/B CF implementations and inversions, convergence, ODE/external checks, failure coverage | Specified, not certified; old shared CF is insufficient | E01 training gate |"
+        },
+        {
+          "line": 9,
+          "text": "| C03 | Price convergence need not imply Greek convergence | Interior counterexample preserving price bounds and boundary traces | Design proof provided; classical mathematics, not new empirical evidence | Proposition B / E04 |"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\EXPERIMENT_MATRIX.md",
+      "sha256": "d8702b412f333efb21bb6bf190f52153cc9145f8dca16b40b689f12313529637",
+      "lines": 65,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 11,
+          "text": "| E03 | Main value/physics/differential/shape comparison B01–B08;B09 control | 50k train,8192 dev,4096 devstress; final65536 ID +8192 boundary +16384 OOD | 5101–5105; frozen additional5106–5110 for E11 | H2/H3/H4,capacity- andtime-matched outcomes,failed-run counts | same evaluation rows across checkpoints; full config,selection history,weights,grad/loss logs,computecost | COLAB-HEAVY; E01,E02 feasibility; final evaluator sealed |"
+        },
+        {
+          "line": 12,
+          "text": "| E04 | State Greek fidelity and value–derivative dissociation; all E03 models | final ID/boundary/OOD; dedicated16parameter slices x41spot x31maturity x3variance=61008 diagnostic rows | 5201 slices; model seeds as E03 | Delta/KGamma/nu errors; ATM-short/tail strata; AD-vs FD agreement | reference and model Greek arrays,coordinate maps,referror bands,local refinement around extrema | small1slice LOCAL-LIGHT on saved checkpoint; full COLAB-HEAVY; E01/E03 |"
+        },
+        {
+          "line": 15,
+          "text": "| E07 | Interpolation/boundary/OOD regime limits | ID256blocks x256; boundary64x128; OOD128x128,64one-axis and64joint shiftblocks | 3001/3002/3003 locked split keys | price/Greek/shape by rho,sigma,v,tau,Feller;failurecoverage | block memberships,predictions,refstatus,stratification edges,OOD axis/type | COLAB-HEAVY full labels/eval; E01,E03; no crisis/market stories |"
+        },
+        {
+          "line": 27,
+          "text": "Interpolation tests use broad parameter support with IID state draws and equal block weighting. Boundary tests tag exact/near terminal,v0,x guard boundaries and near-Feller conditions. Exact tau0 payoff is scored for values only; Greeks at the ATM kink are excluded with counts. OOD tests have predeclared axis tags, including weak/positive rho and sigma>support. Every test reference must satisfy E01 tolerances or appear as uncertified coverage; no favorable filtering after model evaluation. Standard metrics average per block then over blocks to prevent a densely sampled easy surface dominating. Plot-slice arrays are descriptive and not extra IID statistical replications."
+        },
+        {
+          "line": 37,
+          "text": "Strategies: unhedged; analytic referenceDelta_A; independent numerical/COSDelta_B (mustagree within Greek tolerance); B02Delta;B03Delta;B08Delta;B06/B05Delta when available; secondary reference local variance-minimizing stock hedge V_S+(rho*sigma/S)V_v. No learned policy optimization. Observedv is a controlled-simulation assumption, not a market deployability claim. Use referenceinitialcallprice for every primary strategy; own-surrogatepremium is a separate accounting sensitivity."
+        },
+        {
+          "line": 49,
+          "text": "Freeze certified reference tolerances to meet the relevant error budget. Reference production implementation must be vectorized over contracts, reuse CF/coefficients across genuinely shared inputs in the surface workload, and handle large heterogeneous batches by chunking with logged memory/cost. Heterogeneousquery andsame-parameter surface cases are separately reported. Never disable reference convergence in one method only to gain speed. Learned andreference predictions are evaluated on identicalquery rows andprecision requirements."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\FIGURE_PLAN.md",
+      "sha256": "bcd2fb27de3160210dc9eef8288608415cb967ad3c7c7aac0569525380a6cf09",
+      "lines": 21,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 9,
+          "text": "| F03 | Where do pricing errors concentrate? | Signed residual scatter; filled moneyness–maturity contours; price buckets | E03/E07 predictions, references and masks | Relative tail errors require explicit price floor |"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\HYPOTHESES.md",
+      "sha256": "3c03262eb0e0865ceb774259d289ea48eb3fd8be27194b0b62be4530baa8e49a",
+      "lines": 34,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 9,
+          "text": "Constraint shortfall g: price lower/upper dividedK; spot slope negative/above1; negativeKGamma; strike derivative outside[-exp(-rtau),0]; negativeK*V_KK; calendar slope sign in the declared r>=0,q0 regime. Gamma/strike-convexity are not independent evidence under homogeneity. Violation frequency is mean1(g>eta),mean magnitude all points,mean among violations,p95,worst and worst coordinates. Thresholds: eta_bound=1e-6 normalized price,eta_slope=1e-5,eta_curvature=1e-4 normalized curvature; reference certification tolerances are disclosed alongside these operational thresholds. Analytic necessary signs use zero; numerical empirical violations use these explicit thresholds and a tolerance sensitivity plot. All tolerances are design budgets, not predictions of achieved performance."
+        },
+        {
+          "line": 15,
+          "text": "Final interpolation/boundary/OOD populations are those in [research design](PHASE1A_RESEARCH_DESIGN.md); an IID certification stream independent of training/model selection is additional if population-probability certificates are attempted. No final test is used to choose weights,capacity,checkpoint or model. Development-selected checkpoints are frozen before evaluation. Compare both a declared fixed-budget checkpoint and a price-matched development-selected checkpoint; the latter is chosen without final Greek information."
+        },
+        {
+          "line": 23,
+          "text": "| H1 | Do value-only/physics-only models satisfying price nRMSE<=1e-3 still exhibit Greek/shape failures? | Existence of resolved Greek error or shape excursion exceeding its frozen budget; at least3/5 exploratory seeds | Counterexample demonstration; price-matched Delta/Gamma scatter; PDE held-out residual | Same frozen interpolation plus ATM-short/lowv stress; validate suspect coordinates with refined reference and finer network grid | If all qualifying models satisfy every budget on the declared population, empirical H1 unsupported; mathematical counterexample remains true but not evidence about these models. If no model meets price budget, this test is inconclusive |"
+        },
+        {
+          "line": 24,
+          "text": "| H2 | Does minimal shape treatment add value beyond derivative-supervised physics? | Common curvature shortfall population L², with proposed/differentialPI ratio<=.70 as practical target | strike slope frequency; all other constraints; coverage bounds | Paired2x2factorial on interpolation/boundary; confirmatory10seed sign test/CI | No robust>=30% reduction, CIs include no improvement, or reduction exists only due price failure: unsupported. Comparator already at noise floor -> inconclusive, no inflated relative reduction |"
+        },
+        {
+          "line": 26,
+          "text": "| H4 | Does proposed treatment improve Greek fidelity beyond value-only,physics-only and differential-only controls? | KGamma RMSE, proposed/differentialPI<=.80 practical target | Delta andnu errors; derivative residual vs labels; ablation main effects | Interpolation and ATM-short;10seed sign tests/paired CI; compare information/compute-matched controls | No>=20% robust Gamma improvement, reference uncertainty comparable to gap, or Delta/nu materially worsen -> joint claim unsupported; superiority over weak controls alone insufficient |"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\NOVELTY_MOAT.md",
+      "sha256": "68ed622fe5bfd23a847e26a76da70d4a89b9de3f3f55dcd923eb57dd55dfe155",
+      "lines": 44,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "Literature checked 2026-10-07. Search scope: primary papers/author repositories for Heston operators, derivative learning, shape-constrained pricing, residual-error certification and hedge approximation. This is a targeted review, not proof that no competing work exists. All empirical findings of the new project remain untested. The distinction between value and derivatives is longstanding; the oscillatory example is motivation, not a new mathematical discovery."
+        },
+        {
+          "line": 9,
+          "text": "| [DeepSVM, v1, December2025](https://arxiv.org/html/2512.07162v1) | Heston PI-DeepONet; ATM Greeks remain unstable; authors report an unsuccessful Gamma penalty and suggest sensitivity-aware training | This is the closest comparator. A new loss plus Greek plots is insufficient. Compare a documented normalized PI operator, certified derivative control and a budget-matched sensitivity-residual arm; assess out-of-sample tradeoffs and actual hedge deviation |"
+        },
+        {
+          "line": 17,
+          "text": "| [Mishra–Molinaro PINN error estimates](https://arxiv.org/abs/2006.16144), [De Ryck–Mishra Kolmogorov analysis](https://arxiv.org/abs/2106.14473) | Stability/generalization theory for residual methods | Our restricted stability lemma is an application, not a new general theorem; finite sampling and degenerate boundaries must remain qualified |"
+        },
+        {
+          "line": 18,
+          "text": "| [Efficient Error Certification for PINNs](https://arxiv.org/abs/2305.10157) | Continuous-domain verification of residual conditions | Empirical validation cannot be relabeled formal certification. Any cell certificate must have verified bounds, or remain a conditional design |"
+        },
+        {
+          "line": 34,
+          "text": "The comparison must include near-expiry and low-variance cases where reference Greeks are resolved, and identify where residual, price and Greek diagnostics disagree. A research contribution can be an honest negative result if it overturns a plausible training heuristic with controlled evidence; it cannot rely on adverse legacy baselines."
+        },
+        {
+          "line": 38,
+          "text": "Gate N1: independent reference and Greek uncertainty pass E01. N2: close-competitor protocols are reconstructed from primary sources, including version-specific assumptions and adaptation costs; no paper method is replaced by a weak straw baseline. N3: a development pilot yields either a substantial reliability/label-cost advantage over differential MLP/DeepONet and smoothness controls, or a clear non-obvious failure boundary robust across seeds. N4: any certificate has a verified domain/norm interpretation and usefulness beyond trivial bounds. N5: literature review is refreshed before submission, with exact prior-overlap matrix."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\PHASE1A_RESEARCH_DESIGN.md",
+      "sha256": "0d2c5cb802cee9ee6ea2199a93bdc090cb82984681a80a43e29a7dc228ae0b0f",
+      "lines": 121,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 41,
+          "text": "Equivalently V_tau=.5vS²V_SS+rho*sigma*v*S*V_Sv+.5sigma²vV_vv+rSV_S+kappa(theta-v)V_v-rV. Payoff c(x,v,0)=(e^x-1)^+, V(0,v,K,tau)=0, V~S-Ke^{-rtau} as S->infinity for fixed v,tau,p. These asymptotic statements are not exact finite-S boundary labels. Use certified values at artificial finite x/v boundaries. At v=0, diffusion vanishes and the compatible limiting equation is c_tau=r c_x+kappa*theta c_v-r c; zero variance now does not imply a deterministic future variance. Do not impose V=max(S-Ke^{-rtau},0) for positive kappa*theta. Finite v_max is an artificial boundary and uses certified reference values, not a claimed physical boundary law."
+        },
+        {
+          "line": 43,
+          "text": "Theory uses interior compact sets v>=v_min>0,tau>=tau_min>0,|rho|<=rho_max<1 and smooth coefficients; the diffusion matrix in (x,v) has positive determinant sigma²v²(1-rho²)/4. Exact maturity payoff is kinked, so C² claims cannot include tau=0,ATM. v=0/Feller-violating regimes require separate boundary analysis and are not covered by a uniform elliptic theorem. Feller 2kappa*theta>=sigma² is reported, not used to discard hard experiments. Require positive kappa,theta,sigma and the true-martingale/moment integrability assumptions needed for payoff expectation and differentiation; verify first CF moment and numerical integrability across the declared domain."
+        },
+        {
+          "line": 47,
+          "text": "| Quantity | Training support | Boundary / challenge population |"
+        },
+        {
+          "line": 72,
+          "text": "Necessary local inequalities on sampled points are not sufficient for a coherent global surface or dynamic no-arbitrage. For a full strike slice on K in(0,infinity), convexity, slope bounds, C(0)=S,C(infinity)=0 give a nonnegative implied terminal measure; with C'(0+)=-e^{-rtau} and proper limiting conditions it has mass1 and meanSe^{rtau}. Across maturities require compatibility/convex order of the appropriate normalized distributions; measured slice constraints alone do not establish it. Because r>=0,q=0, calendar call monotonicity follows from conditional Jensen and the martingale stock, and is a secondary diagnostic. Do not generalize that assertion to negative rates/dividends without reformulation. Global homogeneity is the only structural identity enforced in this design. No global convexity or arbitrage-free-network guarantee is claimed."
+        },
+        {
+          "line": 79,
+          "text": "L=\\lambda_dL_d+\\lambda_pL_p+\\lambda_bL_b"
+        },
+        {
+          "line": 86,
+          "text": "| L_p | dimensionless full Heston residual on nonterminal interior | coupling of v,x,tau; small empirical loss is not continuum control; second state AD plus parameter backprop costs |"
+        },
+        {
+          "line": 87,
+          "text": "| L_b | exact terminal, exact S=0 external check, certified finite-x/v traces, limiting v=0 equation | uniqueness/boundary consistency; payoff kink never differentiated in PDE; reference trace error audited |"
+        },
+        {
+          "line": 91,
+          "text": "Default shape includes these three shortfall functions only; price bounds/spot slope/calendar remain diagnostics first. Add a bound penalty only if development failures justify it, then record an explicit extra arm. Greek scales are trained-data statistics frozen in config; no per-test-label scaling. PDE scaling uses fixed characteristic units tau*=1year,v*=.04 and derivatives through the coordinate map, never arbitrary residual clipping. Begin with normalized lambda_d=lambda_b=1 and a bounded development grid lambda_p in{.1,1},lambda_g in{.1,1},lambda_s in{.1,1}; select under price noninferiority and development Greek/violation objectives, not test accuracy. Use a declared subset of at most12 candidates per arm, identical tuning wall-time budget; exact schedule must be frozen before Phase1C. Do not auto-enable differentiated PDE residuals (third/fourth order): include at most one budget-matched conceptual-competitor control if needed."
+        },
+        {
+          "line": 99,
+          "text": "Per prospective optimization step: data batch512; interior1024; terminal256; finite-x boundaries256 total (128 each); finite-v boundaries256 total (128 each); shape512; derivative-labelled subset128 of data. These are initial config proposals for Phase1C profiling, not executed schedules. v=0 boundary draws use the limiting PDE; guard-domain v_max=.25 and x=±1.2 traces use certified values. Training states stay in the stated support plus separately tagged BC points. Use Sobol rescrambling per epoch for physics with logged seeds/counters, immutable supervised labels, and no final-test reuse. Do not differentiate exact ATM terminal payoff; shape/PDE tau>=1/252 and v>0 only. All arms share supervised labels and sampling budgets when a term is active; inactive terms have no hidden extra labels."
+        },
+        {
+          "line": 103,
+          "text": "Immutable development:64 parameter blocks x128 queries=8192; separate tuning stress set64x64. Final interpolation:256 held-out parameter blocks x256 queries=65536; boundary:64 blocks x128 queries=8192; OOD:128 blocks x128=16384 across predeclared one-axis and joint shifts. Sample x,v,tau independently within each test block using IID draws for interpretable sampling inference; fixed deterministic diagnostic slices are additional descriptive grids. Test block seed keys3001/3002/3003, development2001/2002,train1001,collocation1101. These published seeds are for reproducibility, not license to inspect final labels during tuning. A separate sealed final evaluator releases aggregate results after checkpoint/config hashes freeze. Split manifests include block membership, coordinates, seeds and all hashes. Any certification failure stays in coverage denominators; metrics only on certified rows plus an explicit failed-coverage table. Failure rates trigger domain redesign before training, not favorable test exclusion."
+        },
+        {
+          "line": 118,
+          "text": "| Physics-Informed Heston Operators with Derivative-Aware Reliability Assessment | Can combined objectives pass declared budgets? | restricted residual stability and norm/penalty links; factorial training comparison | reads as penalty engineering; reject this framing unless combined treatment beats strong differential/shape controls |"
+        },
+        {
+          "line": 121,
+          "text": "Recommend the first with model-development results subordinate to the evaluation question. Avoid “certified model” in the title: Phase1B numerical certification is tolerance-based, while continuous-network certificates remain conditional/restricted. The go/no-go decision is reference work GO; novelty and training readiness NOT YET ESTABLISHED. [RISK_REGISTER.md](RISK_REGISTER.md) includes hostile-review objections and design modifications."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\REFERENCE_ENGINE_SPEC.md",
+      "sha256": "cdd542a14b240e5aacda48b35255f9fa452aaf9f994c647dc8a304871efc1671",
+      "lines": 82,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "Status: proposed protocol, NOT CERTIFIED YET. No Phase1A engine computation or neural training. Certification here means reproducible numerical acceptance within a declared domain and tolerance, not interval-arithmetic proof for all real-valued inputs. Reject old labels and imports from `src/heston_solver.py`; the Phase0 alternate inversion shares its CF and is diagnostic only."
+        },
+        {
+          "line": 24,
+          "text": "Use stable expm1/log1p forms near singular cancellation, branch-continuity diagnostics, and a separately implemented sigma->0 limit; never merely rely on a principal log without checks. Exact special values psi(0)=1,psi(-i)=exp(rtau) are tested/handled analytically instead of evaluating a removable 0/0 case. Large/small sigma and long maturity branch issues get explicit flags. Evaluate"
+        },
+        {
+          "line": 32,
+          "text": "Derive/verify u=0 integrand limits from log-CF derivatives; no epsilon-tuned denominator. Cancellation in OTM price formation is an acceptance issue: independent OTM put/call representations or higher precision escalation may be needed. Log all raw unclipped values. Never apply max(price,intrinsic) as a numerical repair. Bounds are tests, not output transformations. A returned small negative value is a failed/roundoff-qualified raw result with uncertainty, not silently zeroed."
+        },
+        {
+          "line": 38,
+          "text": "Start [a,b] from separately validated log-return cumulants c1,c2,c4, e.g. c1±L sqrt(c2+sqrt(abs(c4))) shifted by x, but this is a heuristic starting interval, not a tail-error proof. If cumulant estimates fail or c2<0 beyond tolerance, fail and investigate; do not sanitize by abs(c2). Extend intervals independently of N. Also compare a conservative interval based on CF/ODE cumulant differentiation. Separate truncation, coefficient and summation error, with compensated summation where required."
+        },
+        {
+          "line": 55,
+          "text": "## Convergence and acceptance"
+        },
+        {
+          "line": 57,
+          "text": "Normalize prices by K. Base price tolerance T_C=1e-8+1e-6*max(|c_A|,|c_B|); nearzero relative error is secondary and only reported when |c_ref|>=1e-5. Physical currency tolerance is K*T_C. These are design tolerances, not achieved precision. Numerical error should be <=10% of the smallest intended model improvement/effect; if not, tighten reference tolerances before training or refrain from ranking the models."
+        },
+        {
+          "line": 59,
+          "text": "- A upper integration cutoffs U=64,128,256,512,1024,2048; adaptive absolute tolerances1e-9,1e-11,1e-13 with an independently varied subinterval mesh. Require last two extensions and last two accuracy refinements each change price by<=T_C/4. Tail oscillation and nonmonotonic convergence must trigger further extension/high precision, not early acceptance based on one small difference."
+        },
+        {
+          "line": 62,
+          "text": "- External analytic crosscheck on256cases to the same price tolerance where the external method demonstrably converges; calendar-time/day-count conventions must agree. External FD256cases use spatial/variance/time independent refinement; discrepancies assessed against its own looser measured error band, not used to lower A/B standards. If too expensive, start32FDcases and declare narrower non-Fourier coverage."
+        },
+        {
+          "line": 70,
+          "text": "Define Delta=V_S, Gamma=V_SS, nu=V_v; also Vega_s=2sqrt(v)*nu for v>0. For normalized pricing validate Delta, KGamma,nu/K. At v=0 use right variance derivatives only if converged, separately tagged; Vega_s=0 there may conceal large nu, so do not substitute it for variance sensitivity."
+        },
+        {
+          "line": 74,
+          "text": "Independent check: five-point central FD in physicalS, not accidentally x. For h, Delta≈(V(S-2h)-8V(S-h)+8V(S+h)-V(S+2h))/(12h); Gamma≈(-V(S+2h)+16V(S+h)-30V(S)+16V(S-h)-V(S-2h))/(12h²). Variance uses analogous five-point first derivative for v±2hv>0, high-order one-sided near0. Initial hS/S={.02,.01,.005,.0025,.00125,.000625}; hv/max(v,.01) same ladder. Use Richardson comparisons and the roundoff/truncation plateau, not smallesth by default. Price tolerance for each stencil must satisfy propagated numerical error<T_G/4 (sum absolute stencil coefficients times price uncertainty); gamma's1/h² amplification may require80digit pricing. Save everyh/stencil price and error bound. No generic complex-step on real-price Re/abs/branch/adaptive quadrature: those maps are nonholomorphic. Complex-step is allowed only on a demonstrated analytic integrand parameterization with full derivation, not a default shortcut."
+        },
+        {
+          "line": 76,
+          "text": "Greek design tolerances: T_Delta=2e-6+1e-5|Delta_ref|; T_KGamma=2e-5+1e-4|KGamma_ref|; T_nu/K=2e-5+1e-4|nu_ref/K|. Require within-route plateau<=T_G/4 and cross-route agreement<=T_G, including the verified FD check on256cases. Near-expiry Gamma divergent behavior is physical and not compared with finite terminalATM Greek. Any region lacking trustworthy Greeks remains uncertified, no target placeholders."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\RISK_REGISTER.md",
+      "sha256": "e6880ea8a47e8f02292f0d340fcbe8c0843e3817a41bbc5a4dba34fb1af48b09",
+      "lines": 48,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 18,
+          "text": "| “Feller-violating regimes are discarded.” | MAJOR | Include near-boundary and violating regimes; keep theory interior restrictions separate from empirical domain | Certification failure cannot be silently deleted; domain change is versioned before model outcomes |"
+        },
+        {
+          "line": 44,
+          "text": "4. Save every refinement, stencil, failure and external comparison to a versioned `reference_validation/` directory; produce `REFERENCE_CERTIFICATE.md` and machine-readable report that distinguishes price and Greek acceptance and numerical versus formal certification."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\TABLE_PLAN.md",
+      "sha256": "f45cb891f1f769fe49dc09153d96722026c7d986cf6a69b71649f03bffa72a2c",
+      "lines": 18,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 7,
+          "text": "| T01 | Reference domain, price/Greek tolerances, convergence settings, gaps, uncertainty, coverage and external-check scope | E01 validation records | F01 |"
+        },
+        {
+          "line": 11,
+          "text": "| T05 | Interpolation/boundary/OOD tags, Feller class, errors, shape metrics, reference coverage and seed uncertainty | E07/E11 | F06 |"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\design\\THEOREM_ARCHITECTURE.md",
+      "sha256": "a750c86a7d849a4b46c3822fadafa3b3d832feb46e236eb086cebf35c6abfabe",
+      "lines": 100,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "Status: exact elementary statements and proof sketches below are part of the design, not novel theorem claims. No convergence theorem for neural optimization, global Heston boundary regularity, or full financial no-arbitrage guarantee is established. Minimum paper core is the counterexample plus a carefully scoped hedge-deviation identity; stability/norm/penalty results are supporting lemmas only if used in an actual empirical analysis."
+        },
+        {
+          "line": 7,
+          "text": "## A — restricted residual-to-value stability"
+        },
+        {
+          "line": 9,
+          "text": "Statement: on Q_T=Omega_xv x(0,T] with bounded Omega, v>=v_min>0,sigma>=sigma_min>0,|rho|<=rho_max<1,r>=0,smooth bounded coefficients, let c,chat be continuous on the parabolic closure and C^{2,1} inside. If exact c solves (partial_tau-L_p+r)c=0, error on initial/spatial parabolic boundary is bounded by b, and continuum residual R=(partial_tau-L_p+r)chat is bounded by delta, then"
+        },
+        {
+          "line": 15,
+          "text": "Proof: ±(b+tau*delta) are super/sub-barriers for the linear operator since r>=0. Apply parabolic maximum principle; equivalently use a stopped Feynman–Kac expectation with boundary error and residual source. For a negative bounded r, an exponential factor is required; that case is not the main domain. Artificial-boundary label uncertainty contributes to b and cannot be omitted."
+        },
+        {
+          "line": 17,
+          "text": "Tools: maximum principle/stopped diffusion; [PINN stability literature](https://arxiv.org/abs/2006.16144) provides broader context. Failure points: empirical L² residual is not continuum L-infinity; v=0/rho=±1 destroy stated ellipticity; payoff is nonsmooth at tau0; missing BC excludes uniqueness; unbounded domain needs different growth control. Empirical consequence: report separately residual distribution, terminal/boundary error and reference boundary uncertainty. Do not derive this bound from a minibatch loss. Status: standard lemma with proof above under stated hypotheses, not new general Heston theory."
+        },
+        {
+          "line": 27,
+          "text": "Uniform price error <=K n^{-3/2}->0. On a compact region with bounded cutoff derivatives, Delta error=O(n^{-1/2}) and converges uniformly, but at z0 Gamma error=-n^{1/2}/K, so Gamma diverges and becomes negative for large n. All perturbed prices remain within call bounds for K n^{-3/2}<m. Because cutoff vanishes near time/space boundaries, the exact payoff/boundary traces are unchanged. This gives a price-bounds-preserving interior counterexample, not just an abstract sinusoid."
+        },
+        {
+          "line": 31,
+          "text": "Proof is explicit differentiation and margin control. Tools: smooth compact cutoffs and the classical discontinuity of differentiation in the C0 norm; no deep theorem needed. Failure points: a payoff kink or zero price-bound margin cannot be included; increasingly oscillatory functions may need increasing model capacity. It does not prove any particular trained network behaves this way. Empirical consequence: price and Delta convergence cannot replace Gamma evaluation; report all three independently. This is known functional analysis applied carefully to pricing, not claimed original theory."
+        },
+        {
+          "line": 35,
+          "text": "For any fixed finite collection of value, PDE and boundary samples, choose an interior neighborhood disjoint from these points, and a smooth compact perturbation supported there. The perturbation and all derivatives vanish at every sampled point. Scale its oscillatory amplitude to zero while increasing frequency as above; sampled value/PDE/boundary losses are identical to the unperturbed function but an unsampled Greek diverges. The same construction preserves price bounds if the support has a positive margin."
+        },
+        {
+          "line": 37,
+          "text": "This proves lack of a deterministic guarantee from finite sampling **without capacity/smoothness/coverage bounds**. It does not invalidate well-resolved population PDE estimates. With uniform ellipticity, suitable continuum graph norms and regular BC, residual estimates may indeed control derivatives: no claim “small true PDE error never controls Greeks.” A neural representability or stochastic generalization claim would require separate approximation/capacity hypotheses. Empirical consequence: independent dense/IID grids, validation of worst regions, and sampling/capacity controls are necessary."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\README.md",
+      "sha256": "dd9533caff8f561d1d24592c85a7447ca16ba74439332cff238a34f295171c74",
+      "lines": 114,
+      "kind": "legacy_quarantined_not_a_new_protocol_source",
+      "boundary_mentions": []
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\CERTIFICATION_PROTOCOL.md",
+      "sha256": "4e916d8b71453a89f931a70238ff6757232e119ce9885553729cbd8a4cce2dc4",
+      "lines": 21,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "Domain v1 and all acceptance budgets in `design/REFERENCE_ENGINE_SPEC.md` are retained. Grid v1.1 replaces 256 random parameter blocks with scrambled Sobol blocks, seed 4101, and uses a separate state Sobol sequence seed 4102. The 1680 deterministic points and 64 challenge points remain; total 5840. This is a coverage change requested in Phase1B, not a tolerance change. No failures are filtered by Feller ratio."
+        },
+        {
+          "line": 9,
+          "text": "For each evaluated row, A uses cutoff 64,128,256,512,1024,2048, tolerance 1e-9,1e-11,1e-13 at U=2048, and panels 4,8,16 at the finest tolerance. B uses N=64,128,256,512,1024,2048,4096 independently at L=8,12,16,24,32. Final two differences in each axis, for every output, must be <= one quarter of the corresponding budget. Quadrature reported error excludes the integration tail. Maximum reference differences are diagnostic metadata, not rigorous error bounds. Any solver exception or integration failure is retained and fails the row."
+        },
+        {
+          "line": 11,
+          "text": "A is float64 only. Its precision option rejects unsupported precision explicitly. Failure to converge is escalated to future independently checked higher precision, never silently switched or clipped. B uses compensated real summation. Both return unclipped values; the exact terminal payoff is a mathematical boundary condition, not clipping a numerical price."
+        },
+        {
+          "line": 13,
+          "text": "FD uses the predeclared six relative steps and five-point physical-S stencils; v uses centered stencils or the fourth-order right stencil (-25,48,-36,16,-3)/(12h). For B the base interval is held fixed over every stencil. Store each stencil value. Acceptance requires two final FD increments and analytic/FD discrepancy <= Greek budget/4. Conservative amplification of the *diagnostic* cross-route price gap plus A quadrature estimate is recorded separately; it is not a proven bound. A failed amplification budget leaves the FD evidence unresolved. Last-step agreement does not remove missing higher-precision evidence."
+        },
+        {
+          "line": 15,
+          "text": "Financial sanity budgets use price/Greek tolerances and homogeneity identities `V_K=(V-S Delta)/K`, `V_KK=(S/K)^2 Gamma`; also independently check strike FD on representative points. Test homogeneity at K=50,100,200. CF checks: zero, moment, conjugation, dense-frequency continuity, parameter perturbations and >=32 direct complex Riccati ODE comparisons. Exact zero/first-moment CF values are imposed identities and therefore also compared with the unforced ODE solution."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\certify.py",
+      "sha256": "5bd5a61b182bf79b93d6cb86d85cff1e7aa7713a992d15a11490022c7d23e5fa",
+      "lines": 207,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 77,
+          "text": "    maxchanges[\"A_tolerance\"]=differences(at)"
+        },
+        {
+          "line": 125,
+          "text": "        row[f\"u_ref_{s}\"]=physical_gap; row[f\"normalized_{s}_gap\"]=float(gap[i]);row[f\"tolerance_{s}\"]=float(tol[i])"
+        },
+        {
+          "line": 155,
+          "text": "            parameter_continuity_A=float(abs(A.cf(u,c.v,c.tau,perturb)-av)),"
+        },
+        {
+          "line": 156,
+          "text": "            parameter_continuity_B=float(abs(B.cf(u,c.v,c.tau,perturb)-bv))))"
+        }
+      ],
+      "functions": [
+        {
+          "name": "normalized",
+          "line": 19
+        },
+        {
+          "name": "budgets",
+          "line": 20
+        },
+        {
+          "name": "clean",
+          "line": 24
+        },
+        {
+          "name": "dump",
+          "line": 34
+        },
+        {
+          "name": "save_npz",
+          "line": 37
+        },
+        {
+          "name": "assess",
+          "line": 46
+        },
+        {
+          "name": "cf_checks",
+          "line": 134
+        },
+        {
+          "name": "summarize",
+          "line": 159
+        },
+        {
+          "name": "run",
+          "line": 171
+        },
+        {
+          "name": "call",
+          "line": 48
+        },
+        {
+          "name": "differences",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\derivatives.py",
+      "sha256": "e6082c9783b5ebc77f4dab08ab22397d9c6842a9e041e9c8a729cfd114a00009",
+      "lines": 37,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [],
+      "functions": [
+        {
+          "name": "studies",
+          "line": 8
+        },
+        {
+          "name": "strike_check",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\README.md",
+      "sha256": "2ab388b5cbd9b854e071ba841722aafcf829b016e92b04e2be169bc20bebfc78",
+      "lines": 25,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": []
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\REFERENCE_VALIDATION_REPORT.md",
+      "sha256": "d14a5e56c4c6b4ca4dff32c52c350ff5d893eaa10815208286be8fea1588af20",
+      "lines": 65,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 9,
+          "text": "A: stable little-trap P1/P2 inversion, analytic spot/variance derivatives and explicit cutoff/tolerance/panel refinements. B: independently written scaled hyperbolic Riccati solution, Taylor-ODE cumulants, analytic COS put coefficients, parity call and direct-call diagnostic, fixed-interval Greeks. Direct numerical Riccati ODE is a third CF validation, not an external price engine. Optional pinned QuantLib analytic/PDE adapter is supplied."
+        },
+        {
+          "line": 13,
+          "text": "Only input/output dataclasses are shared. Neither route imports the other or legacy pricing code. Both model the same risk-neutral Heston process (q=0), hence common model/derivation risk remains. CF is for log(ST/S), with strike only in inversion phase. A chooses Re(d)>=0 and log1p little-trap factors; B uses a scaled hyperbolic denominator. Branch continuity is tested on sampled frequencies/perturbations, not proven over all complex frequencies. Exact moment identities are imposed in production and independently evaluated by unforced ODE."
+        },
+        {
+          "line": 17,
+          "text": "32 direct complex ODE comparisons: maximum A error 3.10861e-14; B error 3.10861e-14. Moment ODE maximum error 0; conjugation maxima A/B 0/0. Dense-frequency A/B maximum error 2.17244e-15. `CF_CHECKS.json` preserves all cases and perturbation results. Unit tests cover normalization, moment, continuity, sigma=0 Black–Scholes limits and off-ATM regressions."
+        },
+        {
+          "line": 51,
+          "text": "Raw A tables vary U=64..2048, tolerance 1e-9..1e-13 and panel count 4/8/16. B independently varies N=64..4096 at every L=8/12/16/24/32. Five-point physical-S and variance stencils use all six predeclared steps; v=0 uses right differences. Each row contains within-route plateau changes, FD/analytic gaps and amplification diagnostics. Small-h agreement is not assumed sufficient. `BOUNDARY_ESCALATION.json` separately extends two short/v=0 cases through U=65536 and N=65536 at L=16/32, without replacing any failed row. Typical R0 prices approach agreement under these extensions, while R4 Gamma remains strongly unstable. The hard cases require further cutoff/term extension and/or independently verified high precision before labels can be certified. Analytic-v=0 values are retained as diagnostics; zero Vega_s does not establish a trustworthy Vv."
+        },
+        {
+          "line": 65,
+          "text": "**FAIL — Phase 1C dataset generation is not authorized; neural training remains prohibited.** Required next work is numerical escalation of retained failures, complete mandatory/FD coverage, and external analytic/PDE review under unchanged budgets. Do not use the full sweep to conceal the already observed failures, or loosen tolerance to restore earlier claims. This report concludes Phase1B with a failed reference gate; it is not a certificate."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference\\tests\\test_reference.py",
+      "sha256": "a6946897e4959e452cf6b17da3a00525eb37e301dd4c05df0dabb11280f2b198",
+      "lines": 97,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 80,
+          "text": "def test_parameter_and_frequency_continuity():"
+        }
+      ],
+      "functions": [
+        {
+          "name": "test_cf_identities_and_ode",
+          "line": 13
+        },
+        {
+          "name": "test_off_atm_regression",
+          "line": 23
+        },
+        {
+          "name": "test_known_deterministic_variance_bs",
+          "line": 35
+        },
+        {
+          "name": "test_homogeneity_derivatives_and_strike",
+          "line": 47
+        },
+        {
+          "name": "test_determinism_grid_and_serialization",
+          "line": 62
+        },
+        {
+          "name": "test_failure_preserved_and_terminal",
+          "line": 74
+        },
+        {
+          "name": "test_parameter_and_frequency_continuity",
+          "line": 80
+        },
+        {
+          "name": "test_positive_rho_stock_moment_singular_algebra",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\boundary_pde.py",
+      "sha256": "24cfd8ed1b7d70faca2b4f9b778858984f3d14a79e6bdbeb8b26dc40b7267ad0",
+      "lines": 27,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 1,
+          "text": "\"\"\"Raw limiting-PDE consistency checks; no invented PDE acceptance tolerance.\"\"\""
+        },
+        {
+          "line": 20,
+          "text": "                    c_tau_FD=dt,limiting_PDE_rhs=rhs,residual=dt-rhs,base=base.row(),status=\"DIAGNOSTIC_ONLY\"))"
+        },
+        {
+          "line": 21,
+          "text": "    dump(Path(output)/\"BOUNDARY_PDE_CHECKS.json\",dict(rows=rows,"
+        },
+        {
+          "line": 23,
+          "text": "        warning=\"No PDE tolerance declared; finite-cutoff agreement is not a boundary certificate\"))"
+        }
+      ],
+      "functions": [
+        {
+          "name": "run",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\BOUNDARY_REPORT.md",
+      "sha256": "66f0f0afaecc8fc423839e89b90e842044f2302ec055b3f03c880b4082cbaa66",
+      "lines": 11,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 1,
+          "text": "# Collar and degenerate boundary evidence"
+        },
+        {
+          "line": 3,
+          "text": "**BOUNDARY/COLLAR GATE: FAIL.** Only 0/3202 planned positive-variance collar grid points have new full-row coverage. Historical collar rows and all sequence diagnostics remain separate and visible. Exact v=0 belongs to the fixed CHALLENGE partition, but is also a boundary obligation of the proposed PDE training objective."
+        },
+        {
+          "line": 5,
+          "text": "Limiting PDE at v=0: c_tau=r*c_x+kappa*theta*c_v-r*c. Positive kappa*theta means future variance is stochastic even when current variance is zero; do not substitute the discounted intrinsic payoff. In the resolved typical tau=.001 case, price is about 9.4226809227e-5, Delta .6299337671, Gamma 1893.6287006251, and right Vv .9413028798. Vega_s=0 conceals that nonzero variance sensitivity."
+        },
+        {
+          "line": 7,
+          "text": "Sequences v=0,1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2 were actually evaluated for typical R0 and severe R4 at tau=.001, with separate A cutoffs and COS term counts. Finite-grid traces are diagnostic; not all are certified. See BOUNDARY_SEQUENCES_local.json and plots. Additional x/positive-v MP sequences are prepared for the full run."
+        },
+        {
+          "line": 9,
+          "text": "BOUNDARY_PDE_CHECKS.json records physical-time five-point differences and the limiting-PDE RHS, without inventing a PDE tolerance. R0 residual decreases from around 1.87e-5 at U32768 to around 1e-10 or below at U524288; R4 retains roughly 1.9e-3 residual at the latter cutoff. Finite-cutoff consistency is not a boundary proof, but it reinforces the need to refine the numerical tail before diagnosing physical singularity."
+        },
+        {
+          "line": 11,
+          "text": "The v=.25 and x=±1.2 artificial-boundary labels required by Phase1A remain uncertified as a complete population. A core-only price certificate, even if obtained later, would not yet satisfy the current training objective's label obligations."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\CHALLENGE_REPORT.md",
+      "sha256": "9b6ea810b20401137b8e396d629fbff93135744a166e0a8738675c288cd3fb9b",
+      "lines": 13,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 9,
+          "text": "Formal scaling derived from the declared SDE: Y_s=v_(tau*s)/tau tends to dY=kappa*theta ds+sigma*sqrt(Y)dB at initial zero. The leading log-price increment is of order tau, unlike order sqrt(tau) when initial v>0. If the scaled return has a regular density at the ATM evaluation point, this suggests Gamma of order 1/tau. The density regularity and uniform asymptotics are additional assumptions, not established here. Gamma growth as tau approaches zero does not establish singularity at a fixed positive tau. No tolerance was changed."
+        },
+        {
+          "line": 11,
+          "text": "The independently sampled large-frequency decay agrees with alpha=(v+kappa*theta*tau)*sqrt(1-rho^2)/sigma. All these fixed-positive-tau cases have alpha>0; polynomial Greek factors times that exponential are integrable for the correct affine CF. Thus fixed-positive-tau infinite Gamma is not supported here, even at initial v=0. Uniform bounds as tau->0 or |rho|->1 do not follow. This distinction supports an unresolved numerical-tail diagnosis for R4 rather than assigning BOUNDARY_SINGULAR to its current quadrature failures."
+        },
+        {
+          "line": 13,
+          "text": "No Domain v2 revision is proposed before complete retained-failure/external analysis. The original Domain v1 and its failed coverage remain reported. Stress inputs can eventually be evaluation-only, but the current boundary labels required for training have not all passed."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\CORE_DOMAIN_CERTIFICATE.md",
+      "sha256": "62583ed21173099c513083c1d361d1209112ad54bb848348fa5f93f24c01094f",
+      "lines": 21,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 19,
+          "text": "Every original tolerance and last-two-refinement rule is retained. Final-method agreement is encouraging but is not sufficient: earlier cutoff refinements, reported requested-accuracy failures, FD propagation and mandatory coverage still require resolution. No challenge failure is used to fail this core decision; its own missing coverage/unresolved evidence fails it."
+        },
+        {
+          "line": 21,
+          "text": "Boundary labels and external checks needed for the original objective also remain unapproved. Phase 1C is not authorized."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\domains.py",
+      "sha256": "e060356aebaa1f7d471ad95a6eaaf5602c49b942240423a7f82d3e7855c38dcb",
+      "lines": 19,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [],
+      "functions": [
+        {
+          "name": "parameter_core",
+          "line": 5
+        },
+        {
+          "name": "classify",
+          "line": 9
+        },
+        {
+          "name": "mandatory_core",
+          "line": 18
+        },
+        {
+          "name": "all_core",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\GREEK_CERTIFICATION.md",
+      "sha256": "529e2ae86bbc683fd7d8176ad38a1066fd3d301011073f1ab7da752371db8fab",
+      "lines": 11,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 5,
+          "text": "All 15 CORE rows flagged for FD truncation/amplification were selected without deletion for additional MP work. See HP_GREEK_PRIORITY.json for evaluated/planned counts. Additional studies use 3-/5-point schemes, Richardson3/5 and ten spot steps from .02 to 1e-7. At v=0 all variance stencils are right-sided. Fifty/eighty/120-digit last-step stencil checks are in FD_PRECISION_CONVERGENCE.json."
+        },
+        {
+          "line": 7,
+          "text": "Unique selected-input Gamma evidence counts: {'NUMERICALLY_RESOLVED': 17, 'UNRESOLVED': 1}. NUMERICALLY_RESOLVED means the recorded precision/degree/cutoff, cross-route and FD evidence meets the selected-point budgets; it is not a certified domain or authorization for training. No BOUNDARY_SINGULAR diagnosis is inferred solely from unstable quadrature."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\high_precision.py",
+      "sha256": "baf96a9524a45896d55795e8a02100f4e0fb79787a3c87d585c6e1986cc2be95",
+      "lines": 137,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [],
+      "functions": [
+        {
+          "name": "context",
+          "line": 18
+        },
+        {
+          "name": "num",
+          "line": 23
+        },
+        {
+          "name": "cf",
+          "line": 25
+        },
+        {
+          "name": "gaussian_rule",
+          "line": 47
+        },
+        {
+          "name": "integration_grid",
+          "line": 51
+        },
+        {
+          "name": "serial",
+          "line": 97
+        },
+        {
+          "name": "evaluate",
+          "line": 100
+        },
+        {
+          "name": "finite_differences",
+          "line": 107
+        },
+        {
+          "name": "__init__",
+          "line": 67
+        },
+        {
+          "name": "spectrum",
+          "line": 72
+        },
+        {
+          "name": "values",
+          "line": 78
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\HIGH_PRECISION_REPORT.md",
+      "sha256": "f14eab01b21b8536929384652b7e91042d86d64b609c2582a319221b65609189",
+      "lines": 36,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 32,
+          "text": "The fixed typical zero-variance case was additionally extended to U=131072/262144/524288, rechecked at 50/80/120 digits and degrees 24/40/64, with right-variance FD and spot FD. Refined A, B and MP agree within unchanged budgets at that point. The original failed values remain unchanged in reference/ and the initial HP records remain visible. Selected numerical resolution does not certify the entire v=0 boundary."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\numerical_analysis.py",
+      "sha256": "84277e0f26365141cd37567d9e9e819ec2711fad1c9d97932cb6fd29b7e466a2",
+      "lines": 51,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [],
+      "functions": [
+        {
+          "name": "analyze",
+          "line": 9
+        },
+        {
+          "name": "numbers",
+          "line": 13
+        },
+        {
+          "name": "changes",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\PROTOCOL.md",
+      "sha256": "fd9aaae5cd27a91d742e0c5a192c0458b3e6a2b1b30f748e8388aeec9125714e",
+      "lines": 19,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "The historical reference/ FAIL, all raw outputs and engine sources are read-only. New output goes only into reference_v2/. Domain v1 remains unchanged. Partition uses only inputs: CORE is the exact closed box in the user request; CHALLENGE takes priority for v=0, tau<1/252, tau>2 or model parameters outside the core ranges; remaining positive-v guard states are COLLAR. Thus v=0 is challenge numerically, while its boundary trace is still mandatory for the proposed training objective. Partition counts of the existing 5840-point grid: CORE 1734 (300 mandatory deterministic +1434 Sobol), COLLAR 3202, CHALLENGE 904. No reassignment after results."
+        },
+        {
+          "line": 5,
+          "text": "All Phase1A numerical acceptance budgets are unchanged. Price 1e-8+1e-6*max(abs(c)); Delta 2e-6+1e-5*max(abs(Delta)); KGamma and Vv/K 2e-5+1e-4*max(abs(Greek)). Require two final stable refinements <=budget/4, cross-route <=budget, and verified FD plateau/error propagation <=budget/4. No enlarged boundary/short tolerance is introduced. Singular claims require mathematical justification and independent evidence; a large unstable number alone is UNRESOLVED."
+        },
+        {
+          "line": 7,
+          "text": "Historical solver failures are reproduced with the same assess() routine into a new directory. A float64 roundoff warning is not erased: it may be diagnosed as precision-limited only if matched high-precision values demonstrate it. No reclassification upgrades the old FAIL. New grid rows retain the original strict status; possible resolution is stored in separate fields. A domain PASS additionally requires all required core coverage, >=256 actual derivative checks, invariances, external triangulation and resolved component budgets. Missing coverage is FAIL with an explicit INCOMPLETE reason. CHALLENGE failure does not automatically fail the core gate. Training authorization also needs the finite-boundary values/Greeks and v=0 treatment used by the original objective."
+        },
+        {
+          "line": 13,
+          "text": "Boundary sequences v=0,1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2; tau=1e-4,2.5e-4,5e-4,1e-3,1/252,.01,.05; ATM and x=±.01, typical and severe R4. Local profiles determine execution size. Heavy full MP/FD/coverage computations are prepared for Colab; any unexecuted entries remain explicit pending, rather than fake rows with passed values."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\README.md",
+      "sha256": "b75e2240543c3ca933d24940c62214f1202cc680ec306d38a00a60e7d8d1ff88",
+      "lines": 29,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 5,
+          "text": "Actual local computation: reproduce original 25 rows, complete 300 mandatory deterministic CORE cases with physical FD, a true 31x31 diagnostic slice, 50/80/120-digit MP selected cases, all 15 CORE FD-truncation targets, extra typical v=0 cutoff escalation, 58 v/tau diagnostic cases, and limiting-PDE consistency checks. See reports for actual completion status and failed counts; this README is not a certificate."
+        },
+        {
+          "line": 16,
+          "text": "python -m reference_v2.workflow boundary --scope local"
+        },
+        {
+          "line": 17,
+          "text": "python -m reference_v2.boundary_pde"
+        },
+        {
+          "line": 29,
+          "text": "All status/uncertainty fields are numerical evidence, not rigorous enclosures. A resolved point cannot certify a continuous domain. v=0 is classified CHALLENGE by the frozen partition but remains a boundary obligation of the original training objective."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\REFERENCE_VALIDATION_REPORT.md",
+      "sha256": "21d7a45c0684174ca690295e453cd3b9569be28084fc8fdc08447f404815013b",
+      "lines": 27,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 3,
+          "text": "**CORE: FAIL — BOUNDARY/COLLAR: FAIL — CHALLENGE/OOD: FAIL. Phase 1C is not authorized.**"
+        },
+        {
+          "line": 25,
+          "text": "The core decision fails on its own incomplete/unresolved evidence. Challenge failures do not automatically invalidate a separately valid core certificate. Nevertheless the current proposed objective also needs finite-x/v boundary information and v=0 compatibility, whose complete certification is absent. Labels remain unapproved."
+        },
+        {
+          "line": 27,
+          "text": "Next numerical work is in colab/phase1b2_reference_escalation.ipynb: complete core then collar/OOD coverage, every retained failure/near-failure MP escalation, external analytic/PDE axis refinement, and renewed review under unchanged tolerances. No neural code is invoked. No Domain v2 is recommended before that evidence exists. Stop after Phase1B.2."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\reports.py",
+      "sha256": "3eab8eabb323d1d1996e2883bd9a437101f34420e958d3cc5a4739f6839f1b4f",
+      "lines": 158,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 66,
+          "text": "Every original tolerance and last-two-refinement rule is retained. Final-method agreement is encouraging but is not sufficient: earlier cutoff refinements, reported requested-accuracy failures, FD propagation and mandatory coverage still require resolution. No challenge failure is used to fail this core decision; its own missing coverage/unresolved evidence fails it."
+        },
+        {
+          "line": 68,
+          "text": "Boundary labels and external checks needed for the original objective also remain unapproved. Phase 1C is not authorized."
+        },
+        {
+          "line": 81,
+          "text": "The fixed typical zero-variance case was additionally extended to U=131072/262144/524288, rechecked at 50/80/120 digits and degrees 24/40/64, with right-variance FD and spot FD. Refined A, B and MP agree within unchanged budgets at that point. The original failed values remain unchanged in reference/ and the initial HP records remain visible. Selected numerical resolution does not certify the entire v=0 boundary."
+        },
+        {
+          "line": 92,
+          "text": "All {len([r for r in core_grid if 'FD_derivative_amplification_or_truncation' in r.get('failure_flags',[])])} CORE rows flagged for FD truncation/amplification were selected without deletion for additional MP work. See HP_GREEK_PRIORITY.json for evaluated/planned counts. Additional studies use 3-/5-point schemes, Richardson3/5 and ten spot steps from .02 to 1e-7. At v=0 all variance stencils are right-sided. Fifty/eighty/120-digit last-step stencil checks are in FD_PRECISION_CONVERGENCE.json."
+        },
+        {
+          "line": 94,
+          "text": "Unique selected-input Gamma evidence counts: {dict(hp_counts)}. NUMERICALLY_RESOLVED means the recorded precision/degree/cutoff, cross-route and FD evidence meets the selected-point budgets; it is not a certified domain or authorization for training. No BOUNDARY_SINGULAR diagnosis is inferred solely from unstable quadrature."
+        },
+        {
+          "line": 100,
+          "text": "    write(\"BOUNDARY_REPORT.md\",f\"\"\""
+        },
+        {
+          "line": 101,
+          "text": "# Collar and degenerate boundary evidence"
+        },
+        {
+          "line": 103,
+          "text": "**BOUNDARY/COLLAR GATE: FAIL.** Only {meta['domains']['COLLAR']['evaluated_grid']}/3202 planned positive-variance collar grid points have new full-row coverage. Historical collar rows and all sequence diagnostics remain separate and visible. Exact v=0 belongs to the fixed CHALLENGE partition, but is also a boundary obligation of the proposed PDE training objective."
+        },
+        {
+          "line": 105,
+          "text": "Limiting PDE at v=0: c_tau=r*c_x+kappa*theta*c_v-r*c. Positive kappa*theta means future variance is stochastic even when current variance is zero; do not substitute the discounted intrinsic payoff. In the resolved typical tau=.001 case, price is about 9.4226809227e-5, Delta .6299337671, Gamma 1893.6287006251, and right Vv .9413028798. Vega_s=0 conceals that nonzero variance sensitivity."
+        },
+        {
+          "line": 107,
+          "text": "Sequences v=0,1e-8,1e-7,1e-6,1e-5,1e-4,1e-3,1e-2 were actually evaluated for typical R0 and severe R4 at tau=.001, with separate A cutoffs and COS term counts. Finite-grid traces are diagnostic; not all are certified. See BOUNDARY_SEQUENCES_local.json and plots. Additional x/positive-v MP sequences are prepared for the full run."
+        },
+        {
+          "line": 109,
+          "text": "BOUNDARY_PDE_CHECKS.json records physical-time five-point differences and the limiting-PDE RHS, without inventing a PDE tolerance. R0 residual decreases from around 1.87e-5 at U32768 to around 1e-10 or below at U524288; R4 retains roughly 1.9e-3 residual at the latter cutoff. Finite-cutoff consistency is not a boundary proof, but it reinforces the need to refine the numerical tail before diagnosing physical singularity."
+        },
+        {
+          "line": 111,
+          "text": "The v=.25 and x=±1.2 artificial-boundary labels required by Phase1A remain uncertified as a complete population. A core-only price certificate, even if obtained later, would not yet satisfy the current training objective's label obligations."
+        },
+        {
+          "line": 122,
+          "text": "Formal scaling derived from the declared SDE: Y_s=v_(tau*s)/tau tends to dY=kappa*theta ds+sigma*sqrt(Y)dB at initial zero. The leading log-price increment is of order tau, unlike order sqrt(tau) when initial v>0. If the scaled return has a regular density at the ATM evaluation point, this suggests Gamma of order 1/tau. The density regularity and uniform asymptotics are additional assumptions, not established here. Gamma growth as tau approaches zero does not establish singularity at a fixed positive tau. No tolerance was changed."
+        },
+        {
+          "line": 124,
+          "text": "The independently sampled large-frequency decay agrees with alpha=(v+kappa*theta*tau)*sqrt(1-rho^2)/sigma. All these fixed-positive-tau cases have alpha>0; polynomial Greek factors times that exponential are integrable for the correct affine CF. Thus fixed-positive-tau infinite Gamma is not supported here, even at initial v=0. Uniform bounds as tau->0 or |rho|->1 do not follow. This distinction supports an unresolved numerical-tail diagnosis for R4 rather than assigning BOUNDARY_SINGULAR to its current quadrature failures."
+        },
+        {
+          "line": 126,
+          "text": "No Domain v2 revision is proposed before complete retained-failure/external analysis. The original Domain v1 and its failed coverage remain reported. Stress inputs can eventually be evaluation-only, but the current boundary labels required for training have not all passed."
+        },
+        {
+          "line": 131,
+          "text": "**CORE: FAIL — BOUNDARY/COLLAR: FAIL — CHALLENGE/OOD: FAIL. Phase 1C is not authorized.**"
+        },
+        {
+          "line": 147,
+          "text": "The core decision fails on its own incomplete/unresolved evidence. Challenge failures do not automatically invalidate a separately valid core certificate. Nevertheless the current proposed objective also needs finite-x/v boundary information and v=0 compatibility, whose complete certification is absent. Labels remain unapproved."
+        },
+        {
+          "line": 149,
+          "text": "Next numerical work is in colab/phase1b2_reference_escalation.ipynb: complete core then collar/OOD coverage, every retained failure/near-failure MP escalation, external analytic/PDE axis refinement, and renewed review under unchanged tolerances. No neural code is invoked. No Domain v2 is recommended before that evidence exists. Stop after Phase1B.2."
+        }
+      ],
+      "functions": [
+        {
+          "name": "key",
+          "line": 15
+        },
+        {
+          "name": "write_reports",
+          "line": 17
+        },
+        {
+          "name": "write",
+          "line": 36
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\tests\\test_escalation.py",
+      "sha256": "3bbe48323b2d4a2b692d932a42bf6f7cefa9af0da491a08fca065deb00ab4942",
+      "lines": 75,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [],
+      "functions": [
+        {
+          "name": "test_partition_exact_and_frozen",
+          "line": 11
+        },
+        {
+          "name": "test_mp_cf_and_true_nodes",
+          "line": 20
+        },
+        {
+          "name": "test_mp_bs_and_precision_convergence",
+          "line": 28
+        },
+        {
+          "name": "test_mp_fd_physical_spot_and_right_variance",
+          "line": 37
+        },
+        {
+          "name": "test_exact_external_time_change",
+          "line": 45
+        },
+        {
+          "name": "test_mp_off_atm_prefactor",
+          "line": 53
+        },
+        {
+          "name": "test_json_null_aggregation_preserves_failures",
+          "line": 62
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v2\\workflow.py",
+      "sha256": "a6ac2d77e8ec84bad118e6ee5f8fc0c4f1af31938e88349d7e8be0d70f74320c",
+      "lines": 218,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 105,
+          "text": "def boundary(out,scope=\"local\"):"
+        },
+        {
+          "line": 117,
+          "text": "        print(\"boundary\",i+1,len(cases),flush=True)"
+        },
+        {
+          "line": 118,
+          "text": "    dump(out/f\"BOUNDARY_SEQUENCES_{scope}.json\",dict(scope=scope,rows=rows,finite_cutoff_warning=True))"
+        },
+        {
+          "line": 134,
+          "text": "    changes=r.get(\"convergence_max_changes\",{});tol=np.array([r.get(f\"tolerance_{f}\",np.inf) for f in [\"price\",\"Delta\",\"Gamma\",\"Vv\"]])"
+        },
+        {
+          "line": 210,
+          "text": "    p=argparse.ArgumentParser();p.add_argument(\"action\",choices=[\"initialize\",\"reproduce\",\"coverage\",\"hp\",\"boundary\",\"aggregate\"])"
+        },
+        {
+          "line": 217,
+          "text": "    elif a.action==\"boundary\":boundary(a.output,a.scope)"
+        }
+      ],
+      "functions": [
+        {
+          "name": "from_row",
+          "line": 22
+        },
+        {
+          "name": "history_hashes",
+          "line": 26
+        },
+        {
+          "name": "initialize",
+          "line": 31
+        },
+        {
+          "name": "verify_history",
+          "line": 37
+        },
+        {
+          "name": "reproduce",
+          "line": 43
+        },
+        {
+          "name": "coverage",
+          "line": 54
+        },
+        {
+          "name": "span",
+          "line": 78
+        },
+        {
+          "name": "hp_selected",
+          "line": 82
+        },
+        {
+          "name": "boundary",
+          "line": 105
+        },
+        {
+          "name": "uncertainty",
+          "line": 120
+        },
+        {
+          "name": "diagnosis",
+          "line": 133
+        },
+        {
+          "name": "aggregate",
+          "line": 142
+        },
+        {
+          "name": "safe_summary",
+          "line": 143
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\boundary.py",
+      "sha256": "e80477db2f30eb1cc8e4793cf87f88fb05fef7a9281570cc4710fc85ecde1429",
+      "lines": 29,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 16,
+          "text": "    dump(root/'BOUNDARY_REQUIRED_PLAN.json',dict(planned=len(cases),selection='original deterministic finite x=+/-1.2, v_max=.25 traces and v=0 compatibility inputs; positive-tau CORE parameter support; not a random or outcome-selected subset',inputs=[c.row() for c in cases],required_labels=dict(finite_positive_variance_Dirichlet_traces=['price'],v0_limiting_PDE=['price','Delta','Vv']),v0_note='v=0 requires limiting PDE consistency; a price/Greek row alone cannot certify it; Gamma is not a boundary training label in the original objective'))"
+        },
+        {
+          "line": 18,
+          "text": "    path=root/'boundary_required.jsonl';rows=[json.loads(z) for z in path.read_text().splitlines()] if path.exists() else [];known={key(r) for r in rows}"
+        },
+        {
+          "line": 22,
+          "text": "            r=f.result();r['training_required_boundary']=True"
+        },
+        {
+          "line": 25,
+          "text": "            if len(rows)%25==0:print('required boundary',len(rows),len(cases),flush=True)"
+        },
+        {
+          "line": 26,
+          "text": "    dump(root/'BOUNDARY_REQUIRED_RESULTS.json',dict(rows=rows,planned=len(cases),evaluated=len(rows),complete=len(rows)==len(cases)))"
+        }
+      ],
+      "functions": [
+        {
+          "name": "plan",
+          "line": 11
+        },
+        {
+          "name": "run",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\boundary_pde.py",
+      "sha256": "07b0ee241fe3c588e23a43af35f0ec0e78bb607c9fa3871780ffd9e5208053d5",
+      "lines": 43,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 1,
+          "text": "\"\"\"Actual v=0 limiting-PDE compatibility, checkpointed per required input.\"\"\""
+        },
+        {
+          "line": 9,
+          "text": "from .boundary import plan"
+        },
+        {
+          "line": 24,
+          "text": "        levels.append(dict(relative_time_step=relative,c_tau=ctx.nstr(derivative,80),RHS=ctx.nstr(rhs,80),residual=ctx.nstr(derivative-rhs,80),stencil_prices=[ctx.nstr(z,80) for z in prices],coefficient_amplification=ctx.nstr(ctx.mpf(18)/(12*h),50)))"
+        },
+        {
+          "line": 25,
+          "text": "    return dict(input=c.row(),config=cfg.__dict__,base=base,levels=levels,status='REVIEW_REQUIRED',reason='No new limiting-PDE residual tolerance is invented; complete value/Greek and time-stencil convergence must be reviewed under the original protocol.')"
+        },
+        {
+          "line": 28,
+          "text": "    root=Path(output);folder=root/'boundary_pde_checkpoints';folder.mkdir(exist_ok=True)"
+        },
+        {
+          "line": 39,
+          "text": "        for f in as_completed(fs):dump(fs[f],f.result());print('v0 limiting PDE',fs[f].name,flush=True)"
+        },
+        {
+          "line": 40,
+          "text": "    dump(root/'BOUNDARY_PDE_CHECKS.json',dict(rows=[json.loads(p.read_text()) for p in folder.glob('*.json')],planned=210))"
+        }
+      ],
+      "functions": [
+        {
+          "name": "worker",
+          "line": 12
+        },
+        {
+          "name": "run",
+          "line": 27
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\BOUNDARY_REQUIRED_CERTIFICATION.md",
+      "sha256": "6bf9f5e235506a1fe9ca989b4b3527a20262b3593784d1115ce315ed0067aece",
+      "lines": 4,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 1,
+          "text": "# Training-required boundary certification"
+        },
+        {
+          "line": 2,
+          "text": "**BOUNDARY GATE FAIL.** Predeclared deterministic finite x=+/-1.2, v_max=.25 and exact v=0 inputs at original CORE parameter regimes/maturities: 600/600 executed; strict {'FAIL': 566, 'PASS': 34}."
+        },
+        {
+          "line": 4,
+          "text": "These support the original Phase1A boundary objective. Evaluation-only short/OOD R4 points are not substitutes. Exact v=0 still requires c_tau=r*c_x+kappa*theta*c_v-r*c compatibility, right variance derivatives and v->0+ continuity. Exact terminal payoff is not differentiated at the kink. Complete MP boundary and limiting-PDE validation are pending; BOUNDARY_REQUIRED_PLAN.json and the notebook enumerate the work. No residual tolerance is invented where the original protocol did not declare one. No boundary labels are approved for training."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\continuity.py",
+      "sha256": "fee173e428c5fbd41cf82d9f7d5af5a2e34f5e12da78265d17d64d38ee83c174",
+      "lines": 29,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 14,
+          "text": "    root=Path(output);folder=root/'continuity_checkpoints';folder.mkdir(exist_ok=True);by={}"
+        },
+        {
+          "line": 20,
+          "text": "            c=Case(0,0,tau,1,p,'continuity_R'+str(i));target=folder/(hashlib.sha256(json.dumps(key(c.row())).encode()).hexdigest()[:20]+'.json')"
+        },
+        {
+          "line": 25,
+          "text": "            dump(target,dict(input=c.row(),config=obj.cfg.__dict__,rows=rows,status='DIAGNOSTIC',v0_point_status=evidence.get('status','UNRESOLVED'),training_required_compatibility=True));print('continuity',c.label,tau,flush=True)"
+        },
+        {
+          "line": 26,
+          "text": "    dump(root/'BOUNDARY_CONTINUITY.json',dict(rows=[json.loads(p.read_text()) for p in folder.glob('*.json')],planned_sequences=15,planned_values=120))"
+        }
+      ],
+      "functions": [
+        {
+          "name": "run",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\CORE_DOMAIN_CERTIFICATE.md",
+      "sha256": "31f6ff65def300dc83cdd694a9c63d609c736f381a5094acf80f47d76cd332ab",
+      "lines": 8,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": []
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\EXTERNAL_VALIDATION_REPORT.md",
+      "sha256": "34702da5c2627febeb69241a9cffe5b394b7ece6422784ef53722290f8b17085",
+      "lines": 81,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": []
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\GREEK_CERTIFICATION.md",
+      "sha256": "36d679059047609e6c25ecc4d1950a015f15cae9d96705784bb8f1fcde9319b8",
+      "lines": 4,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 2,
+          "text": "**Domain-wide certification incomplete.** All 1734 CORE points have the original Delta/Gamma/Vv and physical-FD study. Flagged counts: {'A_domain': 51, 'solver_error': 1531, 'FD_uncertainty_budget_unresolved': 240, 'FD_derivative_amplification_or_truncation': 15, 'strike_FD_derivative_unresolved': 4, 'B_N': 25}. FD, strike, quadrature and COS failures cannot be cleared without matched evidence. MP derivative stencils include 3/5-point and Richardson Gamma, ten physical spot steps, central or right-sided variance steps, and explicit price-uncertainty propagation. Strike failures additionally require actual MP strike differences."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\HIGH_PRECISION_REPORT.md",
+      "sha256": "e94b50945d82774ba5ef16f65317a51f83989b6bbf931900c7dc0e8d5c267166",
+      "lines": 6,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": []
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\mp.py",
+      "sha256": "0a8c9d38fecae0417bee860be3c8f6d06c3c82337ec091cb0a67d2a5a6bf60f8",
+      "lines": 129,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 30,
+          "text": "    required=FIELDS if not r.get('training_required_boundary') else ['price','Delta','Vv'] if c.v==0 else ['price']"
+        },
+        {
+          "line": 33,
+          "text": "        tol=[ctx.mpf(str(r.get('tolerance_'+f,a))) for f,a in zip(FIELDS,[1e-8,2e-6,2e-5,2e-5])]"
+        },
+        {
+          "line": 40,
+          "text": "        cuts=[64,128,256,512,1024,2048,4096,8192,16384,32768]+([65536,131072,262144,524288] if r.get('training_required_boundary') else [])"
+        }
+      ],
+      "functions": [
+        {
+          "name": "worker",
+          "line": 25
+        },
+        {
+          "name": "spectrum",
+          "line": 11
+        },
+        {
+          "name": "vals",
+          "line": 34
+        },
+        {
+          "name": "diffs",
+          "line": 35
+        },
+        {
+          "name": "bchanges",
+          "line": 81
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\README.md",
+      "sha256": "882bad0b17a1754171027b0667ca23bb786602191a4501e841a451e3d9056734",
+      "lines": 54,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 19,
+          "text": "Completed local MP/external/boundary evidence is also transported in `immutable/LOCAL_EVIDENCE_MANIFEST_0001.zip`, with its original manifest and `LOCAL_EVIDENCE_MANIFEST_0001_BUNDLE.json` SHA256 metadata. Publish all three together with the updated `reuse.py`. The importer prefers this verified bundle, so a fresh clone does not require hundreds of loose checkpoint files. It verifies all entries before copying, refuses changed existing checkpoints, and preserves resumed boundary output. Missing evidence never triggers a CORE sweep. After updating the Colab clone to the published fix, rerun the failed reuse cell; the existing CORE receipt/output is retained."
+        },
+        {
+          "line": 30,
+          "text": "python -m reference_v3.boundary --workers 4 --output OUT"
+        },
+        {
+          "line": 31,
+          "text": "python -m reference_v3.escalation --scope boundary --workers 4 --output OUT"
+        },
+        {
+          "line": 32,
+          "text": "python -m reference_v3.continuity --output OUT"
+        },
+        {
+          "line": 33,
+          "text": "python -m reference_v3.boundary_pde --workers 4 --output OUT"
+        },
+        {
+          "line": 50,
+          "text": "External: one checkpoint per input/engine/setting/environment. Boundary: input-key resume. Completed local boundary rows and compatible MP checkpoints are imported. Increasing PDE grids appends settings; it does not erase the earlier sequence. The CORE archive/manifest is separate from all mutable new-output checkpoints."
+        },
+        {
+          "line": 52,
+          "text": "Local-light cost planning is input-only (`LOCAL_COST_PLAN.json`), never selected by favorable numerical answers. Use `--max-seconds 600` for a bounded local MP session: stop submitting new cases when the budget expires, finish active cases, save every result and leave the rest pending. Full MP/PDE/boundary completion is COLAB_HEAVY and may require hours or longer. Hardware/environment execution alone cannot certify the reference engine."
+        },
+        {
+          "line": 54,
+          "text": "Current reports are fail-closed while mandatory numerical evidence remains unresolved. No retrospective subdomain, relaxed tolerance or automatic Phase1C start is allowed. The reference-engine lock is only produced if every existing CORE criterion passes."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\REFERENCE_VALIDATION_REPORT.md",
+      "sha256": "bc72045882bbe3bf6358a2a2b7c712ff777a44b49c7e6681a178bd99ca523d97",
+      "lines": 22,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 2,
+          "text": "CORE **FAIL**, BOUNDARY **FAIL**, CHALLENGE **FAIL**. Phase1C is not authorized."
+        },
+        {
+          "line": 4,
+          "text": "Executed the exact original CORE catalog: 1734/1734, with 300 inherited SHA-verified deterministic rows and 1434 new Sobol rows. No Feller filtering, no altered Domain v1, no changed tolerance. Historical evidence: {'BYTE_IDENTICAL': 213}."
+        },
+        {
+          "line": 20,
+          "text": "Training-required boundary strict coverage 600/600; {'FAIL': 566, 'PASS': 34}. Complete boundary MP and limiting-PDE compatibility remain unapproved. Evaluation-only OOD failures are preserved separately and do not decide CORE."
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\review.py",
+      "sha256": "096f579601fab02c3128adaed543ad5af3f2a27169cee6bbaba90d6bbed29178",
+      "lines": 173,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 52,
+          "text": "                    diagnosis='FLOAT64_TOLERANCE_FLOOR' if any('round' in m for m in messages) else 'HIGH_PRECISION_CONFIRMED'"
+        },
+        {
+          "line": 94,
+          "text": "    boundary=read(root/'BOUNDARY_REQUIRED_RESULTS.json',dict(rows=[],evaluated=0,planned=600));boundary_strict=Counter(z['status'] for z in boundary['rows'])"
+        },
+        {
+          "line": 102,
+          "text": "    metadata=dict(phase='1B.3',CORE=core_gate,BOUNDARY='FAIL',CHALLENGE='FAIL',Phase1C_authorized=False,core_evaluated=len(rows),core_planned=1734,strict_statistics=strict,original_flags=dict(flags),strict_failures_numerically_resolved=resolved,strict_failures_unresolved=unresolved,MP_required=len(needed),MP_evaluated=mp_done,MP_numerically_resolved=mp_resolved,external_analytic_supported=6,external_analytic_within_budget=ext_ok,external_details=extdetails,boundary_evaluated=boundary['evaluated'],boundary_planned=boundary['planned'],boundary_strict=dict(boundary_strict),history_integrity=dict(Counter(history.values())),tolerances_unchanged=True,domain_version='domain-v1-grid-v1.1-sobol4101')"
+        },
+        {
+          "line": 114,
+          "text": "CORE **{core_gate}**, BOUNDARY **FAIL**, CHALLENGE **FAIL**. Phase1C is not authorized."
+        },
+        {
+          "line": 116,
+          "text": "Executed the exact original CORE catalog: {len(rows)}/1734, with 300 inherited SHA-verified deterministic rows and 1434 new Sobol rows. No Feller filtering, no altered Domain v1, no changed tolerance. Historical evidence: {dict(Counter(history.values()))}."
+        },
+        {
+          "line": 126,
+          "text": "Training-required boundary strict coverage {boundary['evaluated']}/{boundary['planned']}; {dict(boundary_strict)}. Complete boundary MP and limiting-PDE compatibility remain unapproved. Evaluation-only OOD failures are preserved separately and do not decide CORE."
+        },
+        {
+          "line": 156,
+          "text": "**Domain-wide certification incomplete.** All {len(rows)} CORE points have the original Delta/Gamma/Vv and physical-FD study. Flagged counts: {dict(flags)}. FD, strike, quadrature and COS failures cannot be cleared without matched evidence. MP derivative stencils include 3/5-point and Richardson Gamma, ten physical spot steps, central or right-sided variance steps, and explicit price-uncertainty propagation. Strike failures additionally require actual MP strike differences."
+        },
+        {
+          "line": 160,
+          "text": "    md('BOUNDARY_REQUIRED_CERTIFICATION.md',f'''# Training-required boundary certification"
+        },
+        {
+          "line": 161,
+          "text": "**BOUNDARY GATE FAIL.** Predeclared deterministic finite x=+/-1.2, v_max=.25 and exact v=0 inputs at original CORE parameter regimes/maturities: {boundary['evaluated']}/{boundary['planned']} executed; strict {dict(boundary_strict)}."
+        },
+        {
+          "line": 163,
+          "text": "These support the original Phase1A boundary objective. Evaluation-only short/OOD R4 points are not substitutes. Exact v=0 still requires c_tau=r*c_x+kappa*theta*c_v-r*c compatibility, right variance derivatives and v->0+ continuity. Exact terminal payoff is not differentiated at the kink. Complete MP boundary and limiting-PDE validation are pending; BOUNDARY_REQUIRED_PLAN.json and the notebook enumerate the work. No residual tolerance is invented where the original protocol did not declare one. No boundary labels are approved for training."
+        },
+        {
+          "line": 168,
+          "text": "        lock=dict(read(root/'FINAL_PROVENANCE.json',{}),QuantLib='1.41',tolerances='unchanged Phase1A',grid='domain-v1-grid-v1.1-sobol4101',settings_files=['HP_ESCALATION_PLAN.json','EXTERNAL_RESULTS.json','CERTIFICATION_RESULTS.json'],neural_labels_generated=False)"
+        },
+        {
+          "line": 170,
+          "text": "    print(json.dumps({k:metadata[k] for k in ['CORE','core_evaluated','strict_failures_unresolved','MP_required','MP_evaluated','external_analytic_within_budget','boundary_evaluated']}),flush=True)"
+        }
+      ],
+      "functions": [
+        {
+          "name": "read",
+          "line": 15
+        },
+        {
+          "name": "budget",
+          "line": 16
+        },
+        {
+          "name": "prior_evidence",
+          "line": 20
+        },
+        {
+          "name": "run",
+          "line": 30
+        },
+        {
+          "name": "md",
+          "line": 112
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\reference_v3\\tests\\test_completion.py",
+      "sha256": "6fbf5b391895edfb576cab2191feecb4a1f2bf255239cd2dfc02842e26bd7552",
+      "lines": 94,
+      "kind": "pre_final_source_or_report",
+      "boundary_mentions": [
+        {
+          "line": 8,
+          "text": "from reference_v3.boundary import plan"
+        },
+        {
+          "line": 31,
+          "text": "def test_catalog_and_objective_boundary_are_not_filtered():"
+        },
+        {
+          "line": 33,
+          "text": "    boundary=plan();assert len(boundary)==600"
+        },
+        {
+          "line": 34,
+          "text": "    assert sum(c.v==0 for c in boundary)==210"
+        },
+        {
+          "line": 35,
+          "text": "    assert all(c.v==0 or c.v==.25 or abs(c.x)==1.2 for c in boundary)"
+        },
+        {
+          "line": 54,
+          "text": "    c=Case(1.2,.25,1,1,Parameters(),'finite_boundary')"
+        },
+        {
+          "line": 56,
+          "text": "    r=dict(c.row(),training_required_boundary=True,domain='COLLAR',failure_flags=[])"
+        }
+      ],
+      "functions": [
+        {
+          "name": "test_affine_variance_cache_matches_independent_cf",
+          "line": 12
+        },
+        {
+          "name": "test_historical_eol_transport_only",
+          "line": 24
+        },
+        {
+          "name": "test_catalog_and_objective_boundary_are_not_filtered",
+          "line": 31
+        },
+        {
+          "name": "test_immutable_catalog_rejects_same_count_substitution",
+          "line": 37
+        },
+        {
+          "name": "test_quantlib_exact_zero_is_not_silently_floored",
+          "line": 45
+        },
+        {
+          "name": "test_finite_dirichlet_trace_does_not_certify_unused_greeks",
+          "line": 51
+        },
+        {
+          "name": "test_evidence_bundle_resumes_without_loose_files_and_rejects_corruption",
+          "line": 65
+        },
+        {
+          "name": "test_missing_evidence_has_actionable_error_without_repricing",
+          "line": 87
+        },
+        {
+          "name": "forbidden",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\Desktop\\Research\\MartingaleONet\\src\\deeponet_model.py",
+      "sha256": "0a51063e337e3616b6a66ef6b8cfbdd834e315fed11c473e9fea30c29880b662",
+      "lines": 146,
+      "kind": "legacy_quarantined_not_a_new_protocol_source",
+      "boundary_mentions": [
+        {
+          "line": 85,
+          "text": "        Computes Heston PDE Residual Loss for Physics-Informed Operator Training."
+        },
+        {
+          "line": 116,
+          "text": "        # Heston PDE Residual (Time to maturity tau = T - t -> V_t = -V_tau)"
+        },
+        {
+          "line": 117,
+          "text": "        pde_residual = ("
+        },
+        {
+          "line": 127,
+          "text": "        return torch.mean(pde_residual ** 2)"
+        }
+      ],
+      "functions": [
+        {
+          "name": "__init__",
+          "line": 18
+        },
+        {
+          "name": "forward",
+          "line": 42
+        },
+        {
+          "name": "compute_autograd_greeks",
+          "line": 55
+        },
+        {
+          "name": "compute_physics_informed_heston_loss",
+          "line": 83
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\5b72d951-0348-4415-8318-16125787724d\\붙여넣은 텍스트.txt",
+      "sha256": "723444040ff556856cfab76e117fe0be9da1a280c9dc47e88321749f64921df8",
+      "lines": 709,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 435,
+          "text": "- PDE residual"
+        },
+        {
+          "line": 437,
+          "text": "- boundary conditions"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\d36cb950-96bd-45c1-8129-4825bcdb80a6\\붙여넣은 텍스트.txt",
+      "sha256": "723444040ff556856cfab76e117fe0be9da1a280c9dc47e88321749f64921df8",
+      "lines": 709,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 435,
+          "text": "- PDE residual"
+        },
+        {
+          "line": 437,
+          "text": "- boundary conditions"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\041ba476-38e9-4fdf-9478-bc6dff508826\\붙여넣은 텍스트.txt",
+      "sha256": "d6b9dc18f11b770f7a7e5544a25208f729e4554f6123ec2b93e4ff3bf9331062",
+      "lines": 685,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 131,
+          "text": "near-Feller-boundary regimes."
+        },
+        {
+          "line": 180,
+          "text": "Write the Heston PDE and payoff/boundary conditions carefully."
+        },
+        {
+          "line": 288,
+          "text": "Residual-to-value stability under clearly stated strong assumptions."
+        },
+        {
+          "line": 325,
+          "text": "+ lambda_BC L_BC"
+        },
+        {
+          "line": 350,
+          "text": "spot boundary sampling,"
+        },
+        {
+          "line": 351,
+          "text": "variance boundary sampling,"
+        },
+        {
+          "line": 383,
+          "text": "boundary test,"
+        },
+        {
+          "line": 405,
+          "text": "boundary conditions."
+        },
+        {
+          "line": 553,
+          "text": "pricing residual scatter,"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\97d90691-ad7a-4305-b593-097f57353fc2\\붙여넣은 텍스트.txt",
+      "sha256": "0d5e7ee387fd0bfcc458a7269f00113c10c00088d5d86d4c9c4ced1fb51cf478",
+      "lines": 588,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 108,
+          "text": "Test continuity with respect to parameters."
+        },
+        {
+          "line": 271,
+          "text": "boundary/challenge points"
+        },
+        {
+          "line": 284,
+          "text": "near-Feller boundary"
+        },
+        {
+          "line": 355,
+          "text": "boundary pathology"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\a62fe7ef-e5db-4b39-a50d-495014726d22\\붙여넣은 텍스트.txt",
+      "sha256": "86f6a737ea4d753d595d0a51f610c0aa7cbecd4170bb8b451f9b881fb45ad9cf",
+      "lines": 541,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 22,
+          "text": "3. challenge/boundary regimes require separate treatment,"
+        },
+        {
+          "line": 59,
+          "text": "B. REFERENCE / BOUNDARY COLLAR"
+        },
+        {
+          "line": 66,
+          "text": "and boundary traces required by the Phase 1A PDE design."
+        },
+        {
+          "line": 88,
+          "text": "BOUNDARY/COLLAR"
+        },
+        {
+          "line": 205,
+          "text": "BOUNDARY_SINGULAR"
+        },
+        {
+          "line": 214,
+          "text": "Treat v=0 as a degenerate boundary, not as ordinary interior training data."
+        },
+        {
+          "line": 220,
+          "text": "the limiting Heston PDE,"
+        },
+        {
+          "line": 221,
+          "text": "right-sided variance derivatives,"
+        },
+        {
+          "line": 222,
+          "text": "continuity as v -> 0+."
+        },
+        {
+          "line": 355,
+          "text": "BOUNDARY_DEGENERACY"
+        },
+        {
+          "line": 411,
+          "text": "J. v -> 0+ continuity plots"
+        },
+        {
+          "line": 451,
+          "text": "degenerate boundary:"
+        },
+        {
+          "line": 473,
+          "text": "BOUNDARY/COLLAR GATE:"
+        },
+        {
+          "line": 487,
+          "text": "boundary/Greek labels actually used during training, are certified to their"
+        },
+        {
+          "line": 503,
+          "text": "reference_v2/BOUNDARY_REPORT.md"
+        },
+        {
+          "line": 534,
+          "text": "11. BOUNDARY gate"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\0c3ca676-7d98-42fe-b906-5ef3c1398be0\\붙여넣은 텍스트.txt",
+      "sha256": "1ca3caaed1f8326a4767d50fc95515a8add8c79f7554fce8985fccbf5051c1c0",
+      "lines": 408,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 6,
+          "text": "BOUNDARY/COLLAR = FAIL"
+        },
+        {
+          "line": 234,
+          "text": "BOUNDARY_DEGENERACY"
+        },
+        {
+          "line": 271,
+          "text": "10. BOUNDARY / COLLAR"
+        },
+        {
+          "line": 274,
+          "text": "After CORE completion, execute the minimum boundary/collar set required by the"
+        },
+        {
+          "line": 281,
+          "text": "v -> 0+ continuity"
+        },
+        {
+          "line": 282,
+          "text": "v = 0 limiting-PDE compatibility"
+        },
+        {
+          "line": 284,
+          "text": "Do not spend time certifying boundary quantities that will not be used during"
+        },
+        {
+          "line": 289,
+          "text": "training-required boundary labels"
+        },
+        {
+          "line": 374,
+          "text": "reference_v3/BOUNDARY_REQUIRED_CERTIFICATION.md"
+        },
+        {
+          "line": 398,
+          "text": "7. boundary certification"
+        },
+        {
+          "line": 401,
+          "text": "10. BOUNDARY gate"
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\WonChan\\.codex\\attachments\\9f000136-4517-422c-9278-cb2438cca350\\붙여넣은 텍스트.txt",
+      "sha256": "c8d458fb29546f41fff8aa33a8619d25d79ce76281daabc2be60e9f461999bb1",
+      "lines": 351,
+      "kind": "human_request",
+      "time": "message sequence known; reliable send timestamp unavailable",
+      "boundary_mentions": [
+        {
+          "line": 10,
+          "text": "BOUNDARY = FAIL"
+        },
+        {
+          "line": 11,
+          "text": "- all 600 training-required boundary points are pointwise numerically resolved"
+        },
+        {
+          "line": 12,
+          "text": "- however continuity / limiting-PDE acceptance remains REVIEW_REQUIRED"
+        },
+        {
+          "line": 23,
+          "text": "training loss L_b uses limiting-v0 compatibility / boundary consistency,"
+        },
+        {
+          "line": 25,
+          "text": "for the relevant continuity / limiting-PDE quantities."
+        },
+        {
+          "line": 33,
+          "text": "PHASE 1B.5 — BOUNDARY ACCEPTANCE PROTOCOL AUDIT"
+        },
+        {
+          "line": 42,
+          "text": "- v -> 0+ continuity"
+        },
+        {
+          "line": 43,
+          "text": "- limiting-PDE compatibility at v = 0"
+        },
+        {
+          "line": 44,
+          "text": "- right-sided Vv behavior"
+        },
+        {
+          "line": 45,
+          "text": "- any other boundary quantity actually consumed by L_b"
+        },
+        {
+          "line": 47,
+          "text": "The purpose is NOT to invent a favorable threshold after seeing results."
+        },
+        {
+          "line": 70,
+          "text": "- original loss definition L_b"
+        },
+        {
+          "line": 71,
+          "text": "- original boundary definitions"
+        },
+        {
+          "line": 74,
+          "text": "- original continuity / PDE-check code comments"
+        },
+        {
+          "line": 77,
+          "text": "Do NOT use later numerical outcomes to infer what the threshold \"should have"
+        },
+        {
+          "line": 84,
+          "text": "3. FORMALIZE THE BOUNDARY QUANTITIES"
+        },
+        {
+          "line": 88,
+          "text": "boundary quantity."
+        },
+        {
+          "line": 92,
+          "text": "1. value continuity:"
+        },
+        {
+          "line": 95,
+          "text": "2. right-sided variance derivative:"
+        },
+        {
+          "line": 98,
+          "text": "3. limiting Heston PDE compatibility at v = 0"
+        },
+        {
+          "line": 100,
+          "text": "4. finite-x boundary constraints"
+        },
+        {
+          "line": 102,
+          "text": "5. v_max boundary constraints"
+        },
+        {
+          "line": 104,
+          "text": "6. any boundary residual explicitly appearing in L_b"
+        },
+        {
+          "line": 119,
+          "text": "For every boundary quantity, assign exactly one status:"
+        },
+        {
+          "line": 138,
+          "text": "Multiple reasonable acceptance thresholds or interpretations remain possible."
+        },
+        {
+          "line": 150,
+          "text": "For each training-relevant boundary quantity:"
+        },
+        {
+          "line": 168,
+          "text": "6. IMPORTANT: DO NOT INVENT A NEW ABSOLUTE PDE THRESHOLD"
+        },
+        {
+          "line": 177,
+          "text": "unless that exact threshold, or a uniquely derivable uncertainty budget,"
+        },
+        {
+          "line": 180,
+          "text": "If the limiting-PDE residual is dimensional or scale-dependent, examine"
+        },
+        {
+          "line": 181,
+          "text": "whether the original design implies a normalized residual."
+        },
+        {
+          "line": 186,
+          "text": "7. CHECK WHETHER L_b ACTUALLY REQUIRES THE BLOCKING QUANTITY"
+        },
+        {
+          "line": 191,
+          "text": "Determine whether L_b requires:"
+        },
+        {
+          "line": 193,
+          "text": "A. exact limiting-PDE residual supervision at v=0"
+        },
+        {
+          "line": 195,
+          "text": "B. only pointwise boundary value constraints"
+        },
+        {
+          "line": 197,
+          "text": "C. continuity regularization"
+        },
+        {
+          "line": 199,
+          "text": "D. right-sided derivative supervision"
+        },
+        {
+          "line": 212,
+          "text": "boundary evidence"
+        },
+        {
+          "line": 213,
+          "text": "    -> boundary training target / penalty"
+        },
+        {
+          "line": 214,
+          "text": "    -> L_b term"
+        },
+        {
+          "line": 229,
+          "text": "- issue BOUNDARY PASS / FAIL"
+        },
+        {
+          "line": 235,
+          "text": "The disputed continuity / limiting-PDE quantity is diagnostic-only and not"
+        },
+        {
+          "line": 236,
+          "text": "actually consumed by L_b."
+        },
+        {
+          "line": 242,
+          "text": "- recompute BOUNDARY gate from actually training-required quantities"
+        },
+        {
+          "line": 251,
+          "text": "- retain BOUNDARY = REVIEW_REQUIRED / FAIL"
+        },
+        {
+          "line": 253,
+          "text": "- do not invent a threshold"
+        },
+        {
+          "line": 268,
+          "text": "- acceptance threshold or confidence rule"
+        },
+        {
+          "line": 275,
+          "text": "- handling of right-sided derivatives"
+        },
+        {
+          "line": 285,
+          "text": "- scale-normalized PDE residual"
+        },
+        {
+          "line": 309,
+          "text": "- checking whether L_b actually consumes each quantity"
+        },
+        {
+          "line": 318,
+          "text": "reference_v5/BOUNDARY_PROTOCOL_AUDIT.md"
+        },
+        {
+          "line": 319,
+          "text": "reference_v5/BOUNDARY_QUANTITY_MAP.md"
+        },
+        {
+          "line": 320,
+          "text": "reference_v5/BOUNDARY_TRAINING_DEPENDENCY.md"
+        },
+        {
+          "line": 321,
+          "text": "reference_v5/BOUNDARY_GATE_DECISION.md"
+        },
+        {
+          "line": 338,
+          "text": "1. which boundary quantities are actually used by L_b"
+        },
+        {
+          "line": 343,
+          "text": "6. whether the current BOUNDARY blocker is scientifically genuine"
+        },
+        {
+          "line": 346,
+          "text": "9. revised BOUNDARY gate"
+        }
+      ]
+    }
+  ],
+  "chronology": [
+    {
+      "quantity": "limiting equation",
+      "path": "design/PHASE1A_RESEARCH_DESIGN.md",
+      "line": 41,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "6155ffb54a40e6a03d012c7cf3f297624b91dad0b574361517a0bc4ea662e66b",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "L_b composition",
+      "path": "design/PHASE1A_RESEARCH_DESIGN.md",
+      "line": 87,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "6155ffb54a40e6a03d012c7cf3f297624b91dad0b574361517a0bc4ea662e66b",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "PDE scales",
+      "path": "design/PHASE1A_RESEARCH_DESIGN.md",
+      "line": 91,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "6155ffb54a40e6a03d012c7cf3f297624b91dad0b574361517a0bc4ea662e66b",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "v0 collocation",
+      "path": "design/PHASE1A_RESEARCH_DESIGN.md",
+      "line": 99,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "6155ffb54a40e6a03d012c7cf3f297624b91dad0b574361517a0bc4ea662e66b",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "value numerical budget",
+      "path": "design/REFERENCE_ENGINE_SPEC.md",
+      "line": 57,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "4e56546b434cddde643f2653c2afb5dadaca61b98ed666f64a0dd973ff77aab0",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "right variance derivative",
+      "path": "design/REFERENCE_ENGINE_SPEC.md",
+      "line": 70,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "4e56546b434cddde643f2653c2afb5dadaca61b98ed666f64a0dd973ff77aab0",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "Greek numerical budget",
+      "path": "design/REFERENCE_ENGINE_SPEC.md",
+      "line": 76,
+      "commit": "e8d63725aee9b9e35a64454f10f896dc76b2280e",
+      "author_date": "2026-10-07T11:35:40+09:00",
+      "committer_date": "2026-10-07T12:34:04+09:00",
+      "subject": "Add Phase 0 and Phase 1 reference validation framework",
+      "blob_sha256": "4e56546b434cddde643f2653c2afb5dadaca61b98ed666f64a0dd973ff77aab0",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "boundary sequences",
+      "path": "reference_v2/PROTOCOL.md",
+      "line": 13,
+      "commit": "85e14cc50cb0d8bc624fac16f227dc9bbe3c47ec",
+      "author_date": "2026-10-07T11:27:26+09:00",
+      "committer_date": "2026-10-07T11:27:26+09:00",
+      "subject": "Add Phase 1B.2 reference escalation workflow",
+      "blob_sha256": "fd9aaae5cd27a91d742e0c5a192c0458b3e6a2b1b30f748e8388aeec9125714e",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "no PDE acceptance tolerance",
+      "path": "reference_v2/boundary_pde.py",
+      "line": 23,
+      "commit": "85e14cc50cb0d8bc624fac16f227dc9bbe3c47ec",
+      "author_date": "2026-10-07T11:27:26+09:00",
+      "committer_date": "2026-10-07T11:27:26+09:00",
+      "subject": "Add Phase 1B.2 reference escalation workflow",
+      "blob_sha256": "24cfd8ed1b7d70faca2b4f9b778858984f3d14a79e6bdbeb8b26dc40b7267ad0",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "minimal training label map",
+      "path": "reference_v3/boundary.py",
+      "line": 16,
+      "commit": "03f83b7dbc07fdc174a7e51a6c8bd4d360427c49",
+      "author_date": "2026-10-07T12:33:47+09:00",
+      "committer_date": "2026-10-07T12:34:06+09:00",
+      "subject": "Add Phase 1B.3 Colab completion workflow and immutable CORE snapshot",
+      "blob_sha256": "a48377ebbb81da084609230fb1ba1090e48436f351c2fa428cf6e1b948f63de0",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "limiting PDE review required",
+      "path": "reference_v3/boundary_pde.py",
+      "line": 25,
+      "commit": "03f83b7dbc07fdc174a7e51a6c8bd4d360427c49",
+      "author_date": "2026-10-07T12:33:47+09:00",
+      "committer_date": "2026-10-07T12:34:06+09:00",
+      "subject": "Add Phase 1B.3 Colab completion workflow and immutable CORE snapshot",
+      "blob_sha256": "ecf35a57be60586d3cc1f9c984b8ba4bfc00a8eb681e11503af430e3b67902de",
+      "before_final_evidence": true
+    },
+    {
+      "quantity": "continuity diagnostic status",
+      "path": "reference_v3/continuity.py",
+      "line": 25,
+      "commit": "03f83b7dbc07fdc174a7e51a6c8bd4d360427c49",
+      "author_date": "2026-10-07T12:33:47+09:00",
+      "committer_date": "2026-10-07T12:34:06+09:00",
+      "subject": "Add Phase 1B.3 Colab completion workflow and immutable CORE snapshot",
+      "blob_sha256": "8ea3756b8549e01e5f0cc27378ca65041f730e91a485b664796f0a73bc24be7e",
+      "before_final_evidence": true
+    }
+  ],
+  "local_commit": "51a5cf4a64da26a43bf5862c59cd59632ba33cce",
+  "proposal_status": "DRAFT_NOT_EXECUTED",
+  "prospective_protocol_sha256": "933ac4794e8aa107bfbe19d26d710cff4e5bc57023de286c3af359626b66db66",
+  "prospective_case_manifest_sha256": "ac46d59e2aae6fdfe80b8b9d72934325b005427fc8f128ec946b89d5c9e1c88b",
+  "protected_evidence_files": 3471,
+  "protected_evidence_unchanged": true,
+  "pricing_calls": 0,
+  "new_residual_evaluations": 0,
+  "training_started": false,
+  "earlier_results_retroactively_retested_under_new_rule": false,
+  "limits": "Commit appearance does not prove first authorship; original user requests retain their message order. Known-zero AD target and numerical compatibility review are distinct. Proposed rule is NEW, not implicitly preregistered.",
+  "input_generation_environment": {
+    "scipy": "1.16.3",
+    "numpy": "2.3.5",
+    "note": "case manifest coordinates and hash are authoritative; no pricing dependencies were used"
+  },
+  "audit_generator_sha256": "ed1075dc74585f6e16a1b02396b7a17db134c361ae9987761743e110aa5b76b0"
+}
