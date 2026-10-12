@@ -1,0 +1,10 @@
+test_independent_characteristic_algebra (reference_v6.test_executor.ExecutorTests.test_independent_characteristic_algebra) ... ok
+test_independent_inversions_and_derivatives (reference_v6.test_executor.ExecutorTests.test_independent_inversions_and_derivatives) ... ok
+test_partial_resume_exact (reference_v6.test_executor.ExecutorTests.test_partial_resume_exact) ... ok
+test_positive_v_pde_sign (reference_v6.test_executor.ExecutorTests.test_positive_v_pde_sign) ... ok
+test_stencil_sign_and_scaling (reference_v6.test_executor.ExecutorTests.test_stencil_sign_and_scaling) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.116s
+
+OK

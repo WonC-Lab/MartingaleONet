@@ -1,0 +1,14 @@
+{
+  "executor_commit": "ab9f4fb7c3e2da65471aaf325daa9fb27801bd5c",
+  "synthetic_numeric_tests": {"tests": 5, "failures": 0, "errors": 0, "raw_log": "SYNTHETIC_TEST_OUTPUT.txt"},
+  "fresh_clone_synthetic_tests": "PASS",
+  "fresh_clone_freeze_and_dependency_preflight": "PASS",
+  "report_only_smoke": {"NOT_RUN": 128, "NEW_V0_GATE": "FAIL", "CORE_recomputed": 0, "old_boundary_recomputed": 0},
+  "blinded128_pricing_started": false,
+  "historical_CORE_modified": false,
+  "frozen_protocol_modified": false,
+  "training_started": false,
+  "real_Colab_execution": "NOT_PERFORMED; user runs notebook manually",
+  "runtime_limit": "30 CPU minutes per case per invocation; 8 wall hours per batch; explicit resume",
+  "cost_limit": "Total runtime unmeasured; may exceed original optimized Lewis-only estimate"
+}
