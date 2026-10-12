@@ -1,0 +1,176 @@
+{
+  "phase": "1B.6",
+  "state": "FROZEN_NOT_EXECUTED_AWAITING_USER_APPROVAL",
+  "git_commit": "f1e52fb0b3276d422742b149c1498077dfc11789",
+  "UTC_timestamp": "2026-10-12T01:32:17.766652+00:00",
+  "protocol_SHA256": "15a8e1f8fa9a347baae892fa17ac756ea0c2e0096dd64f0a9f1ef594614f273b",
+  "protocol_markdown_SHA256": "9e5034777a4ab71f755361cbbe50b5dd98f77ff33c534beaa934b6844732ae53",
+  "blinded_input_SHA256": "5268bcec295ec0fee0affb189cbb50333a552fb1ef4dc582d1061d832679c1a1",
+  "frozen_file_sha256": {
+    "BOUNDARY_CERT_PROTOCOL.md": "9e5034777a4ab71f755361cbbe50b5dd98f77ff33c534beaa934b6844732ae53",
+    "BOUNDARY_CERT_PROTOCOL.json": "15a8e1f8fa9a347baae892fa17ac756ea0c2e0096dd64f0a9f1ef594614f273b",
+    "BOUNDARY_BLINDED_INPUTS.jsonl": "5268bcec295ec0fee0affb189cbb50333a552fb1ef4dc582d1061d832679c1a1",
+    "BOUNDARY_BLINDED_INPUTS.sha256": "7a1b45d86013feb56dff4d2a586efe287a9956f0129e0526dd6e6e528c8ea815",
+    "policy.py": "06915eaf79fe2d18f1528f253a5962c597c17d37a5de3613f8a702a6ddadd6cd",
+    "prepare_freeze.py": "80eed8a8d70b2318b2736032e5dcb1ab46e251114de39a237f96878d71fb08e4",
+    "estimate_cost.py": "c57d218266b7451684ad8fb6ad3bab5bbd640a722d2c1cd8becdd0ef67945d64",
+    "COMPUTE_COST_ESTIMATE.json": "f676bf2f326f4c5c4e004e566a00442af3a60406c68edc9ab8c5dbeadd354132",
+    "INPUT_SELECTION_AUDIT.json": "768c0ebc52ec900929a18bca628d6d5b9eacfd727ed30aac28330f7c484f542e",
+    "SYMBOLIC_AND_FREEZE_CHECKS.json": "aba203d8ea3efb2d87b1b1ed1689d2a71a119074626d079a485e000655c96275"
+  },
+  "exact_sample_size": 128,
+  "exact_seed": 6107,
+  "exact_state_seed": 6108,
+  "exact_formulas": {
+    "raw_R0": "c_tau-r*exp(x)*Delta-kappa*theta*nu+r*c",
+    "normalization": {
+      "tau_star_years": "1",
+      "v_star": "0.04",
+      "C_star": "1",
+      "signed_R_hat": "tau_star*R0/C_star",
+      "absolute_R_hat": "abs(signed_R_hat)",
+      "dimensionless_operator": "c_t-tau_star*r*c_x-(tau_star*kappa*theta/v_star)*c_z+tau_star*r*c",
+      "no_observed_term_max_or_floor": true
+    },
+    "reference_budgets": {
+      "T_C": "1e-8+1e-6*max(abs(c_E1),abs(c_E2))",
+      "T_Delta": "2e-6+1e-5*max(abs(Delta_E1),abs(Delta_E2))",
+      "T_nu": "2e-5+1e-4*max(abs(nu_E1),abs(nu_E2))",
+      "two_final_axis_changes_fraction": "1/4",
+      "freeze_before_residual_decision": true,
+      "no_Gamma_requirement": true
+    },
+    "time_budget": {
+      "formula": "T_ctau=T_C/tau_star",
+      "status": "NEW_PROSPECTIVE_POLICY_NOT_UNIQUELY_IMPLIED_BY_OLD_PROTOCOL",
+      "rationale": "one characteristic year price-error scale; no fit to previously observed residuals"
+    },
+    "residual_budget": {
+      "formula": "B_R=tau_star*(T_ctau+abs(r)*exp(x)*T_Delta+abs(kappa*theta)*T_nu+abs(r)*T_C)/C_star"
+    },
+    "time_stencil": {
+      "order": 4,
+      "coefficients": [
+        1,
+        -8,
+        0,
+        8,
+        -1
+      ],
+      "offsets": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "denominator": "12*h_tau",
+      "j": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "h_tau": "tau/2**j",
+      "minimum_tau": "float(1/252)",
+      "L1_coefficient_sum": 18,
+      "unique_time_prices_minimum": 15,
+      "unique_time_prices_maximum": 25,
+      "minimum_levels": 6,
+      "maximum_levels": 11,
+      "terminal_crossing_forbidden": true
+    },
+    "truncation": {
+      "D_j": "FD5(h_j)",
+      "difference": "d_j=abs(D_j-D_{j-1})",
+      "richardson_finest": "d_j/15",
+      "richardson_previous_scaled": "d_{j-1}/240",
+      "richardson_extrapolate": "(16*D_j-D_{j-1})/15",
+      "accepted_guard": "u_trunc_j=max(d_j,d_{j-1}) for j>=2",
+      "rationale": "order-four leading Richardson factor derived; full observed increments retained as conservative guard, not a rigorous error bound"
+    },
+    "uncertainty": {
+      "axis_component": "u_axis(q)=sum_over_axes max(abs(q_last-q_previous),abs(q_previous-q_preprevious))",
+      "axes_E1": [
+        "cutoff",
+        "degree",
+        "precision"
+      ],
+      "axes_E2": [
+        "COS_N",
+        "COS_L",
+        "precision"
+      ],
+      "reference_c": "u_c=u_axis(c)+u_round(c)",
+      "reference_Delta_nu": "u_q=u_axis(q)+u_round(q)+u_FD(q), q in {Delta,nu}",
+      "physical_FD": "u_FD=max(last_two_FD_increments)+abs(FD5-analytic)+sum(abs(weights)*stencil_price_uncertainties)",
+      "u_tau_price": "sum(abs([1,-8,0,8,-1])*u_c_at_each_time)/(12*h_tau)",
+      "u_tau": "u_tau_price+u_trunc+u_time_arithmetic_round",
+      "u_R": "u_tau+abs(r*exp(x))*u_Delta+abs(kappa*theta)*u_nu+abs(r)*u_c",
+      "u_R_hat": "tau_star*u_R/C_star",
+      "tail_and_quadrature": "cutoff/N/L/degree uncertainties already included; do not double count a tail scalar",
+      "roundoff": "eps=2**(1-actual_mp_bit_precision); gamma_m=m*eps/(1-m*eps); u_round=gamma_m*sum(abs(all_signed_summands_and_constants)); m=64*n_integral_or_COS_terms+256",
+      "time_arithmetic_round": "gamma_64*sum(abs(weight_j*c_j))/(12*h_tau), using actual_mp_bit_precision",
+      "unknown_or_nonfinite": "UNRESOLVED; never silently zero",
+      "no_independence_or_covariance_cancellation": true,
+      "no_statistical_confidence_claim": true,
+      "forward_roundoff_limit": "diagnostic operation-count allowance plus mandatory 50/80/120-digit checks; elementary-function interval enclosure not claimed"
+    }
+  },
+  "exact_thresholds": {
+    "alpha": "1",
+    "alpha_rationale": "absolute uncertainty sum; zero must belong to numerical consistency band; no empirical coverage multiplier",
+    "level_zero_consistency": "abs(R_hat)<=u_R_hat",
+    "uncertainty_cap": "u_R_hat<=B_R/4",
+    "window": "all three consecutive levels satisfy zero_consistency and uncertainty_cap",
+    "refinement_stability": "each last time FD increment <=B_R/4, and ratio last/previous<=1/2 OR both increments <=sum of their two propagated time-price uncertainties",
+    "contraction_rationale": "one-bit reduction guard, weaker than nominal 1/16 fourth-order asymptotics; explicitly new, not calibrated on residual outcomes",
+    "uncertainty_growth": "successive u_R_hat ratios <=2 within window",
+    "growth_rationale": "first derivative absolute stencil amplification doubles when h halves; absolute cap still applies at every window level",
+    "confirmation": "one additional finer step must yield another qualifying overlapping three-step window",
+    "independent_residuals": "abs(R_hat_E1-R_hat_E2)<=u_R_hat_E1+u_R_hat_E2 at selected confirming level",
+    "components": "all c/Delta/nu reference axes, cross-route agreement and physical-FD budgets satisfied; no unresolved amplification or solver flags",
+    "classification": {
+      "PASS": "every frozen condition satisfied",
+      "NUMERICAL_UNRESOLVED": "missing/error/budget/amplification/refinement failure",
+      "RESIDUAL_INCOMPATIBLE": "reference and numerical stability criteria pass but abs(R_hat)>u_R_hat",
+      "caution": "incompatibility is estimator/model-boundary discrepancy, not automatic proof that Heston PDE is wrong"
+    }
+  },
+  "exact_aggregation_rule": {
+    "sample_size": 128,
+    "new_only": true,
+    "all_must_PASS": true,
+    "REVIEW_REQUIRED_permitted_for_PASS": false,
+    "missing_or_solver_failure_blocks": true,
+    "primary_population": "new blinded128 only; old600 not rescored under new rule",
+    "Phase1C": "YES only after new128 PASS AND existing CORE/finite trace requirements unchanged AND no other training blocker; never launch training"
+  },
+  "code_version": {
+    "version": "limiting-v0-certification-v6.0",
+    "policy_sha256": "06915eaf79fe2d18f1528f253a5962c597c17d37a5de3613f8a702a6ddadd6cd",
+    "generator_sha256": "80eed8a8d70b2318b2736032e5dcb1ab46e251114de39a237f96878d71fb08e4",
+    "reference_canonical_lf_sha256": {
+      "reference/types.py": "92cf766d772980deb21dedbbdf79a22a406fb53f92dfe9f27a364cefee26ada7",
+      "reference/route_a.py": "dd7dc9e368165e3e7062165e3f7a530c24c13649a8db5d06956f8cb01fe05922",
+      "reference/route_b.py": "dcd2327e22d784cea60523c25b62585e6c8e49f4f818aa817743e523b7ebac6c",
+      "reference_v2/high_precision.py": "baf96a9524a45896d55795e8a02100f4e0fb79787a3c87d585c6e1986cc2be95",
+      "reference_v2/workflow.py": "a6ac2d77e8ec84bad118e6ee5f8fc0c4f1af31938e88349d7e8be0d70f74320c",
+      "reference_v3/mp.py": "0c2e85d919776b160dcc5a5d0f22569c28edac242669d37bf0e6c08205a70fe0"
+    },
+    "targeted_executor": "NOT_IMPLEMENTED; source commit/hash required after approval, before any blinded evaluation"
+  },
+  "pricing_calls": 0,
+  "blinded_residual_evaluations": 0,
+  "neural_training_started": false,
+  "receipt_commit_semantics": "git_commit identifies protocol/input/code snapshot commit A. Receipt is stored in subsequent commit B; no impossible self-referential Git commit hash.",
+  "no_protocol_tuning_from_old_residuals": true,
+  "execution_approval": "NOT_GRANTED; STOP_AFTER_FREEZE"
+}
