@@ -105,7 +105,9 @@ then starts directly at these saved cursors. Stop all older runtimes first.
 code('''PREPARE_RESUME_JOURNALS = False  # change to True after inspecting the read-only audit
 if PREPARE_RESUME_JOURNALS:
     assert AUDIT_SUMMARY["CHECKPOINTS_ACCEPTED"]
-    subprocess.run([sys.executable, "-m", "reference_v6.hydrate_legacy", "--output", str(OUT), "--audit-dir", str(AUDIT)], cwd=REPO, env=ENV, check=True)
+    prepare_args = [sys.executable, "-m", "reference_v6.hydrate_legacy", "--output", str(OUT), "--audit-dir", str(AUDIT)]
+    if TAKEOVER_STALE_LEASE: prepare_args += ["--takeover-stale-lease"]
+    subprocess.run(prepare_args, cwd=REPO, env=ENV, check=True)
     print((AUDIT / "HYDRATION_REPORT.json").read_text())
 else:
     print("PAUSED: legacy journal preparation not requested.")

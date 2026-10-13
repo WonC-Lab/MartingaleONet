@@ -31,7 +31,7 @@ class Hydrator(runner.CaseRunner):
     def publish_history(self,*args):pass
 
 
-def hydrate(output,audit_dir):
+def hydrate(output,audit_dir,takeover=False):
     output=Path(output);audit_dir=Path(audit_dir)
     # Before any journal creation, fully inspect all saved raw/partial files.
     checked=audit(output,audit_dir)
@@ -41,7 +41,7 @@ def hydrate(output,audit_dir):
     def journal_only_write(path,z):
         if Path(path).name in ['COMPONENT_BUDGET_LOCK.json','TIME_REFINEMENT.json'] or Path(path).name.startswith('physical_'):return
         original_write(path,z)
-    with support.local_run_lock(output),patch.object(runner,'evaluate',side_effect=AssertionError('Pricing prohibited in hydration')) as blocked,patch.object(runner,'write',side_effect=journal_only_write):
+    with support.local_run_lock(output),support.drive_lease(output,runner.SESSION,takeover),patch.object(runner,'evaluate',side_effect=AssertionError('Pricing prohibited in hydration')) as blocked,patch.object(runner,'write',side_effect=journal_only_write):
         for case in sorted((output/'cases').iterdir()):
             if not case.is_dir() or case.name not in rows:continue
             rp=case/'RESULT.json';status=json.loads(rp.read_text())['status'] if rp.exists() else 'NO_RESULT'
@@ -69,4 +69,4 @@ def hydrate(output,audit_dir):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True);p.add_argument('--audit-dir',required=True);a=p.parse_args();hydrate(a.output,a.audit_dir)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',required=True);p.add_argument('--audit-dir',required=True);p.add_argument('--takeover-stale-lease',action='store_true');a=p.parse_args();hydrate(a.output,a.audit_dir,a.takeover_stale_lease)
