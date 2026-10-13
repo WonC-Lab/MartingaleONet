@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "v6_01_0",
+    "key": "518647b4c2efbfd49a641244ed7056b57c641101c2ffe0cfa6d1b5e067fc1daa",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  },
+  {
+    "case_id": "v6_01_0",
+    "key": "d939074de9aa52f835e6b0df3b4edf8c9f166615170ada5c1abc80d1dcdbf43d",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  },
+  {
+    "case_id": "v6_01_1",
+    "key": "488aa57974d08d8dcfadafcb925862d8ba3a96cd1f628429189348d66f8503b1",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  },
+  {
+    "case_id": "v6_01_1",
+    "key": "d76e6518d6cbf09485d7788d854f04d59ee2e6a42bf56b9792ce307f7a9c380b",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  },
+  {
+    "case_id": "v6_01_2",
+    "key": "684793b8eaa4795d620850decba24d7bd165ef605e3fec623ad9ed188bdcac6d",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  },
+  {
+    "case_id": "v6_01_2",
+    "key": "f5d663295a0d169234f4ea6612b46fdf66678fa83866c1e3d02883ed64bda0b0",
+    "nodes": 16384,
+    "validation": "LEGACY_CHECKSUM_AND_MP_TUPLE_LAYOUT_VALID"
+  }
+]
