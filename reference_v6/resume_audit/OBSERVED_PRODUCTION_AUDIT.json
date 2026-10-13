@@ -1,0 +1,185 @@
+{
+  "production_pricing_calls": 0,
+  "completed_exact_evaluations_loaded_without_backend": 36,
+  "legacy_partials_checked_without_execution": 6,
+  "legacy_identity": {
+    "protocol_SHA256": "15a8e1f8fa9a347baae892fa17ac756ea0c2e0096dd64f0a9f1ef594614f273b",
+    "input_SHA256": "5268bcec295ec0fee0affb189cbb50333a552fb1ef4dc582d1061d832679c1a1",
+    "executor_SHA256": {
+      "mp_backend.py": "1acfa66d71f4ac7d28b2c4e6570af2f27a4eef4e28f884d4642e3c71339996a9",
+      "run_boundary_certification.py": "3a37abbe4166fb3176feca8f467e1b5ff4d87aa9bb066816b0364dd6e0d6ecb2",
+      "requirements-colab.txt": "9084ef2d3dd4e356979c9635fc3ba5059925cd4968afb9d5b1213f57e288ac0b"
+    },
+    "CORE_recomputed": 0,
+    "old_boundary_recomputed": 0
+  },
+  "current_legacy_environment": {
+    "UTC": "2026-10-13T02:22:21Z",
+    "python": "3.13.16",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cpu_count": 8,
+    "git_commit": "ab9f4fb7c3e2da65471aaf325daa9fb27801bd5c",
+    "packages": {
+      "mpmath": "1.3.0",
+      "gmpy2": "2.2.1",
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "matplotlib": "3.10.6",
+      "QuantLib": "1.41"
+    }
+  },
+  "cases": {
+    "v6_01_0": {
+      "last_status": "NUMERICAL_UNRESOLVED",
+      "last_attempt_stats": {
+        "cached_evaluations": 1101,
+        "new_evaluations": 29
+      },
+      "log_sessions": [
+        {
+          "log_session": 1,
+          "newly_saved_config_lines": 227,
+          "recorded_wall_seconds": 1778.7,
+          "first_config": {
+            "dps": 80,
+            "degree": 40,
+            "cutoff": 256,
+            "span": "0.08128006743692179619832706515531987017721174763352022972856142083068281628762241556906202038337107018595813391576120285602344552544444090711641910925490615870901"
+          },
+          "last_config": {
+            "cutoff": 262144,
+            "degree": 64,
+            "dps": 120,
+            "span": "0.08128006743692179619832706515531987017721174763352022972856142083068281628762241556906202038337107018595813391576120285602344552544444090711641910925490615870901"
+          }
+        },
+        {
+          "log_session": 2,
+          "newly_saved_config_lines": 113,
+          "recorded_wall_seconds": 2120.4,
+          "first_config": {
+            "cutoff": 262144,
+            "degree": 24,
+            "dps": 120,
+            "span": "0.08128006743692179619832706515531987017721174763352022972856142083068281628762241556906202038337107018595813391576120285602344552544444090711641910925490615870901"
+          },
+          "last_config": {
+            "cutoff": 131072,
+            "degree": 64,
+            "dps": 80,
+            "span": "0.08128006743692179619832706515531987017721174763352022972856142083068281628762241556906202038337107018595813391576120285602344552544444090711641910925490615870901"
+          }
+        },
+        {
+          "log_session": 4,
+          "newly_saved_config_lines": 29,
+          "recorded_wall_seconds": 1010.0,
+          "first_config": {
+            "cutoff": 65536,
+            "degree": 64,
+            "dps": 50,
+            "span": "0.08128006743692179619832706515531987017721174763352022972856142083068281628762241556906202038337107018595813391576120285602344552544444090711641910925490615870901"
+          },
+          "last_config": {
+            "N": 16384,
+            "L": 64,
+            "dps": 80
+          }
+        }
+      ],
+      "exact_recomputation_proven": false,
+      "wasted_production_seconds": null,
+      "limitation": "Old log lacks coordinates/key and cache-hit events; equal config can be a different stencil. Metadata inventory limited to newest100 per folder."
+    },
+    "v6_01_1": {
+      "last_status": "PASS",
+      "last_attempt_stats": {
+        "cached_evaluations": 524,
+        "new_evaluations": 119
+      },
+      "log_sessions": [
+        {
+          "log_session": 1,
+          "newly_saved_config_lines": 198,
+          "recorded_wall_seconds": 1811.3,
+          "first_config": {
+            "dps": 80,
+            "degree": 40,
+            "cutoff": 256,
+            "span": "0.7883441506532812962692008965711198938295653705834269267144297372085003138787893657451702342505489547113270670699022815657696642690953651715907056336799622586101"
+          },
+          "last_config": {
+            "cutoff": 256,
+            "degree": 64,
+            "dps": 80,
+            "span": "0.7883441506532812962692008965711198938295653705834269267144297372085003138787893657451702342505489547113270670699022815657696642690953651715907056336799622586101"
+          }
+        },
+        {
+          "log_session": 2,
+          "newly_saved_config_lines": 69,
+          "recorded_wall_seconds": 2153.7,
+          "first_config": {
+            "cutoff": 512,
+            "degree": 64,
+            "dps": 120,
+            "span": "0.7883441506532812962692008965711198938295653705834269267144297372085003138787893657451702342505489547113270670699022815657696642690953651715907056336799622586101"
+          },
+          "last_config": {
+            "N": 16384,
+            "L": 24,
+            "dps": 120
+          }
+        }
+      ],
+      "exact_recomputation_proven": false,
+      "wasted_production_seconds": null,
+      "limitation": "Old log lacks coordinates/key and cache-hit events; equal config can be a different stencil. Metadata inventory limited to newest100 per folder."
+    },
+    "v6_01_2": {
+      "last_status": "PASS",
+      "last_attempt_stats": {
+        "cached_evaluations": 250,
+        "new_evaluations": 42
+      },
+      "log_sessions": [
+        {
+          "log_session": 1,
+          "newly_saved_config_lines": 149,
+          "recorded_wall_seconds": 1798.5,
+          "first_config": {
+            "dps": 80,
+            "degree": 40,
+            "cutoff": 256,
+            "span": "1.461390744520255129554577065155319870177211747633520229728561420830682816287622415569062020383371070185958133915761202856023445525444440907116419109254906158709"
+          },
+          "last_config": {
+            "N": 16384,
+            "L": 32,
+            "dps": 120
+          }
+        },
+        {
+          "log_session": 2,
+          "newly_saved_config_lines": 42,
+          "recorded_wall_seconds": 1692.1,
+          "first_config": {
+            "N": 16384,
+            "L": 16,
+            "dps": 120
+          },
+          "last_config": {
+            "N": 16384,
+            "L": 32,
+            "dps": 80
+          }
+        }
+      ],
+      "exact_recomputation_proven": false,
+      "wasted_production_seconds": null,
+      "limitation": "Old log lacks coordinates/key and cache-hit events; equal config can be a different stencil. Metadata inventory limited to newest100 per folder."
+    }
+  },
+  "prior_identity_revision_read": "Drive connector lists revisions but cannot fetch JSON revision content; prior hashes/commits not independently read back.",
+  "five_preflight_and_execution_commands": "All recorded output directories match /content/drive/MyDrive/MartingaleONet/reference_v6_colab; current identity and commit match ab9f4fb."
+}

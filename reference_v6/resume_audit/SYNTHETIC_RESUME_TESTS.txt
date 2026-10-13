@@ -1,0 +1,19 @@
+test_independent_characteristic_algebra (reference_v6.test_executor.ExecutorTests.test_independent_characteristic_algebra) ... ok
+test_independent_inversions_and_derivatives (reference_v6.test_executor.ExecutorTests.test_independent_inversions_and_derivatives) ... ok
+test_partial_resume_exact (reference_v6.test_executor.ExecutorTests.test_partial_resume_exact) ... ok
+test_positive_v_pde_sign (reference_v6.test_executor.ExecutorTests.test_positive_v_pde_sign) ... ok
+test_stencil_sign_and_scaling (reference_v6.test_executor.ExecutorTests.test_stencil_sign_and_scaling) ... ok
+test_active_drive_lease_blocks_another_session (reference_v6.test_resume.ResumeTests.test_active_drive_lease_blocks_another_session) ... ok
+test_catalogued_completed_checkpoint_not_visible_is_not_recomputed (reference_v6.test_resume.ResumeTests.test_catalogued_completed_checkpoint_not_visible_is_not_recomputed) ... ok
+test_completed_configuration_skips_backend_and_preserves_bytes (reference_v6.test_resume.ResumeTests.test_completed_configuration_skips_backend_and_preserves_bytes) ... ok
+test_convergence_position_and_complete_operation_resume (reference_v6.test_resume.ResumeTests.test_convergence_position_and_complete_operation_resume) ... ok
+test_full_case_interrupt_matches_legacy_science (reference_v6.test_resume.ResumeTests.test_full_case_interrupt_matches_legacy_science) ... ok
+test_legacy_identity_accepted_unknown_hash_rejected (reference_v6.test_resume.ResumeTests.test_legacy_identity_accepted_unknown_hash_rejected) ... ok
+test_legacy_partial_sums_both_estimators_no_replayed_cf (reference_v6.test_resume.ResumeTests.test_legacy_partial_sums_both_estimators_no_replayed_cf) ... ok
+test_old_unfinished_case_hydrates_to_first_missing_without_pricing (reference_v6.test_resume.ResumeTests.test_old_unfinished_case_hydrates_to_first_missing_without_pricing) ... ok
+test_simultaneous_same_runtime_writer_rejected (reference_v6.test_resume.ResumeTests.test_simultaneous_same_runtime_writer_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 18.035s
+
+OK

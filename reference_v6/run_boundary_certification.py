@@ -12,12 +12,15 @@ import subprocess
 import time
 import traceback
 import zipfile
+import uuid
 from reference_v6 import policy
 from reference_v6.mp_backend import evaluate, FIELDS
+from reference_v6 import resume_support as resume
 
 ROOT=Path(__file__).resolve().parent
 P=json.loads((ROOT/'BOUNDARY_CERT_PROTOCOL.json').read_text(encoding='utf-8'))
 D=policy.D
+SESSION=os.environ.get('REFERENCE_V6_SESSION') or (time.strftime('%Y%m%dT%H%M%SZ',time.gmtime())+'_'+uuid.uuid4().hex)
 
 
 def serial(z):
@@ -29,16 +32,14 @@ def serial(z):
 
 def write(path,value):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
-    temp=path.with_suffix(path.suffix+'.tmp')
-    temp.write_text(json.dumps(serial(value),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    os.replace(temp,path)
+    resume.atomic(path,serial(value))
 
 
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
 def fingerprint():
-    names=['mp_backend.py','run_boundary_certification.py','requirements-colab.txt']
+    names=['mp_backend.py','run_boundary_certification.py','requirements-colab.txt','resume_support.py']
     return {name:digest(ROOT/name) for name in names}
 
 
@@ -60,16 +61,25 @@ def preflight(output):
         if output==protected or protected in output.parents: raise ValueError('Protected output directory')
     output.mkdir(parents=True,exist_ok=True)
     version_file=output/'RUN_IDENTITY.json'
-    if version_file.exists() and json.loads(version_file.read_text())!=version:
-        raise RuntimeError('Resume identity differs; use a new output directory')
-    write(version_file,version)
+    old=json.loads(version_file.read_text(encoding='utf-8')) if version_file.exists() else None
+    if old is not None and not resume.compatible(old,version):
+        raise RuntimeError('Resume identity differs from current or specifically verified legacy executor; existing output is untouched')
+    if old is None and (output/'cases').exists() and any((output/'cases').iterdir()):
+        raise RuntimeError('Existing cases without RUN_IDENTITY; refusing unknown checkpoints')
     env={'UTC':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'python':platform.python_version(),
          'platform':platform.platform(),'cpu_count':os.cpu_count(),'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT.parent,text=True).strip()}
     import importlib.metadata
     env['packages']={k:importlib.metadata.version(k) for k in ['mpmath','gmpy2','numpy','scipy','matplotlib','QuantLib']}
     expected=dict(line.strip().split('==') for line in (ROOT/'requirements-colab.txt').read_text().splitlines() if line.strip())
     if any(env['packages'].get(k)!=v for k,v in expected.items()): raise RuntimeError('Pinned package version mismatch')
-    write(output/'ENVIRONMENT.json',env)
+    env['output_directory']=str(output);env['session_id']=SESSION
+    session=output/'sessions'/SESSION
+    if old is None:write(version_file,version)
+    write(session/'ENVIRONMENT.json',env)
+    write(session/'RESUME_COMPATIBILITY.json',{'original_identity':old or version,'current_identity':version,
+          'accepted':True,'legacy_upgrade':old is not None and old!=version,
+          'legacy_commit':resume.LEGACY_COMMIT,'current_git_commit':env['git_commit'],
+          'output_directory':str(output),'RUN_IDENTITY_overwritten':False})
     return [json.loads(z,parse_float=str,parse_int=str) for z in inputs],output
 
 
@@ -87,34 +97,72 @@ class CaseRunner:
         max_t=D(row['tau'])*(1+D(2)/64);max_v=D('.01')*D('.02')*4
         self.span=str(max_x+D('.04')+abs(D(row['r']))*max_t+
                       abs(D(row['rho']))*(max_v+D(row['kappa'])*D(row['theta'])*max_t)/max(D(row['sigma']),D('.1')))
+        self.catalog_path,self.catalog_identity=self.journal('raw_catalog',[])
+        self.catalog=resume.load_journal(self.catalog_path,self.catalog_identity) or {}
+
+    def save_catalog(self):resume.save_journal(self.catalog_path,self.catalog_identity,self.catalog)
+
+    def journal(self,name,args):
+        identity={'schema':1,'operation':name,'input':self.row,'arguments':serial(args),
+                  'protocol_SHA256':digest(ROOT/'BOUNDARY_CERT_PROTOCOL.json')}
+        k=hashlib.sha256(json.dumps(identity,sort_keys=True).encode()).hexdigest()
+        return self.output/'resume'/f'{name}_{k}.json',identity
+
+    def event(self,action,**fields):
+        entry={'UTC':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'session_id':SESSION,
+               'case_id':self.row['case_id'],'action':action,**serial(fields)}
+        path=self.output/'events'/f'{SESSION}.jsonl';path.parent.mkdir(parents=True,exist_ok=True)
+        with path.open('a',encoding='utf-8') as f:f.write(json.dumps(entry,sort_keys=True)+'\n');f.flush()
+
+    def publish_history(self,name,value):
+        path=self.output/name
+        if path.exists():
+            old=json.loads(path.read_text(encoding='utf-8'))
+            # Legacy replay reconstructs metadata once from checked raw files;
+            # never replace a longer historical trace with a shorter prefix.
+            if isinstance(old,list) and len(old)>len(value):return
+            if isinstance(old,dict) and any(len(old[k])>len(value.get(k,[])) for k in old):return
+            if old==serial(value):return
+        write(path,value)
 
     def tick(self):
         if (self.output.parent.parent/'RUN_INVALID.json').exists():raise RuntimeError('Run invalidated by another worker')
+        lease=self.output.parent.parent/'RUNNER_LEASE.json'
+        if lease.exists():
+            z=json.loads(lease.read_text(encoding='utf-8'))
+            if z.get('active') and z.get('session_id')!=SESSION:raise ResourceStop('Drive lease owner changed')
         if time.process_time()-self.start>=P['stopping']['case_CPU_seconds']: raise ResourceStop('case CPU cap')
         if time.monotonic()>=self.deadline: raise ResourceStop('batch wall cap')
 
     def raw(self,route,cfg,coords):
         self.tick();coords=[list(map(str,q)) for q in coords]
-        key=hashlib.sha256(json.dumps([route,cfg,coords],sort_keys=True).encode()).hexdigest()
+        key=resume.key(route,cfg,coords)
         path=self.output/'raw'/f'{key}.json'
         if path.exists():
-            z=json.loads(path.read_text());self.stats['cached_evaluations']+=1
+            file_sha=digest(path)
+            if key in self.catalog and self.catalog[key]!=file_sha:raise RuntimeError('Previously catalogued raw checkpoint changed: '+key)
+            z=resume.checked(path);self.stats['cached_evaluations']+=1
             if z['route']!=route or z['config']!=cfg or z['coordinates']!=coords: raise RuntimeError('checkpoint identity mismatch')
-            check=z.pop('checkpoint_SHA256')
-            if hashlib.sha256(json.dumps(z,sort_keys=True).encode()).hexdigest()!=check: raise RuntimeError('checkpoint corrupted')
+            self.event('REUSED',key=key,route=route,config=cfg,coordinates=coords,prior_elapsed_seconds=z.get('elapsed_seconds'))
+            self.catalog[key]=file_sha
             return z
+        if key in self.catalog:
+            raise ResourceStop('Previously verified completed checkpoint unavailable; refusing recomputation: '+key)
         partial=path.with_suffix('.partial.json')
-        state=json.loads(partial.read_text()) if partial.exists() else None
-        if state:
-            check=state.pop('checkpoint_SHA256')
-            if hashlib.sha256(json.dumps(state,sort_keys=True).encode()).hexdigest()!=check:raise RuntimeError('Partial checkpoint corrupted')
+        state=resume.checked(partial) if partial.exists() else None
+        resumed_nodes=state['nodes'] if state else 0
+        self.event('PARTIAL_RESUMED' if state else 'NEW',key=key,route=route,config=cfg,coordinates=coords,resumed_nodes=resumed_nodes)
         def save_partial(state):
             state['checkpoint_SHA256']=hashlib.sha256(json.dumps(state,sort_keys=True).encode()).hexdigest()
             write(partial,state)
-        began=time.monotonic();z=evaluate(self.row,route,cfg,coords,self.tick,saved=state,checkpoint=save_partial)
+        print(f"{self.row['case_id']} {'PARTIAL_RESUMED' if state else 'NEW'} {route} key={key} start_node={resumed_nodes}",flush=True)
+        began=time.monotonic();cpu_began=time.process_time();z=evaluate(self.row,route,cfg,coords,self.tick,saved=state,checkpoint=save_partial)
         z['elapsed_seconds']=time.monotonic()-began
+        z['backend_CPU_seconds']=time.process_time()-cpu_began
         z['checkpoint_SHA256']=hashlib.sha256(json.dumps(z,sort_keys=True).encode()).hexdigest()
         write(path,z);self.stats['new_evaluations']+=1
+        self.catalog[key]=digest(path);self.save_catalog()
+        self.event('COMPLETED',key=key,route=route,config=cfg,coordinates=coords,resumed_nodes=resumed_nodes,elapsed_seconds=z['elapsed_seconds'],backend_CPU_seconds=z['backend_CPU_seconds'])
         print(f"{self.row['case_id']} {route} raw checkpoint saved: {cfg}, {z['nodes']} nodes, {z['elapsed_seconds']:.1f}s",flush=True)
         return z
 
@@ -127,34 +175,55 @@ class CaseRunner:
         """
         ladders=({'cutoff':P['refinement']['cutoffs'],'degree':P['refinement']['quadrature_degrees'],'dps':P['refinement']['MP_digits']}
                  if route=='E1' else {'N':P['refinement']['COS_N'],'L':P['refinement']['COS_L'],'dps':P['refinement']['MP_digits']})
-        indices={axis:2 for axis in ladders}
-        if route=='E1': cfg={'cutoff':256,'degree':64,'dps':120,'span':self.span}
-        else: cfg={'N':16384,'L':32,'dps':120}
+        path,identity=self.journal('converge',[route,coords,targets])
+        state=resume.load_journal(path,identity)
+        if state and state.get('status')=='DONE':
+            self.event('OPERATION_REUSED',operation='converge',journal=path.name)
+            return state['result']
+        if state is None:
+            state={'status':'RUNNING','indices':{axis:2 for axis in ladders},
+                   'cfg':{'cutoff':256,'degree':64,'dps':120,'span':self.span} if route=='E1' else {'N':16384,'L':32,'dps':120},
+                   'axis_pos':0,'level_pos':0,'seq':[],'errors':{},'sequences':{},'failed':[]}
+        axes=list(ladders)
+        def save():resume.save_journal(path,identity,state)
+        save()
         while True:
-            self.tick(); errors={}; sequences={}; failed=[]
-            for axis,ladder in ladders.items():
-                idx=indices[axis];seq=[]
-                for v in ladder[idx-2:idx+1]:
-                    trial={**cfg,axis:v};seq.append(self.raw(route,trial,coords))
+            self.tick()
+            indices=state['indices'];cfg=state['cfg'];errors=state['errors'];sequences=state['sequences'];failed=state['failed']
+            while state['axis_pos']<len(axes):
+                axis=axes[state['axis_pos']];ladder=ladders[axis]
+                idx=indices[axis];seq=state['seq']
+                while state['level_pos']<3:
+                    v=ladder[idx-2+state['level_pos']]
+                    trial={**cfg,axis:v}
+                    state['next_missing']={'route':route,'config':trial,'key':resume.key(route,trial,coords)};save()
+                    seq.append(self.raw(route,trial,coords));state['level_pos']+=1;save()
                 sequences[axis]=[z['config'] for z in seq]
                 errors[axis]=[{f:max(abs(D(seq[1]['results'][i]['values'][f])-D(seq[0]['results'][i]['values'][f])),
                                       abs(D(seq[2]['results'][i]['values'][f])-D(seq[1]['results'][i]['values'][f]))) for f in targets}
                               for i in range(len(coords))]
                 if any(e[f]>D(targets[f]) for e in errors[axis] for f in targets): failed.append(axis)
+                state['axis_pos']+=1;state['level_pos']=0;state['seq']=[];save()
             if not failed:
                 final=self.raw(route,cfg,coords);unc=[]
                 for i,z in enumerate(final['results']):
                     unc.append({f:sum(errors[a][i][f] for a in ladders)+D(z['roundoff'][f]) for f in targets})
-                return {'values':[z['values'] for z in final['results']],'uncertainties':unc,
+                result={'values':[z['values'] for z in final['results']],'uncertainties':unc,
                         'axis_errors':errors,'axis_sequences':sequences,'final_config':cfg,
                         'actual_bit_precision':final['actual_bit_precision']}
+                state={'status':'DONE','result':result};save();return result
             for axis in failed:
                 if indices[axis]+1>=len(ladders[axis]): raise RefinementFailure(f'{route} {axis} ceiling, coordinates={coords}')
                 indices[axis]+=1;cfg[axis]=ladders[axis][indices[axis]]
+            state.update(axis_pos=0,level_pos=0,seq=[],errors={},sequences={},failed=[]);save()
 
     def physical(self,route,base,budgets):
-        row=self.row;S=D(row['x']).exp();tau=D(row['tau']);history=[]
-        for q in P['refinement']['physical_relative_steps']:
+        path,identity=self.journal('physical',[route,base,budgets])
+        state=resume.load_journal(path,identity) or {'status':'RUNNING','history':[]}
+        if state['status']=='DONE':
+            self.event('OPERATION_REUSED',operation='physical',journal=path.name);return state['result']
+        row=self.row;S=D(row['x']).exp();tau=D(row['tau']);history=state['history']
+        for q in P['refinement']['physical_relative_steps'][len(history):]:
             h=S*D(q);hv=D('.01')*D(q)
             coords=[((S+j*h).ln(),0,tau) for j in [-2,-1,0,1,2]]+[(D(row['x']),j*hv,tau) for j in [0,1,2,3,4]]
             target=min(budgets['T_C']/4,budgets['T_Delta']*h/1000,budgets['T_nu']*hv/1000)
@@ -168,38 +237,61 @@ class CaseRunner:
             propagated_delta+=gamma*sum(abs(w*p) for w,p in zip([1,-8,0,8,-1],prices[:5]))/(12*h)
             propagated_nu+=gamma*sum(abs(w*p) for w,p in zip([-25,48,-36,16,-3],prices[5:]))/(12*hv)
             item={'q':q,'Delta5':delta,'nu5':nu,'propagated_Delta':propagated_delta,'propagated_nu':propagated_nu,'reference':z}
-            history.append(item);write(self.output/f'physical_{route}.json',history)
-            if len(history)<3: continue
+            history.append(item)
+            if len(history)<3:
+                resume.save_journal(path,identity,state);self.publish_history(f'physical_{route}.json',history);continue
             extras={}
             for f,fd,prop in [('Delta','Delta5','propagated_Delta'),('nu','nu5','propagated_nu')]:
                 increments=[abs(history[k][fd]-history[k-1][fd]) for k in [-1,-2]]
                 extras[f]=max(increments)+abs(item[fd]-D(base['values'][0][f]))+item[prop]
             if all(extras[f]<=budgets['T_'+f]/4 for f in extras):
+                state.update(status='DONE',result=extras);resume.save_journal(path,identity,state)
+                self.publish_history(f'physical_{route}.json',history)
                 return extras
+            resume.save_journal(path,identity,state);self.publish_history(f'physical_{route}.json',history)
         raise RefinementFailure(f'{route} physical FD ceiling')
 
     def run(self):
         row=self.row; coords=[(row['x'],0,row['tau'])]
+        prefix_path,prefix_id=self.journal('prefix',[])
+        prefix=resume.load_journal(prefix_path,prefix_id) or {'bases':{},'extras':{}}
+        def save_prefix():resume.save_journal(prefix_path,prefix_id,prefix)
         # Initial estimates establish conservative component precision goals.
-        a=self.raw('E1',{'dps':80,'degree':40,'cutoff':256,'span':self.span},coords)['results'][0]['values']
-        b=self.raw('E2',{'dps':80,'N':16384,'L':32},coords)['results'][0]['values']
+        if 'a' not in prefix:
+            prefix['a']=self.raw('E1',{'dps':80,'degree':40,'cutoff':256,'span':self.span},coords)['results'][0]['values'];save_prefix()
+        if 'b' not in prefix:
+            prefix['b']=self.raw('E2',{'dps':80,'N':16384,'L':32},coords)['results'][0]['values'];save_prefix()
+        a=prefix['a'];b=prefix['b']
         provisional=policy.component_budgets(a,b,row)
-        bases={route:self.converge(route,coords,{f:provisional['T_'+({'c':'C'}.get(f,f))]/8 for f in FIELDS}) for route in ['E1','E2']}
+        for route in ['E1','E2']:
+            if route not in prefix['bases']:
+                prefix['bases'][route]=self.converge(route,coords,{f:provisional['T_'+({'c':'C'}.get(f,f))]/8 for f in FIELDS});save_prefix()
+        bases=prefix['bases']
         budgets=policy.component_budgets(bases['E1']['values'][0],bases['E2']['values'][0],row)
         # Lock budgets before any time derivative/residual is calculated.
-        write(self.output/'COMPONENT_BUDGET_LOCK.json',{'budgets':budgets,'bases':bases,'before_residual':True})
+        lock={'budgets':budgets,'bases':bases,'before_residual':True};lock_path=self.output/'COMPONENT_BUDGET_LOCK.json'
+        if lock_path.exists():
+            if json.loads(lock_path.read_text(encoding='utf-8'))!=serial(lock):raise RuntimeError('Existing component budget lock differs')
+        else:write(lock_path,lock)
         for f in FIELDS:
             tf=budgets['T_'+({'c':'C'}.get(f,f))]
             if abs(D(bases['E1']['values'][0][f])-D(bases['E2']['values'][0][f]))>tf:
                 raise RefinementFailure('cross-estimator component disagreement: '+f)
             if any(any(e[f]>tf/4 for e in z['axis_errors'][axis]) for z in bases.values() for axis in z['axis_errors']):
                 raise RefinementFailure('final component axis budget: '+f)
-        extras={route:self.physical(route,bases[route],budgets) for route in bases}
-        history={route:[] for route in bases}; candidate=None
-        for j in P['time_stencil']['j']:
+        for route in bases:
+            if route not in prefix['extras']:
+                prefix['extras'][route]=self.physical(route,bases[route],budgets);save_prefix()
+        extras=prefix['extras']
+        time_path,time_id=self.journal('time',[])
+        progress=resume.load_journal(time_path,time_id) or {'history':{route:[] for route in bases},'candidate':None,'j_pos':0,'route_pos':0}
+        history=progress['history'];candidate=progress['candidate'];routes=list(bases)
+        while progress['j_pos']<len(P['time_stencil']['j']):
+            j=P['time_stencil']['j'][progress['j_pos']]
             h=D(row['tau'])/(D(2)**j)
             cs=[(row['x'],0,D(row['tau'])+k*h) for k in [-2,-1,0,1,2]]
-            for route in bases:
+            while progress['route_pos']<len(routes):
+                route=routes[progress['route_pos']]
                 z=self.converge(route,cs,{'c':min(budgets['T_C']/4,budgets['B_R']*h/1000)})
                 prices=[D(v['c']) for v in z['values']]; u=[v['c'] for v in z['uncertainties']]
                 ctau=policy.time_fd5(prices,h);up=policy.propagated_time_uncertainty(u,h)
@@ -211,8 +303,10 @@ class CaseRunner:
                 ur=(policy.residual_uncertainty(up+ut+ar,bu['Delta']+extras[route]['Delta'],bu['nu']+extras[route]['nu'],bu['c'],row) if ut is not None else None)
                 prev.append({'j':j,'h_tau':h,'D5':ctau,'R_hat':rhat,'u_tau_price':up,'u_time_round':ar,
                              'u_trunc':ut,'u_R_hat':ur,'price_reference':z})
-            write(self.output/'TIME_REFINEMENT.json',history)
-            if j<10: continue  # at least five D5 levels for first common window
+                progress['route_pos']+=1;resume.save_journal(time_path,time_id,progress)
+            self.publish_history('TIME_REFINEMENT.json',history)
+            if j<10:
+                progress.update(j_pos=progress['j_pos']+1,route_pos=0);resume.save_journal(time_path,time_id,progress);continue
             qualifies=all(policy.estimator_window_accepts(history[route][-3:],budgets['B_R']) for route in bases)
             if candidate is not None and qualifies and j==candidate+1:
                 one,two=[history[r][-1] for r in ['E1','E2']]
@@ -221,6 +315,7 @@ class CaseRunner:
                 return {'status':'PASS','input':row,'budgets':budgets,'confirming_j':j,
                         'final':{r:history[r][-1] for r in bases},'stats':self.stats}
             candidate=j if qualifies else None
+            progress.update(candidate=candidate,j_pos=progress['j_pos']+1,route_pos=0);resume.save_journal(time_path,time_id,progress)
         # A discrepancy is classified only after two overlapping numerical
         # windows satisfy every stability/cap test with zero consistency removed.
         stable=all(all(policy.estimator_window_accepts([{**z,'R_hat':D(0)} for z in window],budgets['B_R'])
@@ -248,6 +343,7 @@ def worker(row,output,deadline):
     except Exception:
         result={'status':'EXECUTOR_ERROR_RUN_INVALID','input':row,'traceback':traceback.format_exc(),'stats':runner.stats}
     result['case_CPU_seconds_this_attempt']=time.process_time()-runner.start
+    runner.save_catalog()
     write(path,result);return result
 
 
@@ -305,6 +401,7 @@ def main():
     parser.add_argument('--preflight-only',action='store_true')
     parser.add_argument('--report-only',action='store_true')
     parser.add_argument('--execute-frozen-v6',action='store_true')
+    parser.add_argument('--takeover-stale-lease',action='store_true',help='Only after other runtime stopped and its lease is at least 180 seconds old')
     args=parser.parse_args()
     if not 1<=args.workers<=4:parser.error('workers must be between 1 and 4')
     rows,output=preflight(args.output)
@@ -315,7 +412,7 @@ def main():
     for name in fingerprint():
         blob=subprocess.check_output(['git','show','HEAD:reference_v6/'+name],cwd=ROOT.parent)
         if hashlib.sha256(blob).hexdigest()!=digest(ROOT/name):raise RuntimeError('Executor is not source-committed: '+name)
-    write(output/'EXECUTION_RECEIPT.json',{'UTC':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
+    write(output/'sessions'/SESSION/'EXECUTION_RECEIPT.json',{'UTC':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
           'explicit_command_opt_in':True,'historical_freeze_receipt_preserved':True,'workers':args.workers,
           'scope':'new128 only','executor_SHA256':fingerprint()})
     deadline=time.monotonic()+P['stopping']['batch_wall_seconds']
@@ -324,16 +421,18 @@ def main():
     print(f'128 frozen inputs; {len(pending)} pending; {args.workers} CPU workers; CORE pricing calls=0.',flush=True)
     invalid=output/'RUN_INVALID.json'
     if invalid.exists():raise RuntimeError('Run invalidated by an earlier executor error; new protocol/version required')
-    try:
-        with ProcessPoolExecutor(max_workers=args.workers) as pool:
-            futures={pool.submit(worker,r,str(output),deadline):r for r in pending}
-            for future in as_completed(futures):
-                result=future.result();print(result['input']['case_id'],result['status'],flush=True)
-                if result['status']=='EXECUTOR_ERROR_RUN_INVALID':
-                    write(invalid,{'case_id':result['input']['case_id'],'reason':'Executor coding error; run is invalid'})
-                    for task in futures:task.cancel()
-                    raise RuntimeError('Executor error: entire run invalid; inspect raw traceback before any further pricing')
-    finally:report(output,rows)
+    with resume.local_run_lock(output),resume.drive_lease(output,SESSION,args.takeover_stale_lease):
+        os.environ['REFERENCE_V6_SESSION']=SESSION
+        try:
+            with ProcessPoolExecutor(max_workers=args.workers) as pool:
+                futures={pool.submit(worker,r,str(output),deadline):r for r in pending}
+                for future in as_completed(futures):
+                    result=future.result();print(result['input']['case_id'],result['status'],flush=True)
+                    if result['status']=='EXECUTOR_ERROR_RUN_INVALID':
+                        write(invalid,{'case_id':result['input']['case_id'],'reason':'Executor coding error; run is invalid'})
+                        for task in futures:task.cancel()
+                        raise RuntimeError('Executor error: entire run invalid; inspect raw traceback before any further pricing')
+        finally:report(output,rows)
 
 
 if __name__=='__main__': main()

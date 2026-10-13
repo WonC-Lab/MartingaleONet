@@ -1,7 +1,9 @@
 # Phase 1B.6 Colab execution
 
 Open `colab/phase1b6_boundary_certification.ipynb` in Colab and choose CPU.
-Run its cells from top to bottom. The notebook pins the executor Git commit,
+The updated notebook starts in audit-only mode. Follow RESUME_INSTRUCTIONS.md
+to inspect existing checkpoints, prepare legacy cursors without pricing, and
+explicitly enable continuation. The notebook pins the executor Git commit,
 installs `requirements-colab.txt` including QuantLib 1.41, verifies the immutable
 v6 freeze and historical gate hashes, then runs only the new 128 inputs.
 The original freeze's NOT_GRANTED records the state at freezing; it is preserved

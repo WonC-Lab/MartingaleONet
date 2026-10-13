@@ -60,6 +60,10 @@ def evaluate(row, route, cfg, coordinates, tick=lambda:None, saved=None, checkpo
         resume_nodes=saved['nodes']
         sums=[[ctx.make_mpf(tuple(z)) for z in q] for q in saved['sums']]
         absolute=[[ctx.make_mpf(tuple(z)) for z in q] for q in saved['absolute']]
+        if len(sums)!=len(pts) or len(absolute)!=len(pts) or any(len(q)!=3 for q in sums+absolute):
+            raise RuntimeError('Partial accumulator shape mismatch')
+        if not isinstance(resume_nodes,int) or resume_nodes<0:raise RuntimeError('Invalid partial node position')
+        nodes=resume_nodes
     def persist():
         checkpoint({'nodes':nodes,'sums':[[list(map(int,z._mpf_)) for z in q] for q in sums],
                     'absolute':[[list(map(int,z._mpf_)) for z in q] for q in absolute]})
@@ -68,16 +72,21 @@ def evaluate(row, route, cfg, coordinates, tick=lambda:None, saved=None, checkpo
         maximum=ctx.pi*degree/(4*max(ctx.mpf(str(cfg['span'])),ctx.mpf('.01')))
         def grid():
             left=ctx.mpf(0); width=ctx.mpf(1); cutoff=ctx.mpf(cfg['cutoff'])
+            index=0
             while left<cutoff:
                 right=min(cutoff,left+min(width,maximum)); mid=(left+right)/2; half=(right-left)/2
-                for z,w in zip(base,weights): yield mid+half*z,half*w
+                for z,w in zip(base,weights):
+                    if index>=resume_nodes:yield mid+half*z,half*w
+                    index+=1
                 left=right; width*=2
+            if resume_nodes>index:raise RuntimeError('Partial position exceeds quadrature grid')
         iterator=grid()
     elif route=='E2':
         a,b=map(ctx.mpf,cos_interval(row,cfg['L'])); length=b-a
         lo=a; hi=min(b,ctx.mpf(0))
         def grid():
-            for n in range(cfg['N']):
+            if resume_nodes>cfg['N']:raise RuntimeError('Partial position exceeds COS grid')
+            for n in range(resume_nodes,cfg['N']):
                 u=n*ctx.pi/length
                 if hi<=lo: coeff=ctx.mpf(0)
                 else:
@@ -90,8 +99,6 @@ def evaluate(row, route, cfg, coordinates, tick=lambda:None, saved=None, checkpo
         iterator=grid()
     else: raise ValueError(route)
     for u,w in iterator:
-        if nodes<resume_nodes:
-            nodes+=1;continue
         if nodes%128==0:
             try: tick()
             except Exception:
