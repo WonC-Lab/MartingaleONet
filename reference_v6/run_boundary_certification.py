@@ -39,7 +39,7 @@ def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
 def fingerprint():
-    names=['mp_backend.py','run_boundary_certification.py','requirements-colab.txt','resume_support.py']
+    names=['mp_backend.py','run_boundary_certification.py','requirements-colab.txt','resume_support.py','resume_plan.py','hydrate_legacy.py']
     return {name:digest(ROOT/name) for name in names}
 
 
@@ -413,6 +413,9 @@ def main():
     if args.expected_commit:
         actual=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT.parent,text=True).strip()
         if actual!=args.expected_commit:raise RuntimeError('Wrong executor checkout: '+actual)
+        for name in fingerprint():
+            blob=subprocess.check_output(['git','show','HEAD:reference_v6/'+name],cwd=ROOT.parent)
+            if hashlib.sha256(blob).hexdigest()!=digest(ROOT/name):raise RuntimeError('Uncommitted executor source: '+name)
     if args.expected_repo_root and Path(args.expected_repo_root).resolve()!=ROOT.parent.resolve():
         raise RuntimeError('Wrong imported runner: '+str(__file__))
     if args.resume_plan_only or args.smoke_case:
@@ -434,6 +437,8 @@ def main():
     plan=json.loads(Path(args.plan_report).read_text())
     if plan['output_directory']!=str(output) or plan['production_pricing_calls']!=0:
         raise RuntimeError('Wrong production resume plan')
+    from reference_v6.resume_plan import validate
+    if plan['identity']!=validate(output):raise RuntimeError('Plan source/protocol identity changed')
     for item in plan['cases']:
         _,current=inventory(output/'cases'/item['case_id'])
         if current!=item['protected_hashes']:raise RuntimeError('Checkpoint tree changed since plan: '+item['case_id'])
