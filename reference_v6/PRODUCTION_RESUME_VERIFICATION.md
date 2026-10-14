@@ -19,10 +19,23 @@ not demonstrate that the updated production runner or hydration was executed.
 
 For the following two current Drive raw files, old and newly generated serialized
 keys are byte-identical. The key schema excludes source hash and git commit.
-Protocol and frozen inputs are verified separately. No mismatch was observed in
+The actual root environment read later identifies git commit
+`ab9f4fb7c3e2da65471aaf325daa9fb27801bd5c` at 2026-10-14T00:18:07Z.
+The initial verified subprocess used
+`940937a76aaaaf73495939ae9b9ff772b509df6c` in its separately pinned checkout.
+Its zero-pricing hydration exposed a real DriveFS lease replacement race:
+`exists()` succeeded but the subsequent heartbeat `read_text()` failed with
+FileNotFoundError. No numerical kernel ran. The corrective executor is pinned
+to `07283f898aedcffeb1f15bc82df9bd307f4ffeb5`, with bounded heartbeat read retries
+and explicit parent-to-worker transmission of verified completed raw keys.
+An unreadable required lease stops with a resource status, never authorization
+to calculate. All generated journals retain the original identity schema.
+Both use the same original Drive production folder and frozen protocol/input
+hashes. Protocol and frozen inputs are verified separately. No mismatch was observed in
 span, Decimal serialization, estimator configuration, or legacy key schema for
-these exact base-coordinate examples. Worker behavior must still be verified in
-the actual mounted runtime; this document does not claim a completed live test.
+these exact base-coordinate examples. Synthetic tests also verify restoration
+in a fresh worker process and reject any kernel call for parent-verified keys
+when a Drive file is not visible.
 
 E1, both old and new serialization (UTF-8, no trailing newline):
 
@@ -42,10 +55,18 @@ Both SHA256 keys: `2770ab8d06a6c2a72d53626fc93236f503f194b0fc8ac5529f8c5a4f9f656
 
 Matching cutoff/degree/dps alone is insufficient: that E1 configuration exists
 for a base coordinate and multiple distinct ten-coordinate physical stencils.
-The user's reported four timings total 883.0 seconds. They establish expensive
-kernel activity, but assigning this time to exact duplicate keys requires the
-actual executed coordinate/key records. Existing raw files and log evidence are
-preserved; duplicate time is not silently assumed to be zero.
+The user's reported four timings total 883.0 seconds. The real mounted directory
+contains exactly matching elapsed times (75.480356324, 279.477243755,
+255.711563462 and 272.333902168 seconds). All four files evaluate the five
+time-stencil coordinates at tau 0.0968750, 0.0984375, 0.1000000, 0.1015625,
+0.1031250. Their keys are respectively `eb3383c1...`, `58bfbafd...`,
+`e0270c1f...`, `74fd24fd...`; none exists in the previous full Drive snapshot.
+The four previously completed base-coordinate keys are still byte-identical
+to their earlier snapshot. These specific timings therefore identify new time
+stencil work, not recomputation of those base-coordinate evaluations. See
+`resume_audit/LIVE_REPORTED_TIMING_KEYS_20261014.json` for full keys, coordinates,
+source file hashes and comparisons. This does not establish zero duplication
+for every historical session; old keyless logs still limit that broader audit.
 
 The new plan mode reads all real raw checksums and all pending cases, and replays
 metadata in a temporary overlay with the kernel patched to fail on any call.

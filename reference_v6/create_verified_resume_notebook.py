@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-REF='940937a76aaaaf73495939ae9b9ff772b509df6c'
+REF='07283f898aedcffeb1f15bc82df9bd307f4ffeb5'
 cells=[]
 def md(z):cells.append({'cell_type':'markdown','metadata':{},'source':z.splitlines(True)})
 def code(z):cells.append({'cell_type':'code','metadata':{},'source':z.splitlines(True),'execution_count':None,'outputs':[]})
@@ -66,8 +66,9 @@ Enable only after the exact reuse proof above. All existing production files
 are read-only during smoke. Results stay in this new evidence overlay.
 ''')
 code('''RUN_ONE_SMOKE = False
+SMOKE_CASE = "v6_09_2"  # one pending case with a genuinely new frontier, no partial restart
 if RUN_ONE_SMOKE:
-    command(["--smoke-case", "v6_00_1", "--plan-report", str(PLAN), "--smoke-output", str(EVIDENCE / "smoke")], EVIDENCE / "SMOKE.log")
+    command(["--smoke-case", SMOKE_CASE, "--plan-report", str(PLAN), "--smoke-output", str(EVIDENCE / "smoke")], EVIDENCE / "SMOKE.log")
     print((EVIDENCE / "smoke/SMOKE_REPORT.json").read_text())
 else:
     print("PAUSED. No pricing. Evidence:", EVIDENCE)

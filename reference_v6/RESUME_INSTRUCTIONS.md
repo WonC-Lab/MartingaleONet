@@ -1,3 +1,8 @@
+# 재개 절차 교체 — 2026-10-14
+
+`colab/phase1b6_verified_resume.ipynb`와 [VERIFIED_COLAB_STEPS.md](VERIFIED_COLAB_STEPS.md)를 사용하세요.
+아래 내용은 이전 절차의 기록입니다. 실제 Drive 계획 검증을 건너뛰어 생산을 재개하지 마세요.
+
 # 기존 Colab 생산 계산 이어가기
 
 1. 기존 계산 셀과 다른 Colab runtime을 모두 종료한다. 기존 notebook의 Stop만
