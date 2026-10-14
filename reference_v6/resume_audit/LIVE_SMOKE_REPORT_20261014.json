@@ -1,0 +1,11 @@
+{
+  "case_id": "v6_09_2",
+  "kernel_calls": 1,
+  "production_files_unchanged": true,
+  "status": "Smoke maximum ONE missing sub-evaluation",
+  "stats": {
+    "cached_evaluations": 83,
+    "new_evaluations": 1
+  },
+  "smoke_output": "/content/drive/MyDrive/MartingaleONet/reference_v6_resume_verification_20261014T011655Z/smoke"
+}

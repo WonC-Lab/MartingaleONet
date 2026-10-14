@@ -5,9 +5,9 @@
     "input_SHA256": "5268bcec295ec0fee0affb189cbb50333a552fb1ef4dc582d1061d832679c1a1",
     "executor_SHA256": {
       "mp_backend.py": "8334933ae55edb2b17387befe1b349340b3b05020d2e6f80da0fb455e9868068",
-      "run_boundary_certification.py": "bf35e36d23557de598ed998fd7dc61578e7d1bb9bc6ae5bdda781c8014855514",
+      "run_boundary_certification.py": "1d2378b49e3e2ec3e7cacb77b3900fca644b3841113c7c14d0d940c6f5e232ce",
       "requirements-colab.txt": "9084ef2d3dd4e356979c9635fc3ba5059925cd4968afb9d5b1213f57e288ac0b",
-      "resume_support.py": "b1e5507e027770cfeeb01304f3033d138416a67a370fdf256c2ec423b2958279",
+      "resume_support.py": "cba9d45e387ce208e4654bd76e1d7d96d4f97461cbbbafef30d0aef0d4b7f05a",
       "resume_plan.py": "d6e3d474f37f9f726e7f3e4527f1128b528ace5bc47a333d37ee757f9932c968",
       "hydrate_legacy.py": "b1c3dfcd85862bb18e9b4c5b1cd4983102ecff35ae7720928b5c38ade627cb65"
     },
@@ -15,6 +15,7 @@
     "old_boundary_recomputed": 0
   },
   "production_pricing_calls": 0,
+  "stage": "AFTER_VERIFIED_HYDRATION_AND_APPEND_ONLY_ONE_E2_SMOKE",
   "cases": [
     {
       "case_id": "v6_00_1",
@@ -22,7 +23,23 @@
       "reusable_E1": 236,
       "reusable_E2": 92,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_02ab1980204a0663fd52f41da05fb382a346805d9f3be87fd71396457928edcf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_091303c3de4b68ca872bcc192400db4bf356b30205e2e6dd8f408f811c0a9681.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_0cc2bf23993ae8bb74e7273109d8308944c26f797020f816b8c7d3b3dcf56ca1.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_172d6e593ad9865d2f3fda3fe237ff9d281c3b1476226760ae5bee4b85b764ad.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_80b6d2851b465cb53f56234fb64eb441f828bdc0c7c8ac2dd120523ef0626b23.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_b08be7e83234eba7f83fa742a1f67528c3635bd2bd21b812901f76adf514fb2b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_d53ab214e113ca804a999ca8fc28455628c57137b94b2fb3a83d84f2659cf266.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_d6e2b22d5b74a245088c8842045b015ebb53e3fe8b45ddb6295948351c9f2d98.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_ee510840610dfa5209b99211254d3941708497b1ddd76a3bc5bc5c11c669229b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/converge_f95684a21831adb20cd672edb2613cb3c7c3f99b9ce0f12dacc179b8852535ef.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/physical_1fe466c257187f2e3d1888a979ecd5badbfb2c93b78cd239e7e325517023679b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/physical_85124d39846578c2ff5a351f884e3b99e030fced29d4e7a684b818b87151af58.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/prefix_c9ad43204ff06190258b54424d0e2ee2297b5d81489f627b9c19dfe99334859d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/raw_catalog_b1362a4c8e3714114ba0c05da69ef84df30525e9507e3d9460393ae33bc931c8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_1/resume/time_ed5bfe924cf362ed5d2e7cdc0b2a47f4d18508fa7663bfcdb621870b33499489.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "f61f608c8a1aa76d2d9f69a0bff5b7b2852d938bb8c2f76946ac1452f0d5d916",
         "route": "E2",
@@ -71,7 +88,13 @@
       "reusable_E1": 114,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_3/resume/converge_3420d9c331b605909f1dd3b8ea6528d84104ea3c297121dbfee29c13bcca7b55.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_3/resume/converge_6558938852b817650c24023cb3a3c553aaff20d456a445458ded5b32c1dcf13e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_3/resume/converge_ce77b2afbad3a8ae8d5bbd83edcc07a12daaa74d82d1b68a8333304522fdd4ec.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_3/resume/prefix_5bb8161ab5c0cf1e043a3c3242ef6c742e3f761c14722457d80f4c2acdbabae3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_00_3/resume/raw_catalog_9ba4f81b0cd5945908b791a82983098ca028ca8448bedde601943393f1cd29dd.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "8934afb0c2b2fb6798352795dccdd9b5878658ba7c5d93c34a5a3b5cbbd5a2ab",
         "route": "E1",
@@ -146,7 +169,16 @@
       "reusable_E1": 180,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/converge_13403d5ff2850ffb8bf5a6ba9e8ea56229f03301a75a462abadc354688a3024e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/converge_25b5ce85141dccca9624b4d401461dbbd5600023e0ad9fd71b09930474ce4497.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/converge_2c6a30e9de7b4817e46b811a8683e768b8dd376c7b1e16a90617149866b41568.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/converge_558c8f77b5b66f93d42ee26e985555497dc5458692e474ff5684ef84fb957b06.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/converge_781b8bff301a45903cb26a138c9d150c9e3fffe63e3207fe805352887f4f29ae.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/physical_809457da0ae060435bd6e74ec2dc04434621f2f2f41fb6afa7f59e90c3599bdc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/prefix_fb8674e23b39f0399ff5ac73161fafda796955b3fb601133bac72f0a166807a1.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_01_3/resume/raw_catalog_29d87b0c769e65e9ec2af7a195625f4fe1f91e4a6dcb9ebfdbe3ae6b87ddf365.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "29321d911e62c1ed06fe118ecfebbf7c8050614dcfcf54c0726d030d4fafae3d",
         "route": "E1",
@@ -221,7 +253,16 @@
       "reusable_E1": 190,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/converge_5a7e5891569210ad323e67edcb1ab9f644e3ab40cb712e16b229e0a4bd24f65a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/converge_a131797fe281e0196afaa9d58ec9af18345609ffe1a6c7a5e0428c1498e52091.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/converge_b5950f70e845d7d5dff32446f5beeea077c6d1232fac92679d94d707edd2e2d1.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/converge_bc6fadc4db128909a74ee6a86892c0e0459541e68305d3d86e12ea46944798d7.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/converge_d15311f3b6c265c983d34faa0e266459f4dbf9499e037c2e35fa31e4c53db04f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/physical_6fb292791ecd5818b558ea83e5355e1bd019df6592495cc51e825bd9bd493cbf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/prefix_f9637bb21424d8bd7ccecd2d3a9355041720f9f11cf5a31396aa51a809d432ce.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_02_3/resume/raw_catalog_8254adac5429916c83955b6c2f125d69dc1c9009040b278f318e0307eae7447e.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "d1c646e751bf8dd521037e14f8ff3ac1db554b8ab55631a0bdadd336685ff933",
         "route": "E1",
@@ -293,17 +334,34 @@
     {
       "case_id": "v6_03_3",
       "status": "PENDING_RESOURCE_LIMIT",
-      "reusable_E1": 246,
+      "reusable_E1": 247,
       "reusable_E2": 35,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_08f5a1a0002266a5e03a5ceb3febf026f72821ad1daaf6aa02aa35d4477ea974.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_17a24a452e936350d0a9e6010aedce9f6f87a232805018abc53b4a4313b91c6e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_1897bd5e8b3daa152887a4ecc5f60d731724b15b0e0ba036b1564359ea0aa35c.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_74afb8a7b07a689b53686fd14d008b607a76f288087cf26c6ce96ffae0a1baa6.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_78556fce2db7729d2c8659327696b5c6bf40f8af08844d01aa5388edc4343b91.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_8072a4ad3a41779b7466a8f745174806b8172c614cff3b5d50ddf16ddfae987e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_8b361694d7ceb38bc2195ad73c0b6220f99cf22c2efd3587ced767e50f351d22.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_90c3157ca2b0fa829c3060c72abbf8f60435efa3ab1411b2cf142fccc962c420.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_a69b93af5350fb9bcafa449f079b0e6083a6c19839dc4bbcf5d325bd57f43247.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_b0344955a187b380cefc5608cf645f34769231f463a2630e78a5f0d724af44b5.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/converge_de658d174dcb8269a7ebbbf8d9fe3c262be7510760d184b6138dde421f7ec3b7.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/physical_6f00de64189f920155ee13245f834dbec5f8041e6d3cedacf86d1fe1d9a921a3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/physical_89bd0eff442459b6707a366aa6e38b0748d8ec820b5bd63e75b5a2774102fc8c.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/prefix_65d3f18853fde3ee5a7dab1d3db6e91cafb517259c7fc4c1e05d6abb9b9ef09e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/raw_catalog_ee965ebcc82750a7eafca53febcef7d263dd5ea7fbda79004d9bc93cb8fb6c1e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_03_3/resume/time_1546a94c3a486dc754812a20c0a148fc31b55680e0fd293c611a3f6d3e243861.json"
+      ],
       "first_genuinely_missing_key": {
-        "key": "49e5f88b24bcf1ced346bd919cbc8e67a2c99ce721d65ef1a3be52b7ce63d83c",
+        "key": "48fd2ea91f40e84d86e27763eb04409c2c895894a501f08367614ae68dd7fe2c",
         "route": "E1",
         "config": {
           "cutoff": 16384,
           "degree": 64,
-          "dps": 50,
+          "dps": 80,
           "span": "1.282657915534233677059200896571119893829565370583426926714429737208500313878789365745170234250548954711327067069902281565769664269095365171590705633679962258610"
         },
         "coordinates": [
@@ -334,7 +392,7 @@
           ]
         ],
         "partial_resumable": true,
-        "resumed_nodes": 8192
+        "resumed_nodes": 12288
       },
       "genuinely_new_at_frontier": 0,
       "adaptive_future_new_count": "UNKNOWN_UNTIL_PRECEDING_VALUES_EXIST",
@@ -346,7 +404,15 @@
       "reusable_E1": 145,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/converge_2c941a805792c9a06fea579899aaf2e81ed18fca3e9e2e4929bb33aef0010cda.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/converge_6c664e232205b3337b8c24bb4e9eafcaa09f9ac79a655ddc79cc279da93edd75.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/converge_c275e0a1273fd18803f667e6856dec4c879c5ecdded1e2df164859f395777e3d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/converge_c9bad6df03ce74d1fdc3a4344f679c40ea927748df1b8e6435d77bc057ba56e3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/physical_719d86a4bf5857394b7c72160ac7d63019b7770d1541aa5ed9a38a3640f063f7.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/prefix_6b89a98c957eaa5b65e003ebcd724b6a5dd60b2e0fac6efa5392473d4be21e8e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_04_3/resume/raw_catalog_ef9fcad899a0d1e098d21c9d99b04c2117d87d7d561dca32c2c0a7e93b39225c.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "a26d5395b07c765ca1fe468ba8b50a5f68673c0cd4de06d11e6bd8e67dc03b50",
         "route": "E1",
@@ -409,7 +475,7 @@
           ]
         ],
         "partial_resumable": true,
-        "resumed_nodes": 28672
+        "resumed_nodes": 73728
       },
       "genuinely_new_at_frontier": 0,
       "adaptive_future_new_count": "UNKNOWN_UNTIL_PRECEDING_VALUES_EXIST",
@@ -421,7 +487,16 @@
       "reusable_E1": 169,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/converge_411dc4600aec33d3283c23f8feadfd6696708d700c853bec14199aec1413acc9.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/converge_881ae3b70a6d40d4ea6507f90016aa08b9c36e72e23d55bdaeb0441c9ddc2833.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/converge_e9918946015b4eaa2028f4d9cde2672ec8682aed3ae30e52b70e0ae7d4f85dfa.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/converge_f59ac2a3a03fde25e31e40991fec6ec186e67590c36bb849a4a4d6a02320906b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/converge_fc2fe381d7595b5e1e9328741cc50905638d4ec73461b848473a508d7c16c5dc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/physical_bd6e0c0569e6bcacb593a1a2c56b8b3a8b186fd1233faf026ef5818e0da41f1d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/prefix_b9205dd4c09f49ff4dc4ddb81fdf60b34c65746a0f3cda3aba725bee2397c509.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_05_3/resume/raw_catalog_00879dc418a58f0f4a53adcb530c5e6b5e8c34f8e55ebb6092081d1cb3fbb78e.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "955a03e3bab34dd129868daf8a6fce20e1661304c0d3e5e7de5fa37c7e737971",
         "route": "E1",
@@ -496,7 +571,16 @@
       "reusable_E1": 161,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/converge_5bd61071c4dc34bec77b6bcffebfb1a5d7c33081724039744994ba43b1b1408a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/converge_7433d0745af49488deb2684f2b1eb57be3778337677be69ecd854f3dc8a36909.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/converge_b3f70bd2fc776de1a5a71894a870e2684c57d79a113c91c25d56a2de8b5b6d3d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/converge_c66a793d4da4ae03d73623a7c1ffc6d5419b1dbe9af96d8adee4284e16400983.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/converge_e0a1c3ab40f29dc4bffcc79ff697e42a7ac72afe078a28bceba77e21aaa0e2bf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/physical_b13616130396bf5e2ec3977b54b4db668fcbeeda41b07145b1bfcdc035fe4510.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/prefix_76089cd359d192f41ef55eb2fe52a126dbaeaca60eaa508d606ff5a3333a45c7.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_06_3/resume/raw_catalog_ae4240bab8114dafb1fa1a7c7b638f51f5ab85882d09854416601131f6aaf7eb.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "cd32c505d273c568ad524a7c2f8607c996c83f75cc63acdbd76b1605d146e0a7",
         "route": "E1",
@@ -571,7 +655,37 @@
       "reusable_E1": 445,
       "reusable_E2": 89,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_0385dc6d7e2353e9961d7f508eae9c35b60bbb1e0b31ba38f04eb283686e66fc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_05ae96e08721f7ec57ff88442b376b0351be02ed4ba6405503a632d790fe4c6a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_0650512c33618aecdf9d56a4cf87a9a7753c7f0cf8faf98d0573e07952c3fc08.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_10d49da9e4a9df2269b6d2af1e14c578bb710804210608fc0b54b3ac327247f8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_161f3ef618d25362ea42351ae788a1e8d8d8e5207b630910f39115d30453e7f3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_1be2838daf0ec50063f61e8a747cdf29b6ad4fd2d4a4ccc10e9f926fee8f0721.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_1d728d9564171e64c24211affe396cf192da33cf5f07e29b06e1e1e1890b9f25.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_1fdad14a814792cafe35aeaa9ea86e259e9d75210eeb14d8b0d6baa29c321bb8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_45834bfbf0e0a8e68382926cb7837038fb5f142bc6f94aa24de6c69812bbf776.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_45beaff60c1bcbdc92e001dfbe860d965f9cb09cc66d347db425cf2df8327407.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_47639af038092f6e62b7795079b42d99d3f49c89430564b55e6e5f0d97d2d2fc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_624cbbf2ffba565e102fdf6906d73a9fe1f244024a5eac0dd1759d2c747e5634.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_67266dcfd5a1c57421674170c2fc63b23584d31c0a64839cba19bca20eaff1b2.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_77dab4f3e82ef69509d6a3c4de0a29c419cc231ad28c19fa99fa9fbd7e1c59da.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_83e4011d348a3c1f307a1d1ec355e5604f5ddbd81bc11d93ef4ba36ca3ddf429.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_8ee562ba5ff744a2ba7ca1e3c2306b913480066375187ae1530623d424aae478.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_8f0b315aeeed5f9bb68be6ccdcabb7ad62de4eb375d428f1cf776cbd2abfc3df.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_9a53a518dfeba85a6e7c0de94cfef3e1f79b296cba59812f040faf41a82cf586.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_9a865aa3a065c8a5eca4c1ca6bf6901c3bbc2eccaac96d3d8e88da53bb8cf9a3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_b812976d8eeb29b75e1107dd373e36a4f72a29e9dd342cf838ce8dee9bd99457.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_c150c3284888e888d652342c28083df1cefab6cc71dbc6fb6d71ffbd548dc73b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_d57b8f37a64b08273f0dbaa4a68bba3a1bd1d557b42d744799906482624767ef.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_e1ff42637cc7eaeae8998fd9f4c631bbe3325dbf2777b7dcd9073d498f02ef98.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/converge_f19d297e2089b047c7a1904c6897b87dad3b37d72a486eca18efb9b6ecced15a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/physical_098955ab5b86ff7f2539a86246626ff350efa89bc79c2fbc59959a570ae01f06.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/physical_193ce219cb143976b64c42db8db5ce27d4e75503375748874fd50657c39c79eb.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/prefix_cd08485faa7bf2f35ca1c700131816ec15526b7b79a0d4034a8eb7a91210f434.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/raw_catalog_6290e659188b3d745dc4effcc46fe04cf289fa789cb3bbbb566ab43b7fc94b1f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_0/resume/time_652546ce117a2773438d628a62fe7852587d755ad146b44af87ceb8b84107130.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "b4a7eee4db30b42cde28dd6e42d73b68d50d97267bbdb81d1d0bfbc83041829f",
         "route": "E2",
@@ -620,7 +734,21 @@
       "reusable_E1": 176,
       "reusable_E2": 28,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_08d50d6902a2503dcdf660a046e4080dbb129bf4ae735433b28bf4e204094758.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_0d5270206048908f31bdae7a94d72b02b8749496ebbbb56a5b0883786c3dafb4.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_0eccdb55e3464ff8975370b45b88105983739247f60e8bc0c5243382c6b0d116.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_1587a7bd9d45d70d4462f728cffe1bc40a99ac8d631a742487142b482e772535.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_48c3de560b5b4a1629fafa81f4e33c979fff5ae34b60d4186155881effe30285.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_881429580f41a597313dc4d1fb867948534e3daa0788d52397fbdccb1452fc2e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_974f44b05250301a5cada1e7a1c020d2fcf2c2fa3df399d9fe549e89a928ad15.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_b811b52d79714153d1c6d1566aac7a8a2e0c5694a093184213fc8b1f62504960.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/converge_d20cecf4a2872b167092f890506b5a7ae7a6a4062eb43b285f6a821e4d70904b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/physical_118609eb12547d541738f7db79af2cc85dda56e29f5f6588ff13dff5825c3ade.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/physical_3739b4eb8cf51466003532f5ece513e490fec693d21fab2223c8648823d7c766.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/prefix_e4601f9c80ca84354600819f832f0e3d00560dae91906c7400d5ea5d053bb2cf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_07_3/resume/raw_catalog_58afd1aae53bf6a5bb86fa5201c54fedbbee2fa19ddff01049af5a0455c6a25d.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "dfa1d1665328349b89dc05669ee704c9ae55e1c8323eebe6aeea5fff40d73930",
         "route": "E1",
@@ -670,7 +798,22 @@
       "reusable_E1": 510,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_0f589b3ce21972de8df274255c3a96111d5782216c8976e7c59e05c88d5a2e59.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_122d849a9548d901001ff2a3448b5d2fb92a47cb12661b488c47312277eaab3e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_201f51eeba6033aa0db847259e18fcd1956b8702e25158346567af9288b5daf8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_42a1f74bc5d2aa369358a9a51fd787d501ffe2fcd997f6902a2e76256f1c4e41.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_4602309df5cb16b8f7a3fd0e7a3ad125250b07dbd538f8ee24dcc0b5a03507f0.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_57be03a29cc4a680935b3890c4d37701bf2ebccb73ccff8a8f6bd7b106b8175a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_5f1f8eb2a7854cf6d47789ea1f06ad2bcbe91efcd80e1e4e62afbb6af121fd25.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_66ad9878499bde90304864c51110585918f2e941a35f2264d50e53a37a7e6cab.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_a81e54074b26aa50ceb39b43cdb1b135fbb338eb62c70faefc341e6bbe4b9b03.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_bead3c2cefcf97bb9ea2f522f729da93155f1101c428b93a38c83a476612d1cc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/converge_bfc04e2d6c4bd553b09c769083f09d12174a5a7df478a23b026c646d64c54220.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/physical_796e67a361b8508257ba0a05d6760495627f08e77650f5454a592c8ff34a1981.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/prefix_89c3f75d4082d18059beb19b8688f1f895e596f46f224ba3d069b3869647dbc4.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_0/resume/raw_catalog_f6ed426fab088a2517f2fc69c52f0bfbd8a7db4af8d08f2508b9fab3e2aca049.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "cbc39dc2b351074e5ed952025b7f4b8b04f2d4b3d0bc7588865f9f8d9a3dd0c7",
         "route": "E1",
@@ -745,7 +888,31 @@
       "reusable_E1": 239,
       "reusable_E2": 59,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_31e790acdf727310bf268ab808099564239b92dc0fa014d38cdf7723119d4a87.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_3705a74b093d0f31573061a0e044f72eacc7b86cad902cdfa3e4452e361fcd8d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_41bce1729ba655cbf34f22f7eecd6f238e90b893c3f7e000a6a48dc27cea4454.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_563b832853a2092caec388079ddbaca98ab2f0f2650e23d16d6f1502331cbd11.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_5c145981689b74e08ad9c5a2067790e4278a4079ccb26fc1aff0ba46720ef27b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_77057a8029153c8d8d14dda70163bbe10fbb40b7387abc5bc07a9c0eaa4bef32.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_86119d565815de6b07ade5fa471ad4658a03ea2eba058adc5df71af1bab93cd6.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_865ead299fa892300a7a03905561137b6c1f518afe16fa4bb84e597ea2a6aa63.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_90c57edd27f5bb1d2b7619c794c8ea44c6cb455a4e6fa133dbcdd05cd5556dfc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_9b99b35ff46002cb905b699abc38f2c3f2786802c63e760a72cb3b235426ce23.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_9d875ec70cb4fdcae4fdd5f826106efc7f1e5578745c7c0f0205ba0df733c189.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_a147529063bfdf0ff46ba4070f235a6355f64b8d9f7627cd7875847dc84e1c4f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_b521d6cf3295786a0d810bc54d206b01c33f1a86dc4fc71a566fb9c39e0c373c.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_b97f6fd6b2230bdf17743dc631c4cfb04e97f567d30538f9999e6d26978b9f45.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_caedbaa932977d43f9edebe1a76d5aab450a0e1686d61e2a28a711f576605e91.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_d9d6e99b3daaf9355e9fd5e6202f79ee1d0b2b5dc50dc32e63568b9bf487b313.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_db874cf724c016aff405fc95d3b6673b397d627b45b7cccafb73940ed030fedf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/converge_e047c5c7931c6bfbd1d4b77c09a7d156a0e447c5c0e9a95ed364c7796e8ffaca.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/physical_1423497621b623968c53e9b9b90ff431cc0f734478534518b7bfc85d0bb29c10.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/physical_1eafb8964d509d7cb6f7337da95d3c292ce421177447ae8e463430e83b27bc32.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/prefix_b32762f4714eed8b6617e44db3b1cd3047bbffac1e3f6abb930df86a5dd12205.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/raw_catalog_9f1a2b8bd806289630b73a3af868474c2990630b3e8d4b512fa4b0cda8e0a786.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_1/resume/time_8031f785131c22bd417d99a72f2462f149fcd6dce8cc576554d9288ebf248e14.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "7878c03638df9d5307710e3ec4696e3eaed5b11b4d95e20d8b49143c18e21fd2",
         "route": "E2",
@@ -794,7 +961,13 @@
       "reusable_E1": 82,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_3/resume/converge_21c08c51ee3d177f21954628cf973b82b2ff4346d81c6ee408b590202c9aaaaa.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_3/resume/converge_63bdaad1b6d0e0a6807924a554acec047cc32db38528afe21664ada1c14003c3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_3/resume/converge_98e93ea6660d37ff43eabe22f22448cdce8f54878c926a410bdfc8b120649b10.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_3/resume/prefix_a04ceb231f883bea60f0517952f3d0ef02b28627774de374e7e5b1b0c052ebc8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_08_3/resume/raw_catalog_1eb00df0ec85d7e2accb4927d63de780ee6c66e1bfbe183b1bc06009b0c79c58.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "7879168b14695023ed3235e6bb278c5f7743779842ffaca4d107ab0b61349f37",
         "route": "E1",
@@ -869,7 +1042,22 @@
       "reusable_E1": 423,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_05bfc18d75b71a2b24783d45dae7247def57782e117983d71241d93f57cc4760.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_13af7e521895164d0efaf3bc5e5832eb3343f962fa5489d353bc58c3ba60dde4.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_3f0db0abb882434db09bc4ae4fee3f552a7a38df947257703120239678db3354.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_4bf9761c5aac3b492c3cba22eb3fbb40434041240d28abf07afac9418c18be49.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_5adcd5b9084dd3ef3c0d9f7484cf553d40a385e9dc51401663f1fd91ab4e0a49.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_8dfc57584e226ec324257583f174773e6d2562f9ec2930bb0b3599ef2832601e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_931a7f06b8ab39ae887ff1a15b3ae37b315ee6324e2da3e897aee0ef0d7dc166.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_9b2d58ae527d3aa04b50fe13ec4b27b33d5a520670fc848b72e2a1d33b7ff204.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_9c5849d7b16ed5a4efe5204dc05f9ee0ec50c47121e784e4e6b3bc8e4859f529.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_d3ae576d8223ff761d3581356a76b9f7ec861b5f8e4675c8e85601f39dd8e1df.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/converge_f9ef2fae82ed802043b3e7d870b88f3c957f5b7a00dde5ced3c55273c70a0b3f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/physical_5b0cce8c8bcd582dae1012f1e18d85ec1842065673afb990a7c9710b273837e7.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/prefix_1fc94b9d17081df97bd930792a540f89230f25f5f9185dc0b44890c24722c072.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_0/resume/raw_catalog_4b2b2e0361c74f98c6da876f66543f02786666452cb37bf391a25864f3e69adc.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "7737f2b7a95978f83168b9f8f01bd8d985f255a40f6c54897a32525bc2c8a30f",
         "route": "E1",
@@ -944,7 +1132,23 @@
       "reusable_E1": 106,
       "reusable_E2": 34,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_033a1c64eb5916f148542bb3a4925025811a5ec0823547de8323a5885dadcc90.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_5b07223d634bcadedf8876970f3d8a9d0a10dbbdc7e1681b2925adee59b62487.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_8bc461068257b29b9e5c1f56ad4c97c0dae49271c4526c3f84119270d076ffe1.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_8d480f2bb877d963a6b5a26a8e746ecd39b64c0d1b5e043c64384598bdd61856.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_92fc56bd6fb0f948160cf6025c52a9a6b964452afdaa2fd235a5c109104db61f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_9b0c442773498530783c207cc03c8426870078b619e0e1612a4f794bc15db8cf.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_c65f5ceee4744f4b29f72a651e0dda85413544854c88b1333550c51f5f56f473.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_ce56c10f2ecc2270ded63b6a79970a1c41feb8af48630edb492e8c1e411897a3.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_cedc026f1f641930fffb3d0e357d20b150a3de6e2d05a432740750f9460a6a49.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/converge_e3753473d169fa0efbcd5c5143de5b54171c8b05e5b6b1f54f1267be9258bda5.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/physical_1197ebe23d49feccd364daec98cd0ce4338b11c1677d53a5c34c8904c4b552be.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/physical_fc88943911c019ea49d5f3b7eb17663752f58123c45f68c5aad9501beafc3da2.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/prefix_3920544ad48d7459ec03dfe135a283e4cfc40078190f5015f5bd173a27d4d79c.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/raw_catalog_d8889a3cc0b55c328ba462a9f2e665950f3725d5fd64b5652928fb693d285413.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_1/resume/time_a017900e987814c3c759d8652986ad65430a1faafa188c1a15838856e13cc9f5.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "2942e661266e03fa3dbaa30e41e1824cd86ba6a81e8832d0de3e7f54ccdeb4fd",
         "route": "E2",
@@ -991,16 +1195,34 @@
       "case_id": "v6_09_2",
       "status": "PENDING_RESOURCE_LIMIT",
       "reusable_E1": 43,
-      "reusable_E2": 39,
+      "reusable_E2": 40,
       "partial_resumable": 0,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_0928b1c3e29a0794698e244205af758e3878651379310571f9660326e303ddab.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_1bf02cf58458f7430f501b278d4601fdb1f153b3fc0e4801e93804c75b23d0a6.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_41b23ef3e327912df0c57ca7dd222a525a12c897f45ac3075cd89b5ec9c38c5b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_7153ebbb55f329c2a655884f18a5316e95a5ddd524487b72736ce8f27fb9d174.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_9692737671dd525f8061d74f4b88c721b25f0c2d073dd5747877ce6f0d2f1c98.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_b43daf51d6a08beb9c4cf36b2d75690cda8bb8ff673b456c5216d88deba47c67.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_be4c73f544e259605dbe447060f807df24de8dcb2603dec078fa123b465b6c80.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_c1673397992b203dfdb2be88bff77c42aede430cb97a801993dc3aabb4c4f21b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_d3b2022a50a8efd097b1d4863d8940d473aae4a4e187802b1a4f2a954a5c9f5f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_ea5d67b30e4a06a78f0acfc4f4146acd040c815d45c1aeebd2060a84d0cda364.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_f4d595b37f8760d78d7c85022f6b182741d6e55b782e2e9c480382ac10169210.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/converge_fef884b5751fd2d4f2331f879a5ec0a045d9e26ec532e6a2a0f3128d2afb3f8d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/physical_2c2665fad94b5425dfca9d7b649cb79ba7b5c36008ee4a2240ed9d41f6aa0b9d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/physical_e1e2b5577d9ddf0dbc4bbd4ca571bba6d75d1a6a34bf0703da42cf63b8a5b425.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/prefix_184b7d79ccb050389c13a3273cd885a420059d9ff6ff9b1925480cac85d907da.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/raw_catalog_600ccfd059690a4f3bc767ed6f0402e4884bcf48af3b5955c7de2d2a4ffd9fed.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/resume/time_51f88a6f1c1693b4de30f689e38d659136ebe6460766849716b117a9e4abb334.json"
+      ],
       "first_genuinely_missing_key": {
-        "key": "d44749c5c0dfd33c896a248a9ae4a86871632d4904f99d437002957b73106500",
+        "key": "20321230b9c7ecbe2272ac701f6573bdbd7b7825148ef3ed9b2b855ac49bb00d",
         "route": "E2",
         "config": {
           "N": 16384,
-          "L": 24,
-          "dps": 120
+          "L": 32,
+          "dps": 50
         },
         "coordinates": [
           [
@@ -1042,7 +1264,13 @@
       "reusable_E1": 77,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_3/resume/converge_4c889d3408000debb1b709e96f653f06e1d86372e4f3541f32e169ed18c01b3a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_3/resume/converge_92fa26a898ba0618afd158c1cec1cdf7a756cdd2c64e4ef6f13f33a3d4066100.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_3/resume/converge_9d58ae02482c3e7e491452a9a4a1853a6dd11cd1b959aed76c538e7acab38c26.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_3/resume/prefix_6abb1e7d7db4512ee96d005ab551b88a18054ca907a8ae749536983c92eaff32.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_3/resume/raw_catalog_40e8ef077308cda24b464479b7904312cd8526231ee1ea06143e4b5d8cc42878.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "ff1c95daf07715a1a0e1d642dd410e583ba69e6c58d185b781c4706b56ff09e4",
         "route": "E1",
@@ -1117,7 +1345,16 @@
       "reusable_E1": 207,
       "reusable_E2": 7,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/converge_817dd76d1bbbe162b58e105ecdf1f488d8ea985a945f1f5cf6c9ec80c530599b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/converge_8350bc56d9bc59f23e2de919aa142e466adcf94881fb50fb17ab07a825da3e62.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/converge_952cdb43f35c7b157a1ff65f10c38392d04865502044c8ea1d2a8d4e27aa9120.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/converge_b1512b3fd8f8f24a66a5364165544c46cbca6f5cee073fe974f088956d4fd12d.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/converge_d796d4e21c586129628b7025f5a96831323da16d606fc5f5e40ab4925ed247b8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/physical_ac12ff288abeb6ac488a08c8925aabcf49da44da42e5adb16f05d5058496bd52.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/prefix_52a56b2d50abcb500d7361530633fd3e83c31c95c02aba51daca5b7e3566341f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_0/resume/raw_catalog_376357bc33a87850cc7f7f6787750e5b7fbc8e963fc1a1e2ef6389e4ed157729.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "f432a6412dbc3557193d43bdd8c8a7cd3449ea1787f0a14ea422de5a3a94a060",
         "route": "E1",
@@ -1192,7 +1429,24 @@
       "reusable_E1": 289,
       "reusable_E2": 18,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_1435be3b1971c21cab159d906c94904cd52c0cf34a6be2e87c26ab00851be30f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_1918986e3a8a2506def58c8f547c0c1f380185ef40be6aab266d8bf6eeb6f866.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_1ccfd85623e19874a0fdae32c3f7f3521f6cdee743f1718ceefeb01f16ef11ac.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_30d4a86b4370920b9297605feb7d489d39b4c3d543e3291eeeb2b0939477fbb8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_387e62a6e435f05dd51a69c593e8f2a41799bce2f875016082a19bc736d14c6f.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_38c2b393298cfa26e098cfc4fb277606f7469ca6965847f60d8261782d50d78a.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_3f1dbc2b2a3a883120cec5660f2b757c0a7f2ef04505377d054aa8d817a1d312.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_59b568678542882db3458ab0cd68be29ec462cfe8de1bdbbd7df58be09e795be.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_5e0a27632b79a2c50cd01f419c32b8d9d2d7764af5131c0a58e890039196a458.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_7588703113093ddf7d759f22c0c1168de430f0de13bf9dc24b765573a5708aa9.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_b76bd281d93a79b850e6fc915b07ce5efed2a8755b192d60b3405d7e54ef76cc.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/converge_f21d118fa94dfb57e9567a0af42ca51103e436cce8e97c4cf6742c02c288fcc8.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/physical_4752ef67bbbce63cf551127a18a73d7f079d96f9f23227156a35cdb36ec7988b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/physical_974e5a6dbc1a4bc4c4ec3e7778b716be52ba2fac7273f3a22492e678a3a5d347.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/prefix_dbabc5b25ddf7be715c18b6448c1cf67278d12340d8600e21343b8a8969007ea.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_1/resume/raw_catalog_365b701362d4dd6b1107973f63d0816915bfb3857b546b848d6a5e1ef69f1be7.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "2e5e62480ea10ab0671ce328a8f3af93dadbb791ee5caceb0f6dc8f2a36abbfe",
         "route": "E2",
@@ -1266,7 +1520,17 @@
       "reusable_E1": 44,
       "reusable_E2": 9,
       "partial_resumable": 1,
-      "journal_paths": [],
+      "journal_paths": [
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_02bd11bfa903cbfeef6560ae9719ec31244d8571739d97275061e2d007bf1581.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_0f6e80254c58ee0714c857283ed522383cd2443adb55d268317e1b776f8884eb.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_7adcd7a84f5e5f26609515971ac8e4666112804bcb836fb3131fab550a24c613.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_87237b3cdc7e5e8ef6709fe429ad712c589615f2cf8559c2a2d7444dc6d562d5.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_aba46d8b748881adee7cf37ab492dedd7a57b3266522e8bff97ff53501a2e19e.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/converge_f41a0d4027a74e021c356d16ab6ce81994c25846176817851b6e6c72b34f2147.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/physical_10ab96e3025aea33406ea4f2c49132b0614e9f0df7b454f9d196e711cb41261b.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/prefix_31b661b4c10a19bf856f0f7bbc85af9a5ebc899be2c23b65b568f197fccacc90.json",
+        "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_10_2/resume/raw_catalog_55eee60f380383e50da89615ca6ad730ee7c80a2b335054ccd9a8b3a377982bc.json"
+      ],
       "first_genuinely_missing_key": {
         "key": "876f7a1ff9a60056d2df7e8b7453eeef2350dea86ade62b8c5dfee56b6f146b8",
         "route": "E2",
