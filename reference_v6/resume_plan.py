@@ -26,6 +26,7 @@ def inventory(case):
         if not partial and s.key(z['route'],z['config'],z['coordinates'])!=key:
             raise RuntimeError('Raw cache key mismatch: '+str(p))
         records.append({'key':key,'partial':partial,'route':z.get('route'),
+                        'classification':'PARTIAL_RESUMABLE' if partial else 'REUSED',
                         'config':z.get('config'),'coordinates':z.get('coordinates'),
                         'nodes':z.get('nodes'),'elapsed_seconds':z.get('elapsed_seconds')})
     for p in sorted((case/'resume').glob('*.json')):
@@ -122,6 +123,7 @@ def smoke(output,report_path,case_id,smoke_output):
     output=Path(output).resolve();validate(output)
     report=json.loads(Path(report_path).read_text())
     if report['output_directory']!=str(output) or report['production_pricing_calls']!=0:raise RuntimeError('Wrong plan')
+    if report['identity']!=validate(output):raise RuntimeError('Plan executor/protocol identity changed')
     item=next(z for z in report['cases'] if z['case_id']==case_id)
     case=output/'cases'/case_id
     _,before=inventory(case)

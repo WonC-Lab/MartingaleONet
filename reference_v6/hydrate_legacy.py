@@ -38,6 +38,7 @@ def hydrate(output,audit_dir,takeover=False):
     if not checked['CHECKPOINTS_ACCEPTED']:raise RuntimeError('Audit rejected checkpoints')
     rows={r['case_id']:r for l in (runner.ROOT/'BOUNDARY_BLINDED_INPUTS.jsonl').read_text().splitlines() for r in [json.loads(l,parse_float=str,parse_int=str)]}
     result=[];original_write=runner.write
+    snapshot=json.loads((audit_dir/'CHECKPOINT_SNAPSHOT.json').read_text())
     def journal_only_write(path,z):
         if Path(path).name in ['COMPONENT_BUDGET_LOCK.json','TIME_REFINEMENT.json'] or Path(path).name.startswith('physical_'):return
         original_write(path,z)
@@ -50,18 +51,22 @@ def hydrate(output,audit_dir,takeover=False):
             obj=Hydrator(rows[case.name],output,time.monotonic()+runner.P['stopping']['batch_wall_seconds'])
             # Full read-only audit already verified these raw bytes. A missing
             # file on a later Drive mount must stop, never silently recompute it.
-            snapshot=json.loads((audit_dir/'CHECKPOINT_SNAPSHOT.json').read_text())
+            imported={'E1':0,'E2':0}
             for rel,sha in snapshot.items():
                 p=Path(rel)
                 if len(p.parts)>=4 and p.parts[1]==case.name and not p.name.endswith('.partial.json'):
                     obj.catalog[p.stem]=sha
+                    imported[support.checked(output/rel)['route']]+=1
             obj.save_catalog()
             try:
                 obj.run();item={'case_id':case.name,'action':'ALL_SUBEVALUATIONS_ALREADY_COMPLETE_NO_PRICING'}
             except Missing as e:item={'case_id':case.name,'action':'READY_AT_NEXT_MISSING_SUBEVALUATION','next_missing':e.record}
             except runner.ResourceStop:item={'case_id':case.name,'action':'HYDRATION_RESOURCE_CAP_RESUME_METADATA_ONLY'}
             except runner.RefinementFailure as e:item={'case_id':case.name,'action':'EXISTING_REFINEMENT_CEILING_NO_PRICING','reason':str(e)}
-            item['stats']=obj.stats;result.append(item)
+            item['stats']=obj.stats;item['imported_completed_keys']=imported
+            item['catalog_path']=str(obj.catalog_path)
+            item['journal_paths']=sorted(str(p) for p in (case/'resume').glob('*.json'))
+            result.append(item)
             obj.save_catalog()
         assert blocked.call_count==0
     report={'production_pricing_calls':0,'old_scientific_files_overwritten':0,'cases':result}
