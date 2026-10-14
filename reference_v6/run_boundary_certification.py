@@ -88,7 +88,7 @@ class RefinementFailure(Exception): pass
 
 
 class CaseRunner:
-    def __init__(self,row,output,deadline):
+    def __init__(self,row,output,deadline,verified_catalog=None):
         self.row=row; self.output=Path(output)/'cases'/row['case_id'];self.output.mkdir(parents=True,exist_ok=True)
         self.start=time.process_time();self.deadline=deadline
         self.stats={'cached_evaluations':0,'new_evaluations':0}
@@ -99,6 +99,9 @@ class CaseRunner:
                       abs(D(row['rho']))*(max_v+D(row['kappa'])*D(row['theta'])*max_t)/max(D(row['sigma']),D('.1')))
         self.catalog_path,self.catalog_identity=self.journal('raw_catalog',[])
         self.catalog=resume.load_journal(self.catalog_path,self.catalog_identity) or {}
+        for key,sha in (verified_catalog or {}).items():
+            if key in self.catalog and self.catalog[key]!=sha:raise RuntimeError('Parent plan/catalog mismatch: '+key)
+            self.catalog[key]=sha
 
     def save_catalog(self):resume.save_journal(self.catalog_path,self.catalog_identity,self.catalog)
 
@@ -128,9 +131,12 @@ class CaseRunner:
     def tick(self):
         if (self.output.parent.parent/'RUN_INVALID.json').exists():raise RuntimeError('Run invalidated by another worker')
         lease=self.output.parent.parent/'RUNNER_LEASE.json'
-        if lease.exists():
-            z=json.loads(lease.read_text(encoding='utf-8'))
+        required=os.environ.get('REFERENCE_V6_LEASE_PATH')==str(lease.resolve())
+        try:z=resume.read_lease(lease,missing_ok=not required)
+        except resume.LeaseUnavailable as e:raise ResourceStop(str(e)) from e
+        if z:
             if z.get('active') and z.get('session_id')!=SESSION:raise ResourceStop('Drive lease owner changed')
+            if required and not z.get('active'):raise ResourceStop('Required production lease is inactive')
         if time.process_time()-self.start>=P['stopping']['case_CPU_seconds']: raise ResourceStop('case CPU cap')
         if time.monotonic()>=self.deadline: raise ResourceStop('batch wall cap')
 
@@ -333,8 +339,8 @@ def round_gamma(bits,m):
     eps=D(2)**(1-bits);return m*eps/(1-m*eps)
 
 
-def worker(row,output,deadline):
-    runner=CaseRunner(row,output,deadline);path=runner.output/'RESULT.json'
+def worker(row,output,deadline,verified_catalog=None):
+    runner=CaseRunner(row,output,deadline,verified_catalog);path=runner.output/'RESULT.json'
     if path.exists():
         previous=json.loads(path.read_text())
         if previous.get('status')=='PASS': return previous
@@ -459,9 +465,11 @@ def main():
     if invalid.exists():raise RuntimeError('Run invalidated by an earlier executor error; new protocol/version required')
     with resume.local_run_lock(output),resume.drive_lease(output,SESSION,args.takeover_stale_lease):
         os.environ['REFERENCE_V6_SESSION']=SESSION
+        verified={item['case_id']:{Path(k).stem:v for k,v in item['protected_hashes'].items()
+                  if Path(k).parts[0]=='raw' and not k.endswith('.partial.json')} for item in plan['cases']}
         try:
             with ProcessPoolExecutor(max_workers=args.workers) as pool:
-                futures={pool.submit(worker,r,str(output),deadline):r for r in pending}
+                futures={pool.submit(worker,r,str(output),deadline,verified[r['case_id']]):r for r in pending}
                 for future in as_completed(futures):
                     result=future.result();print(result['input']['case_id'],result['status'],flush=True)
                     if result['status']=='EXECUTOR_ERROR_RUN_INVALID':

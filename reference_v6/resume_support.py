@@ -73,6 +73,23 @@ def compatible(old,current):
     return old.get('executor_SHA256') in [LEGACY_EXECUTOR,current['executor_SHA256']]
 
 
+class LeaseUnavailable(RuntimeError):pass
+
+
+def read_lease(path,missing_ok=False):
+    """DriveFS may briefly hide a replaced heartbeat. Never assume ownership.
+
+    Bounded retries are infrastructure I/O only, never a numerical retry.
+    """
+    path=Path(path)
+    if missing_ok and not path.exists():return None
+    for attempt in range(8):
+        try:return json.loads(path.read_text(encoding='utf-8'))
+        except (FileNotFoundError,json.JSONDecodeError) as e:
+            if attempt==7:raise LeaseUnavailable('Drive lease temporarily unreadable; stop without pricing: '+str(path)) from e
+            time.sleep(min(.05*2**attempt,.4))
+
+
 @contextlib.contextmanager
 def local_run_lock(output):
     """Kernel lock: same runtime cannot launch two writers on one output tree.
@@ -106,8 +123,8 @@ def drive_lease(output,session,takeover=False):
     """
     import threading
     path=Path(output)/'RUNNER_LEASE.json';previous=None
-    if path.exists():
-        previous=json.loads(path.read_text(encoding='utf-8'))
+    previous=read_lease(path,missing_ok=True)
+    if previous:
         if previous.get('active'):
             age=time.time()-previous['heartbeat_epoch']
             if age<180 or not takeover:raise RuntimeError('Existing active/stale Drive lease; stop other runtime first. Stale takeover requires --takeover-stale-lease after 180 seconds.')
@@ -115,8 +132,9 @@ def drive_lease(output,session,takeover=False):
         atomic(Path(output)/'sessions'/session/'PREVIOUS_LEASE.json',previous)
     stop=threading.Event();errors=[]
     def refresh(active=True):
-        if path.exists():
-            owner=json.loads(path.read_text(encoding='utf-8')).get('session_id')
+        record=read_lease(path,missing_ok=True)
+        if record:
+            owner=record.get('session_id')
             if owner not in [session,previous.get('session_id') if previous else None]:raise RuntimeError('Drive lease owner changed')
         atomic(path,{'session_id':session,'active':active,'heartbeat_epoch':time.time(),'pid':os.getpid()})
     refresh()
@@ -125,7 +143,11 @@ def drive_lease(output,session,takeover=False):
             try:refresh()
             except Exception as e:errors.append(e);return
     thread=threading.Thread(target=pulse,daemon=True);thread.start()
+    prior_required=os.environ.get('REFERENCE_V6_LEASE_PATH')
+    os.environ['REFERENCE_V6_LEASE_PATH']=str(path.resolve())
     try:yield
     finally:
         stop.set();thread.join(timeout=20)
+        if prior_required is None:os.environ.pop('REFERENCE_V6_LEASE_PATH',None)
+        else:os.environ['REFERENCE_V6_LEASE_PATH']=prior_required
         if not errors:refresh(False)
