@@ -7,6 +7,7 @@ import contextlib
 import io
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import time
 import types
@@ -35,6 +36,45 @@ def fake(row,route,cfg,coords,tick=lambda:None,saved=None,checkpoint=lambda z:No
 
 
 class ResumeTests(unittest.TestCase):
+    def test_transient_replaced_lease_is_retried_and_missing_required_stops(self):
+        with tempfile.TemporaryDirectory() as td:
+            path=Path(td)/'RUNNER_LEASE.json'
+            with patch.object(Path,'read_text',side_effect=[FileNotFoundError(),json.dumps({'session_id':'a','active':True})]),patch.object(support.time,'sleep'):
+                self.assertEqual(support.read_lease(path)['session_id'],'a')
+            with patch.object(Path,'read_text',side_effect=FileNotFoundError()),patch.object(support.time,'sleep'):
+                with self.assertRaises(support.LeaseUnavailable):support.read_lease(path)
+
+    def test_parent_verified_catalog_blocks_kernel_when_drive_hides_completed_file(self):
+        with tempfile.TemporaryDirectory() as td:
+            cfg={'N':64,'L':16,'dps':50};coords=[('.13',0,'.73')];key=support.key('E2',cfg,coords)
+            obj=runner.CaseRunner(ROW,td,time.monotonic()+100,verified_catalog={key:'previously_verified_bytes'})
+            with patch.object(runner,'evaluate',side_effect=AssertionError('recomputed parent-verified key')) as kernel:
+                with self.assertRaises(runner.ResourceStop):obj.raw('E2',cfg,coords)
+                self.assertEqual(kernel.call_count,0)
+
+    def test_fresh_worker_process_restores_unfinished_journals(self):
+        with tempfile.TemporaryDirectory() as td:
+            completed=[]
+            def interrupted(*args,**kwargs):
+                if len(completed)==25:raise runner.ResourceStop('synthetic parent interrupted')
+                completed.append(support.key(args[1],args[2],args[3]));return fake(*args,**kwargs)
+            with patch.object(runner,'evaluate',side_effect=interrupted):
+                with self.assertRaises(runner.ResourceStop):runner.CaseRunner(ROW,td,time.monotonic()+100).run()
+            code='''import json,sys,time
+from reference_v6 import run_boundary_certification as r,resume_support as s
+from reference_v6.test_resume import ROW,fake
+completed=set(json.loads(sys.argv[2]))
+def kernel(*args,**kwargs):
+    assert s.key(args[1],args[2],args[3]) not in completed, "worker recomputed completed key"
+    return fake(*args,**kwargs)
+r.evaluate=kernel
+z=r.worker(ROW,sys.argv[1],time.monotonic()+100)
+assert z['status']=='PASS', z
+print('FRESH_WORKER_RESUME_PASS')
+'''
+            out=subprocess.check_output([sys.executable,'-c',code,td,json.dumps(completed)],cwd=runner.ROOT.parent,text=True)
+            self.assertIn('FRESH_WORKER_RESUME_PASS',out)
+
     def test_real_tree_plan_has_zero_kernel_calls_and_smoke_at_most_one(self):
         from reference_v6 import resume_plan as p
         with tempfile.TemporaryDirectory() as td:
