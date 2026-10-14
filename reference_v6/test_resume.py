@@ -35,6 +35,24 @@ def fake(row,route,cfg,coords,tick=lambda:None,saved=None,checkpoint=lambda z:No
 
 
 class ResumeTests(unittest.TestCase):
+    def test_real_tree_plan_has_zero_kernel_calls_and_smoke_at_most_one(self):
+        from reference_v6 import resume_plan as p
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);production=root/'production';report=root/'plan.json'
+            a=runner.CaseRunner(ROW,production,time.monotonic()+100)
+            cfg={'dps':50,'N':4096,'L':16};coords=[('.13','0','.73')]
+            with patch.object(runner,'evaluate',side_effect=fake):a.raw('E2',cfg,coords)
+            before={str(q.relative_to(production)):q.read_bytes() for q in production.rglob('*') if q.is_file()}
+            with patch.object(p,'validate',return_value={}),patch.object(p,'rows',return_value=[ROW]),patch.object(runner,'evaluate',side_effect=AssertionError('plan priced')) as kernel:
+                z=p.plan(production,report)
+                self.assertEqual(kernel.call_count,0)
+            self.assertEqual(z['cases'][0]['reusable_E2'],1)
+            self.assertIsNotNone(z['cases'][0]['first_genuinely_missing_key'])
+            with patch.object(p,'validate',return_value={}),patch.object(p,'rows',return_value=[ROW]),patch.object(runner,'evaluate',side_effect=fake) as kernel:
+                z=p.smoke(production,report,ROW['case_id'],root/'smoke')
+                self.assertEqual(kernel.call_count,1);self.assertEqual(z['kernel_calls'],1)
+            self.assertEqual(before,{str(q.relative_to(production)):q.read_bytes() for q in production.rglob('*') if q.is_file()})
+
     def setUp(self):
         self.capture=contextlib.redirect_stdout(io.StringIO());self.capture.__enter__()
     def tearDown(self):self.capture.__exit__(None,None,None)
