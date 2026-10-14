@@ -3,6 +3,9 @@ import json
 import argparse
 from pathlib import Path
 
+if __name__=='__main__':
+    raise SystemExit('Retired resume template. Use reference_v6/create_verified_resume_notebook.py and colab/phase1b6_verified_resume.ipynb.')
+
 cells=[]
 def md(text):cells.append({'cell_type':'markdown','metadata':{},'source':text.splitlines(keepends=True)})
 def code(text):cells.append({'cell_type':'code','metadata':{},'source':text.splitlines(keepends=True),'execution_count':None,'outputs':[]})

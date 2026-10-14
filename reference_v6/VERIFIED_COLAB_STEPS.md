@@ -3,8 +3,8 @@
 Open `colab/phase1b6_verified_resume.ipynb` in Colab. Stop the older production
 runtime first; closing its browser tab does not stop its subprocesses. Use CPU.
 
-1. Run bootstrap: a new `/content/MartingaleONet_verified_940937a76aaa`
-   checkout is pinned to `940937a76aaaaf73495939ae9b9ff772b509df6c`. A new Python
+1. Run bootstrap: a new `/content/MartingaleONet_verified_07283f898aed`
+   checkout is pinned to `07283f898aedcffeb1f15bc82df9bd307f4ffeb5`. A new Python
    subprocess checks HEAD, source bytes and imported runner directory every time.
 2. Run Drive/plan cell. It refuses a missing original
    `/content/drive/MyDrive/MartingaleONet/reference_v6_colab` folder. It saves
@@ -21,7 +21,9 @@ runtime first; closing its browser tab does not stop its subprocesses. Use CPU.
    raw/partial, scientific traces, identities and RESULT files remain intact.
    The plan is regenerated after hydration so journal hashes agree.
 5. Only after the reuse proof, set `RUN_ONE_SMOKE=True` in the optional cell.
-   It invokes `--smoke-case v6_00_1 --plan-report <PLAN> --smoke-output
+   The default `SMOKE_CASE=v6_09_2` has a genuinely new frontier. The required
+   v6_00_1 E1 reuse proof is still checked before selecting this single case.
+   It invokes `--smoke-case v6_09_2 --plan-report <PLAN> --smoke-output
    <EVIDENCE>/smoke`. It emits checked REUSED events before at most one missing
    numerical evaluation. Its hard kernel cap is one; only that single case is
    selected. Results/partials are confined to the new smoke evidence overlay.
@@ -35,3 +37,18 @@ runtime first; closing its browser tab does not stop its subprocesses. Use CPU.
 Do not change the original output folder, protocol, blinded inputs, thresholds,
 or acceptance rules. Do not delete Drive files. The smoke overlay is external
 validation evidence, not a case PASS or an amendment to certification results.
+
+If a zero-pricing inspection hangs on Drive I/O, stop that inspection process
+first. A real observed stall had 7 minutes elapsed, 1 second CPU, and an open
+old raw file; it was not a pricing kernel. Once all processes using this Drive
+mount have stopped, the official Colab recovery used successfully was:
+
+```python
+from google.colab import drive
+drive.flush_and_unmount(timeout_ms=30000)
+drive.mount("/content/drive")
+```
+
+Do not force an unmount if the flush reports failure. This procedure reconnects
+the runtime filesystem; it does not delete or rewrite any Drive checkpoints.
+After recovery re-run the zero-pricing plan against the original directory.

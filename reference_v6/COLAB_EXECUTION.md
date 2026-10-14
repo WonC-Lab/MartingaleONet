@@ -1,3 +1,8 @@
+# Resume workflow replaced on 2026-10-14
+
+Use `colab/phase1b6_verified_resume.ipynb` and [VERIFIED_COLAB_STEPS.md](VERIFIED_COLAB_STEPS.md).
+The instructions below describe the historical launcher; do not use it to resume production.
+
 # Phase 1B.6 Colab execution
 
 Open `colab/phase1b6_boundary_certification.ipynb` in Colab and choose CPU.

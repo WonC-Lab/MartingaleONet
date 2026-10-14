@@ -1,0 +1,198 @@
+[
+  {
+    "key": "eb3383c1ee2773251adcaad43ebc606655ea7960a2e0828e7b27fa9c054d3927",
+    "partial": false,
+    "route": "E1",
+    "classification": "REUSED",
+    "config": {
+      "cutoff": 65536,
+      "degree": 24,
+      "dps": 120,
+      "span": "0.7828821507702551295545770651553198701772117476335202297285614208306828162876224155690620203833710701859581339157612028560234455254444409071164191092549061587090"
+    },
+    "coordinates": [
+      [
+        "-0.7",
+        "0",
+        "0.0968750"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.0984375"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1000000"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1015625"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1031250"
+      ]
+    ],
+    "nodes": 65424,
+    "elapsed_seconds": 75.48035632400001,
+    "reported_seconds": 75.5,
+    "present_in_prior_snapshot": false,
+    "prior_SHA256": null,
+    "live_SHA256": "1e69d2f3a600f190994fb9480300b66688daa499e29b3262b3173ba4a6f595a0",
+    "reported_session_classification": "NEW_TIME_STENCIL_NOT_IN_PRIOR_SNAPSHOT",
+    "prior_completed_base_key": "2363ac445ab63eddd1fdfcab278b1930bf305d93e6c159872a7739ee94f6691a",
+    "prior_base_bytes_unchanged": true,
+    "duplicate_seconds_supported_for_this_key": 0
+  },
+  {
+    "key": "58bfbafd2b1ddeaf476491dc81b74e5dd77c7e1c653fde61a30ab18e622542d1",
+    "partial": false,
+    "route": "E1",
+    "classification": "REUSED",
+    "config": {
+      "cutoff": 65536,
+      "degree": 40,
+      "dps": 120,
+      "span": "0.7828821507702551295545770651553198701772117476335202297285614208306828162876224155690620203833710701859581339157612028560234455254444409071164191092549061587090"
+    },
+    "coordinates": [
+      [
+        "-0.7",
+        "0",
+        "0.0968750"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.0984375"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1000000"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1015625"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1031250"
+      ]
+    ],
+    "nodes": 65520,
+    "elapsed_seconds": 279.4772437549999,
+    "reported_seconds": 279.5,
+    "present_in_prior_snapshot": false,
+    "prior_SHA256": null,
+    "live_SHA256": "2346b22e9ccfa2e630f9c5e089c4e936e5ac341a704e40bd44bcc53f6faf1921",
+    "reported_session_classification": "NEW_TIME_STENCIL_NOT_IN_PRIOR_SNAPSHOT",
+    "prior_completed_base_key": "58b47fc55d92c3185e9f95400057085b1d7c8bbae726138eee085b7cb7f61363",
+    "prior_base_bytes_unchanged": true,
+    "duplicate_seconds_supported_for_this_key": 0
+  },
+  {
+    "key": "e0270c1fb468e9033b98c6fdb07c8bffb606174efcfcebfc8b174df5548547e3",
+    "partial": false,
+    "route": "E1",
+    "classification": "REUSED",
+    "config": {
+      "cutoff": 65536,
+      "degree": 64,
+      "dps": 50,
+      "span": "0.7828821507702551295545770651553198701772117476335202297285614208306828162876224155690620203833710701859581339157612028560234455254444409071164191092549061587090"
+    },
+    "coordinates": [
+      [
+        "-0.7",
+        "0",
+        "0.0968750"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.0984375"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1000000"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1015625"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1031250"
+      ]
+    ],
+    "nodes": 65664,
+    "elapsed_seconds": 255.71156346199996,
+    "reported_seconds": 255.7,
+    "present_in_prior_snapshot": false,
+    "prior_SHA256": null,
+    "live_SHA256": "a2775a8dc2228bc67a31e0debb9f4f761d4bc0317834fea811846bf80db6204e",
+    "reported_session_classification": "NEW_TIME_STENCIL_NOT_IN_PRIOR_SNAPSHOT",
+    "prior_completed_base_key": "c47a5cc5ec5abe632590556201d8ad9cc03bdcea94a7b717bb57c8d5da750c29",
+    "prior_base_bytes_unchanged": true,
+    "duplicate_seconds_supported_for_this_key": 0
+  },
+  {
+    "key": "74fd24fd1c6868cb5d0eb4991fd9ef179b11e18321dc81cd4a2d9898a8b8e583",
+    "partial": false,
+    "route": "E1",
+    "classification": "REUSED",
+    "config": {
+      "cutoff": 65536,
+      "degree": 64,
+      "dps": 80,
+      "span": "0.7828821507702551295545770651553198701772117476335202297285614208306828162876224155690620203833710701859581339157612028560234455254444409071164191092549061587090"
+    },
+    "coordinates": [
+      [
+        "-0.7",
+        "0",
+        "0.0968750"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.0984375"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1000000"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1015625"
+      ],
+      [
+        "-0.7",
+        "0",
+        "0.1031250"
+      ]
+    ],
+    "nodes": 65664,
+    "elapsed_seconds": 272.3339021679999,
+    "reported_seconds": 272.3,
+    "present_in_prior_snapshot": false,
+    "prior_SHA256": null,
+    "live_SHA256": "298d666a8d25f33f3d30037a0d5135d74b60e750e8821c901adbc72e342e67ab",
+    "reported_session_classification": "NEW_TIME_STENCIL_NOT_IN_PRIOR_SNAPSHOT",
+    "prior_completed_base_key": "47c2992b81748c2163ce89dad3ad7887c1acfc4e1ebbbb6fa2f4f5955ee7a801",
+    "prior_base_bytes_unchanged": true,
+    "duplicate_seconds_supported_for_this_key": 0
+  }
+]
