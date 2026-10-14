@@ -1,5 +1,11 @@
 # Continue the existing production folder safely
 
+The original Drive folder was live-verified on 2026-10-14. Its journals are
+already prepared and the ONE-case smoke is complete. Leave `RUN_ONE_SMOKE=False`
+when continuing this run. The single new E2 raw was appended without overwriting
+any old file and is now reusable. See
+[the live verification report](resume_audit/LIVE_VERIFICATION_REPORT_20261014.md).
+
 Open `colab/phase1b6_verified_resume.ipynb` in Colab. Stop the older production
 runtime first; closing its browser tab does not stop its subprocesses. Use CPU.
 

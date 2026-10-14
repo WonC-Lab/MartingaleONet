@@ -1,0 +1,71 @@
+{
+  "executor_commit": "07283f898aedcffeb1f15bc82df9bd307f4ffeb5",
+  "output_directory": "/content/drive/MyDrive/MartingaleONet/reference_v6_colab",
+  "evidence_directory": "/content/drive/MyDrive/MartingaleONet/reference_v6_resume_verification_20261014T011655Z",
+  "plan_pricing_calls": 0,
+  "pending_cases": 105,
+  "completed_E1": 4083,
+  "completed_E2": 481,
+  "hydration_pricing_calls": 0,
+  "smoke": {
+    "case_id": "v6_09_2",
+    "kernel_calls": 1,
+    "production_files_unchanged": true,
+    "status": "Smoke maximum ONE missing sub-evaluation",
+    "stats": {
+      "cached_evaluations": 83,
+      "new_evaluations": 1
+    },
+    "smoke_output": "/content/drive/MyDrive/MartingaleONet/reference_v6_resume_verification_20261014T011655Z/smoke"
+  },
+  "promotion": {
+    "case_id": "v6_09_2",
+    "key": "d44749c5c0dfd33c896a248a9ae4a86871632d4904f99d437002957b73106500",
+    "new_completed_raw_added": 1,
+    "existing_files_overwritten": 0,
+    "existing_files_deleted": 0,
+    "all_187_original_file_hashes_preserved": true,
+    "source": "/content/drive/MyDrive/MartingaleONet/reference_v6_resume_verification_20261014T011655Z/smoke/cases/v6_09_2/raw/d44749c5c0dfd33c896a248a9ae4a86871632d4904f99d437002957b73106500.json",
+    "destination": "/content/drive/MyDrive/MartingaleONet/reference_v6_colab/cases/v6_09_2/raw/d44749c5c0dfd33c896a248a9ae4a86871632d4904f99d437002957b73106500.json",
+    "sha256": "15b895dcd6b26f14be2253efd866c2d9a948322fd5bb9e12dbf6d576c799cd3b"
+  },
+  "next_missing_after_smoke": {
+    "key": "20321230b9c7ecbe2272ac701f6573bdbd7b7825148ef3ed9b2b855ac49bb00d",
+    "route": "E2",
+    "config": {
+      "N": 16384,
+      "L": 32,
+      "dps": 50
+    },
+    "coordinates": [
+      [
+        "-1.2",
+        "0",
+        "1.968750"
+      ],
+      [
+        "-1.2",
+        "0",
+        "1.984375"
+      ],
+      [
+        "-1.2",
+        "0",
+        "2.000000"
+      ],
+      [
+        "-1.2",
+        "0",
+        "2.015625"
+      ],
+      [
+        "-1.2",
+        "0",
+        "2.031250"
+      ]
+    ],
+    "partial_resumable": false,
+    "resumed_nodes": 0
+  },
+  "full_production_started": false
+}
