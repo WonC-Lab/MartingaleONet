@@ -144,6 +144,7 @@ class CaseRunner:
             z=resume.checked(path);self.stats['cached_evaluations']+=1
             if z['route']!=route or z['config']!=cfg or z['coordinates']!=coords: raise RuntimeError('checkpoint identity mismatch')
             self.event('REUSED',key=key,route=route,config=cfg,coordinates=coords,prior_elapsed_seconds=z.get('elapsed_seconds'))
+            print(f"{self.row['case_id']} REUSED {route} key={key} config={json.dumps(cfg,sort_keys=True)}",flush=True)
             self.catalog[key]=file_sha
             return z
         if key in self.catalog:
@@ -402,12 +403,42 @@ def main():
     parser.add_argument('--report-only',action='store_true')
     parser.add_argument('--execute-frozen-v6',action='store_true')
     parser.add_argument('--takeover-stale-lease',action='store_true',help='Only after other runtime stopped and its lease is at least 180 seconds old')
+    parser.add_argument('--resume-plan-only',action='store_true')
+    parser.add_argument('--plan-report')
+    parser.add_argument('--expected-commit')
+    parser.add_argument('--expected-repo-root')
+    parser.add_argument('--smoke-case')
+    parser.add_argument('--smoke-output')
     args=parser.parse_args()
+    if args.expected_commit:
+        actual=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT.parent,text=True).strip()
+        if actual!=args.expected_commit:raise RuntimeError('Wrong executor checkout: '+actual)
+    if args.expected_repo_root and Path(args.expected_repo_root).resolve()!=ROOT.parent.resolve():
+        raise RuntimeError('Wrong imported runner: '+str(__file__))
+    if args.resume_plan_only or args.smoke_case:
+        from reference_v6.resume_plan import plan,smoke
+        if not args.plan_report:parser.error('--plan-report required')
+        if args.resume_plan_only:plan(args.output,args.plan_report)
+        else:
+            if not args.smoke_output:parser.error('--smoke-output required')
+            smoke(args.output,args.plan_report,args.smoke_case,args.smoke_output)
+        return
     if not 1<=args.workers<=4:parser.error('workers must be between 1 and 4')
     rows,output=preflight(args.output)
     if args.preflight_only: print('Freeze, baseline and dependency checks passed; no pricing started.');return
     if args.report_only:report(output,rows);return
     if not args.execute_frozen_v6:parser.error('Execution requires --execute-frozen-v6')
+    if not args.expected_commit or not args.expected_repo_root or not args.plan_report:
+        parser.error('Production requires --expected-commit, --expected-repo-root and --plan-report; use verified resume notebook')
+    from reference_v6.resume_plan import inventory
+    plan=json.loads(Path(args.plan_report).read_text())
+    if plan['output_directory']!=str(output) or plan['production_pricing_calls']!=0:
+        raise RuntimeError('Wrong production resume plan')
+    for item in plan['cases']:
+        _,current=inventory(output/'cases'/item['case_id'])
+        if current!=item['protected_hashes']:raise RuntimeError('Checkpoint tree changed since plan: '+item['case_id'])
+        if item['reusable_E1']+item['reusable_E2'] and not item['journal_paths']:
+            raise RuntimeError('Hydration missing: '+item['case_id'])
     # A committed, unmodified executor must precede all blinded pricing.
     for name in fingerprint():
         blob=subprocess.check_output(['git','show','HEAD:reference_v6/'+name],cwd=ROOT.parent)
